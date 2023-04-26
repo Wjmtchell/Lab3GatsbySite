@@ -4,8 +4,23 @@ import Header3 from 'components/Header3';
 
 function renderSection1(props) {
   return (
-    <section className="flex flex-col relative grow min-h-[1024px]">
-      <div className="flex flex-col relative grow mt-[341px] mx-[364px] mb-[203px]">
+    <section className="flex flex-col relative grow min-h-[175px]">
+      <div className="flex flex-col relative grow">
+        <div className="bg-[rgb(79,236,161)] outline outline-[rgb(70,70,70)] outline-[6px] outline-offset-[-6px] relative min-h-[140px]" />
+        <div className="mt-[-140px] flex flex-col relative">
+          <h1 className="font-normal text-[128px] leading-[1.36] font-NunitoSans text-[rgb(70,70,70)] tracking-[0px] w-[65.97%] relative grow my-0 mx-auto">
+            Team 1 Portfolio
+          </h1>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function renderSection2(props) {
+  return (
+    <section className="flex flex-col relative grow min-h-[849px]">
+      <div className="flex flex-col relative grow mt-[166px] mx-[364px] mb-[203px]">
         <div className="flex flex-col relative z-[1]">
           <div className="bg-[rgb(79,236,161)] rounded-[10px] outline outline-[rgb(70,70,70)] outline-[3px] w-[85.67%] relative grow min-h-[72px] my-0 mx-auto" />
         </div>
@@ -52,6 +67,7 @@ export default function Lab03Home(props) {
 
       <main className="lab03home flex flex-col bg-white pt-[undefinedpx] pr-[undefinedpx] pb-[undefinedpx] pl-[undefinedpx] relative overflow-hidden">
         <div className="flex flex-col relative">{renderSection1(props)}</div>
+        <div className="flex flex-col relative">{renderSection2(props)}</div>
       </main>
     </React.Fragment>
   );
