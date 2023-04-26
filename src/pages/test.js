@@ -1,11 +1,9 @@
 import React from 'react';
 import cn from 'classnames';
-import Headroom from 'react-headroom';
-import Header3 from 'components/Header3';
 
-import section1Styles from './Lab03Home_section1.module.scss';
-import section2Styles from './Lab03Home_section2.module.scss';
-import styles from './Lab03Home.module.scss';
+import section1Styles from './test_section1.module.scss';
+import section2Styles from './test_section2.module.scss';
+import styles from './test.module.scss';
 
 function renderSection1(props) {
   return (
@@ -51,16 +49,11 @@ function renderSection2(props) {
   );
 }
 
-export default function Lab03Home(props) {
+export default function test(props) {
   return (
     <React.Fragment>
-      <Headroom tag="header" className="page-header">
-        <nav className="max:show">
-          <Header3 />
-        </nav>
-      </Headroom>
 
-      <main className={cn(styles.main, 'lab03home')}>
+      <main className={cn(styles.main, 'test')}>
         <div className={styles.main__cell}>{renderSection1(props)}</div>
         <div className={styles.main__cell}>{renderSection2(props)}</div>
       </main>
