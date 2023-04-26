@@ -1,6 +1,4 @@
 import React from 'react';
-import Headroom from 'react-headroom';
-import Header3 from 'components/Header3';
 
 function renderSection1(props) {
   return (
@@ -59,12 +57,6 @@ function renderSection2(props) {
 export default function Lab03Home(props) {
   return (
     <React.Fragment>
-      <Headroom tag="header" className="page-header">
-        <nav className="max:show">
-          <Header3 />
-        </nav>
-      </Headroom>
-
       <main className="lab03home flex flex-col bg-white pt-[undefinedpx] pr-[undefinedpx] pb-[undefinedpx] pl-[undefinedpx] relative overflow-hidden">
         <div className="flex flex-col relative">{renderSection1(props)}</div>
         <div className="flex flex-col relative">{renderSection2(props)}</div>
