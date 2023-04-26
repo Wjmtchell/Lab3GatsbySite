@@ -11,12 +11,13 @@ const styles = StyleSheet.create({
   message : {color : 'red'},
   message2 : {color: 'blue'}
 }
-  );
+);
 const IndexPage = () => {
   return (
     <main className={css(styles.message)}>
         Hello World
-        <br></br><Link to="/test">Test</Link><br></br>
+        <br></br>
+        <Link to="/test">Test</Link>
         <span className={css(styles.message2)}>Hello There</span>
     </main>
   )
