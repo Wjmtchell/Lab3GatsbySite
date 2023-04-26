@@ -1,0 +1,137 @@
+@use "utils" as *;
+
+$color_type_0: rgb(255, 255, 255);
+$color_type_1: rgb(70, 70, 70);
+$color_type_2: rgb(79, 236, 161);
+
+$border_radius_type_0: 10px 10px 10px 10px;
+
+$font_type_0: 400 64px/1.35 "Nunito Sans", Helvetica, Arial, serif;
+$font_type_1: 400 48px/1.16 "Roboto", Helvetica, Arial, serif;
+
+.section2 {
+  @include flex-column;
+  position: relative;
+  flex-grow: 1;
+  min-height: 849px;
+}
+.flexCol {
+  @include flex-column;
+  position: relative;
+  flex-grow: 1;
+  margin: 166px 364px 203px;
+}
+.flexCol__cell {
+  @include flex-column;
+  position: relative;
+  z-index: 1;
+}
+.rect2 {
+  background-color: $color_type_2;
+  border-radius: $border_radius_type_0;
+  outline: 3px solid rgb(70, 70, 70);
+  width: 85.67%;
+  position: relative;
+  flex-grow: 1;
+  min-height: 72px;
+  margin: 0px auto;
+}
+.flexCol__cell1 {
+  margin-top: -72px;
+  @include flex-column;
+  position: relative;
+  z-index: 5;
+}
+.hero_title1 {
+  @include font-face($font_type_0, $color_type_0, 0px);
+  width: 38.2%;
+  position: relative;
+  flex-grow: 1;
+  margin: 0px auto;
+}
+.flexCol__cell2 {
+  @include flex-column;
+  position: relative;
+  z-index: 2;
+}
+.rect3 {
+  background-color: $color_type_2;
+  border-radius: $border_radius_type_0;
+  outline: 2px solid rgb(70, 70, 70);
+  outline-offset: -2px;
+  width: 30.9%;
+  position: relative;
+  flex-grow: 1;
+  min-height: 100px;
+  margin: 93px 0% 0px 69.1%;
+}
+.flexCol__cell3 {
+  margin-top: -100px;
+  @include flex-column;
+  position: relative;
+  z-index: 3;
+}
+.rect1 {
+  background-color: $color_type_2;
+  border-radius: $border_radius_type_0;
+  outline: 3px solid rgb(70, 70, 70);
+  outline-offset: -3px;
+  width: 30.9%;
+  position: relative;
+  flex-grow: 1;
+  min-height: 100px;
+  margin: 0px 69.1% 0px 0%;
+}
+.flexCol__cell4 {
+  margin-top: -78px;
+  @include flex-column;
+  position: relative;
+  z-index: 4;
+}
+.hero_title {
+  @include font-face($font_type_1, $color_type_1, 0px);
+  position: relative;
+  flex-grow: 1;
+  margin: 0px 25px;
+}
+.flexCol__cell5 {
+  margin-top: -56px;
+  @include flex-column;
+  position: relative;
+  z-index: 7;
+}
+.hero_title2 {
+  display: flex;
+  justify-content: flex-end;
+  font: $font_type_1;
+  color: $color_type_1;
+  text-align: right;
+  letter-spacing: 0px;
+  width: 83.71%;
+  position: relative;
+  flex-grow: 1;
+  margin: 0px auto;
+}
+.rect11 {
+  background-color: $color_type_2;
+  border-radius: $border_radius_type_0;
+  outline: 3px solid rgb(70, 70, 70);
+  outline-offset: -3px;
+  width: 30.9%;
+  position: relative;
+  min-height: 100px;
+  margin: 122px auto 0px;
+}
+.flexCol__cell6 {
+  margin-top: -78px;
+  @include flex-column;
+  position: relative;
+  z-index: 6;
+}
+.hero_title3 {
+  @include font-face($font_type_1, $color_type_1, 0px);
+  width: 22.19%;
+  position: relative;
+  flex-grow: 1;
+  margin: 0px auto;
+}

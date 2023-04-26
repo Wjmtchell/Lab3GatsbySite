@@ -129,7 +129,7 @@ const IndexPage = () => {
     <main style={pageStyles}>
       <h1 style={headingStyles}>
         Hello World
-        <Link to="/test">Test</Link>
+        <br><Link to="/test">Test</Link></br>
       </h1>
     </main>
   )
