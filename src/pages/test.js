@@ -46,7 +46,6 @@ function renderSection2(props) {
 export default function Lab3(props) {
   return (
     <React.Fragment>
-
       <main className={cn(css(styles.main), 'lab3')}>
         <div className={css(styles.main__cell)}>{renderSection1(props)}</div>
         <div className={css(styles.main__cell)}>{renderSection2(props)}</div>
