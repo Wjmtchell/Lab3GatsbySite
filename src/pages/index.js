@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Link } from 'gatsby'
 
 const pageStyles = {
 color: "#232129",
@@ -128,6 +129,7 @@ const IndexPage = () => {
     <main style={pageStyles}>
       <h1 style={headingStyles}>
         Hello World
+        <Link to="/test">Test</Link>
       </h1>
     </main>
   )
