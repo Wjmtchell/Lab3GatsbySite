@@ -16,9 +16,12 @@
   },
   "dependencies": {
     "aphrodite": "^2.4.0",
+    "classnames": "^2.3.2",
+    "components": "^0.1.0",
     "gatsby": "^5.8.1",
     "gatsby-plugin-aphrodite": "^2.1.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-headroom": "^3.2.1"
   }
 }
