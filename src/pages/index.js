@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   message : {color : 'red'},
   message2 : {color: 'blue'}
 }
-  );
+);
 const IndexPage = () => {
   return (
     <main className={css(styles.message)}>
