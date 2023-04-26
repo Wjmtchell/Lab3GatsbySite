@@ -5,5 +5,5 @@ module.exports = {
   siteMetadata: {
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: ['gatsby-plugin-aphrodite'],
+  plugins: ["gatsby-plugin-aphrodite"],
 }
