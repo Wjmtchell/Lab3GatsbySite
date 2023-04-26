@@ -1,5 +1,4 @@
 import React from 'react';
-import cn from 'classnames';
 
 import section1Styles from './test_section1.module.scss';
 import section2Styles from './test_section2.module.scss';
