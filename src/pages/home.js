@@ -26,17 +26,17 @@ function renderSection2(props) {
           <span className={css(section2Styles.btn__text)}>About Us</span>
         </button>
 
-        <button id={'mbtn'} className={css(section2Styles.btn1)} onClick={props.sButtonClicked}>
-          <span className={css(section2Styles.btn__text1)}>Shay</span>
+        <button id={'mbtn'} className={css(section2Styles.btn1)} onClick={() => {navigate("/mitchell")}}>
+          <span className={css(section2Styles.btn__text1)}>Mitchell</span>
         </button>
 
-        <button id={'mbtn'} className={css(section2Styles.btn2)} onClick={props.sButtonClicked}>
-          <span className={css(section2Styles.btn__text2)}>Mitchell</span>
+        <button id={'mbtn'} className={css(section2Styles.btn2)} onClick={() => {navigate("/william")}}>
+          <span className={css(section2Styles.btn__text2)}>William</span>
         </button>
 
-        <button className={css(section2Styles.btn3)} onClick={props.wButtonClicked}>
+        <button className={css(section2Styles.btn3)} onClick={() => {navigate("/shay")}}>
           {/* wbtn */}
-          <span className={css(section2Styles.btn__text3)}>William</span>
+          <span className={css(section2Styles.btn__text3)}>Shay</span>
         </button>
       </div>
     </section>

@@ -7,7 +7,7 @@ import home from '../images/home.png';
 function renderSection1(props) {
   return (
     <section className={css(section1Styles.section1)}>
-      <h1 className={css(section1Styles.hero_title)}>About Team 1</h1>
+      <h1 className={css(section1Styles.hero_title)}>Shay London</h1>
     </section>
   );
 }
@@ -15,11 +15,6 @@ function renderSection1(props) {
 function renderSection2(props) {
   return (
     <section className={css(section2Styles.section2)}>
-      <h1 className={css(section2Styles.title)}>
-        We’re a collection of two CSEs and an EE that met in this class. Our Senior Design Project is about creating a
-        database to manage a school with the help of an English class from Taiwan!
-      </h1>
-
       <div className={css(section2Styles.content_box)}>
         <div className={css(section2Styles.foreground)}>
           <div
@@ -28,32 +23,30 @@ function renderSection2(props) {
             onClick={() => {navigate("/home")}}
           />
 
-          <button className={css(section2Styles.btn)} onClick={() => {navigate("/mitchell")}}>
-            <span className={css(section2Styles.btn__text)}>Mitchell’s Page</span>
+          <button className={css(section2Styles.btn)} onClick={() => {navigate("/about")}}>
+            <span className={css(section2Styles.btn__text)}>About Us</span>
           </button>
 
-          <button className={css(section2Styles.btn1)} onClick={() => {navigate("/william")}}>
-            <span className={css(section2Styles.btn__text)}>William’s Page</span>
+          <button className={css(section2Styles.btn1)} onClick={() => {navigate("/mitchell")}}>
+            <span className={css(section2Styles.btn__text1)}>Mitchell's Page</span>
           </button>
 
-          <button className={css(section2Styles.btn2)} onClick={() => {navigate("/shay")}}>
-            <span className={css(section2Styles.btn__text)}>Shay’s Page</span>
+          <button className={css(section2Styles.btn2)} onClick={() => {navigate("/william")}}>
+            <span className={css(section2Styles.btn__text2)}>William's Page</span>
           </button>
         </div>
       </div>
 
-      <div className={css(section2Styles.flexRow)}>
-        <div className={css(section2Styles.flexRow__cell)}>
-          <div className={css(section2Styles.rect3)} />
-        </div>
-        <div className={css(section2Styles.flexRow__spacer)} />
-        <div className={css(section2Styles.flexRow__cell)}>
-          <div className={css(section2Styles.rect3)} />
-        </div>
-        <div className={css(section2Styles.flexRow__spacer)} />
-        <div className={css(section2Styles.flexRow__cell)}>
-          <div className={css(section2Styles.rect3)} />
-        </div>
+      <div className={css(section2Styles.main__text)}>
+        Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing
+        particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.
+        It is a way I have of driving off the spleen and regulating circulation. Whenever I find myself growing grim
+        about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily
+        pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my
+        hypos get such an upper hand of me, that it requires a strong moral principle to prevent me from deliberately
+        stepping into the street, and methodically knocking people’s hats off—then, I account it high time to get to sea
+        as soon as I can. There is nothing surprising in this. If they but knew it, almost all men in their degree, some
+        time or other, cherish very nearly the same feelings towards the ocean with me.
       </div>
     </section>
   );
@@ -99,7 +92,7 @@ const section1Styles = StyleSheet.create({
     },
     display: 'flex',
     justifyContent: 'center',
-    font: '128px/1.36 "Nunito Sans", Helvetica, Arial, serif',
+    font: '600 128px/1.36 "Nunito Sans", Helvetica, Arial, serif',
     color: 'rgb(70,70,70)',
     textAlign: 'center',
     letterSpacing: '0px',
@@ -115,32 +108,8 @@ const section2Styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     position: 'relative',
-    flexGrow: 1
-  },
-  title: {
-    '@media (max-width: 1199px)': {
-      fontSize: '28px'
-    },
-    '@media (max-width: 991px)': {
-      fontSize: '24px'
-    },
-    '@media (max-width: 767px)': {
-      fontSize: '20px'
-    },
-    '@media (max-width: 383px)': {
-      fontSize: '16px'
-    },
-    display: 'flex',
-    justifyContent: 'center',
-    font: '32px/1.37 "Nunito Sans", Helvetica, Arial, serif',
-    color: 'rgb(70,70,70)',
-    textAlign: 'center',
-    letterSpacing: '0px',
-    height: 129,
-    position: 'absolute',
-    top: -25,
-    left: 180,
-    right: 0
+    flexGrow: 1,
+    minHeight: 824
   },
   content_box: {
     display: 'flex',
@@ -193,21 +162,21 @@ const section2Styles = StyleSheet.create({
   },
   btn__text: {
     '@media (max-width: 1199px)': {
-      fontSize: '20px'
-    },
-    '@media (max-width: 767px)': {
-      fontSize: '16px'
-    },
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    font: '400 24px/1.37 "Nunito Sans", Helvetica, Arial, serif',
-    color: 'rgb(255,255,255)',
-    textAlign: 'center',
-    letterSpacing: '0px',
-    width: '100%',
-    height: 80,
-    position: 'relative'
+        fontSize: '20px'
+      },
+      '@media (max-width: 767px)': {
+        fontSize: '16px'
+      },
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      font: '400 24px/1.37 "Nunito Sans", Helvetica, Arial, serif',
+      color: 'rgb(255,255,255)',
+      textAlign: 'center',
+      letterSpacing: '0px',
+      width: '100%',
+      height: 80,
+      position: 'relative'
   },
   btn1: {
     display: 'flex',
@@ -224,11 +193,23 @@ const section2Styles = StyleSheet.create({
     minWidth: 160,
     margin: '69px 10px 0px'
   },
-  foreground__cell: {
+  btn__text1: {
+    '@media (max-width: 1199px)': {
+      fontSize: '20px'
+    },
+    '@media (max-width: 767px)': {
+      fontSize: '16px'
+    },
     display: 'flex',
-    flexDirection: 'column',
-    position: 'relative',
-    flex: '1 0 auto'
+    alignItems: 'center',
+    justifyContent: 'center',
+    font: '400 24px/1.37 "Nunito Sans", Helvetica, Arial, serif',
+    color: 'rgb(255,255,255)',
+    textAlign: 'center',
+    letterSpacing: '0px',
+    width: '100%',
+    height: 80,
+    position: 'relative'
   },
   btn2: {
     display: 'flex',
@@ -239,46 +220,41 @@ const section2Styles = StyleSheet.create({
     height: 80,
     cursor: 'pointer',
     position: 'relative',
+    flex: '1 0 auto',
+    minHeight: 0,
     minWidth: 160,
-    margin: '68px 11px 0px 9px'
+    margin: '68px auto 0px'
   },
-  flexRow: {
+  btn__text2: {
     '@media (max-width: 1199px)': {
-      flexWrap: 'wrap',
-      justifyContent: 'flex-start',
-      alignContent: 'flex-start',
-      rowGap: 16
+      fontSize: '20px'
+    },
+    '@media (max-width: 767px)': {
+      fontSize: '16px'
     },
     display: 'flex',
     alignItems: 'center',
-    width: '83.33%',
+    justifyContent: 'center',
+    font: '24px/1.37 "Nunito Sans", Helvetica, Arial, serif',
+    color: 'rgb(255,255,255)',
+    textAlign: 'center',
+    textShadow: '0px 4px 4px rgba(0,0,0,0.24705882352941178)',
+    letterSpacing: '0px',
+    width: '100%',
+    height: 66,
     position: 'relative',
-    flexGrow: 1,
-    margin: '124px 2.36% 12px 14.31%'
+    margin: '7px 0px'
   },
-  flexRow__cell: {
-    '@media (max-width: 1199px)': {
-      flex: '0 0 calc(1/1 * 100% - 0px / 1)',
-      minWidth: 'unset'
-    },
+  main__text: {
     display: 'flex',
-    flexDirection: 'column',
-    position: 'relative',
-    flex: '1 1 370px'
-  },
-  rect3: {
-    borderRadius: '10px 10px 10px 10px',
-    outline: '2px solid rgb(70,70,70)',
-    outlineOffset: -2,
+    justifyContent: 'center',
+    font: '400 30px/1 "Nunito Sans", Helvetica, Arial, serif',
+    color: 'rgb(58,58,58)',
+    textAlign: 'center',
+    letterSpacing: '0px',
     position: 'relative',
     flexGrow: 1,
-    minHeight: 688
-  },
-  flexRow__spacer: {
-    '@media (max-width: 1199px)': {
-      display: 'none'
-    },
-    flex: '0 1 45px'
+    margin: '2px 2px 2px 182px'
   }
 });
 
