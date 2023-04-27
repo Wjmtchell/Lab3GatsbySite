@@ -20,13 +20,11 @@ function renderSection2(props) {
 
       <div className={css(section2Styles.content_box)}>
         <div className={css(section2Styles.foreground)}>
-          <div className={css(section2Styles.content_box1)} onClick={props.hButtonPressed}>
-            <img
-              src={require('../images/home.png')}
-              alt="Home Button"
-              className={css(section2Styles.icon)}
-            />
-          </div>
+          <div
+            style={{ '--src': `url(${require('../images/home.png')})` }}
+            className={css(section2Styles.content_box1)}
+            onClick={props.hButtonPressed}
+          />
 
           <button className={css(section2Styles.btn)} onClick={props.mButtonPressed}>
             <span className={css(section2Styles.btn__text)}>Mitchell’s Page</span>
@@ -66,6 +64,7 @@ function renderSection2(props) {
 export default function AboutPage(props) {
   return (
     <React.Fragment>
+
 
       <main className={cn(css(styles.main), 'about-page')}>
         <div className={css(styles.main__cell)}>{renderSection1(props)}</div>
@@ -166,44 +165,19 @@ const section2Styles = StyleSheet.create({
   content_box1: {
     display: 'flex',
     flexDirection: 'column',
+    background: 'var(--src) center center / contain no-repeat',
     backgroundColor: 'rgb(70,70,70)',
     width: 180,
     height: 130,
     cursor: 'pointer',
     boxShadow: '0px 4px 4px 0px rgba(0,0,0,0.247)',
     transitionDuration: '0.3s',
-    transitionProperty: 'color',
+    transitionProperty: 'background-color',
     ':hover': {
-      color: '#50e3c2ff'
+      backgroundColor: '#4feca1ff'
     },
     position: 'relative',
     minWidth: 180
-  },
-  icon: {
-    '@media (max-width: 1199px)': {
-      margin: '5px 24px 5px 27px'
-    },
-    '@media (max-width: 991px)': {
-      margin: '5px 20px'
-    },
-    '@media (max-width: 767px)': {
-      margin: '5px 16px'
-    },
-    '@media (max-width: 575px)': {
-      margin: '5px 16px 5px 12px'
-    },
-    '@media (max-width: 479px)': {
-      margin: '5px 12px'
-    },
-    width: 124,
-    height: 'auto',
-    aspectRatio: '1.03',
-    verticalAlign: 'top',
-    objectFit: 'cover',
-    objectPosition: 'center center',
-    position: 'relative',
-    minWidth: 124,
-    margin: '5px 29px 5px 27px'
   },
   btn: {
     display: 'flex',
