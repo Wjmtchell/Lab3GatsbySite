@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import cn from 'classnames';
-
+import home from '../images/home.png';
 function renderSection1(props) {
   return (
     <section className={css(section1Styles.section1)}>
@@ -20,12 +20,14 @@ function renderSection2(props) {
 
       <div className={css(section2Styles.content_box)}>
         <div className={css(section2Styles.foreground)}>
-          <div
-            style={{ '--src': `url(${require('../images/home.png')})` }}
-            className={css(section2Styles.content_box1)}
+          <div className={css(section2Styles.content_box1)}
             onClick={props.hButtonPressed}
-          />
-
+          >
+          <img
+            src={home}
+            alt="Home Button"
+            className={css(section2Styles.icon)}
+          /></div>
           <button className={css(section2Styles.btn)} onClick={props.mButtonPressed}>
             <span className={css(section2Styles.btn__text)}>Mitchell’s Page</span>
           </button>
