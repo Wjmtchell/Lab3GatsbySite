@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import cn from 'classnames';
 import home from '../images/home.png';
+
 function renderSection1(props) {
   return (
     <section className={css(section1Styles.section1)}>
@@ -20,14 +21,12 @@ function renderSection2(props) {
 
       <div className={css(section2Styles.content_box)}>
         <div className={css(section2Styles.foreground)}>
-          <div className={css(section2Styles.content_box1)}
+          <div
+            style={{ '--src': `url(${home})` }}
+            className={css(section2Styles.content_box1)}
             onClick={props.hButtonPressed}
-          >
-          <img
-            src={home}
-            alt="Home Button"
-            className={css(section2Styles.icon)}
-          /></div>
+          />
+
           <button className={css(section2Styles.btn)} onClick={props.mButtonPressed}>
             <span className={css(section2Styles.btn__text)}>Mitchell’s Page</span>
           </button>
@@ -66,7 +65,6 @@ function renderSection2(props) {
 export default function AboutPage(props) {
   return (
     <React.Fragment>
-
 
       <main className={cn(css(styles.main), 'about-page')}>
         <div className={css(styles.main__cell)}>{renderSection1(props)}</div>
