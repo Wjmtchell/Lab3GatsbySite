@@ -17,7 +17,7 @@ const IndexPage = () => {
     <main className={css(styles.message)}>
         Hello World
         <br></br>
-        <Link to="/test">Test</Link>
+        <Link to="/home">Test</Link>
         <span className={css(styles.message2)}>Hello There</span>
     </main>
   )

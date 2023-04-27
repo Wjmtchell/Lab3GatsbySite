@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import cn from 'classnames';
+import { navigate } from 'gatsby';
 
 function renderSection1(props) {
   return (
@@ -21,7 +22,7 @@ function renderSection2(props) {
   return (
     <section className={css(section2Styles.section2)}>
       <div className={css(section2Styles.flexCol)}>
-        <button id={'abtn'} className={css(section2Styles.btn)} onClick={props.aboutButtonClicked}>
+        <button id={'abtn'} className={css(section2Styles.btn)} onClick={() => {navigate("/about")}}>
           <span className={css(section2Styles.btn__text)}>About Us</span>
         </button>
 
