@@ -4,6 +4,8 @@ import cn from 'classnames';
 import { navigate } from 'gatsby';
 import home from '../images/home.png';
 import Disqus from 'gatsby-plugin-disqus';
+import mitch_dogs from '../images/mitch_dogs.jpeg';
+
 function renderSection1(props) {
   return (
     <section className={css(section1Styles.section1)}>
@@ -37,16 +39,27 @@ function renderSection2(props) {
         </div>
       </div>
 
-      <div className={css(section2Styles.main__text)}>
-        Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing
-        particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.
-        It is a way I have of driving off the spleen and regulating circulation. Whenever I find myself growing grim
-        about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily
-        pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my
-        hypos get such an upper hand of me, that it requires a strong moral principle to prevent me from deliberately
-        stepping into the street, and methodically knocking people’s hats off—then, I account it high time to get to sea
-        as soon as I can. There is nothing surprising in this. If they but knew it, almost all men in their degree, some
-        time or other, cherish very nearly the same feelings towards the ocean with me. Test.
+      <div className={css(section2Styles.main__text)} style={{fontWeight: 'bold', textDecoration: 'underline', textUnderlinePosition: 'under'}}>2022</div>
+      <div className={css(section2Styles.main__text)} style={{textAlign: 'center',lineHeight:'1.1'}}>
+      <br></br>
+      <br></br>
+      <br></br>
+        In summer 2022 I worked at Team Adventure USA where we convert Mercedes Sprinter Vans to off-grid vans. I designed the electrical system in the vans. It was a great time and I learned alot.
+      </div>
+      <div className={css(section2Styles.main__text)} style={{fontWeight: 'bold', textDecoration: 'underline', textUnderlinePosition: 'under'}}>2023</div>
+      <div className={css(section2Styles.main__text)} style={{textAlign: 'center',lineHeight:'1.1'}}>
+        <br></br>
+        <br></br>
+        <br></br>
+        For summer 2023, I am working for Esco Group and I am going to be working with control systems for industrial automation.
+      </div>
+      <div className={css(section2Styles.main__text)} style={{fontWeight: 'bold', textDecoration: 'underline', textUnderlinePosition: 'under'}}>Personal</div>
+      <div className={css(section2Styles.main__text)} style={{textAlign: 'center',lineHeight:'1.1'}}>
+        <br></br>
+        <br></br>
+        <br></br>
+        I play fetch with my dogs every morning and every evening in my big backyard and they love it. I also own a CNC machining business which takes up almost all of my free time.
+      <img src={mitch_dogs} width ='40%' style={{marginLeft: '20px'}}></img>
       </div>
       <div className={css(section2Styles.comment_styling)}>
       <Disqus
