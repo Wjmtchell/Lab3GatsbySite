@@ -50,8 +50,8 @@ function renderSection2(props) {
       </div>
       <div className={css(section2Styles.comment_styling)}>
       <Disqus
-        identifier="mitchellPage"
-        title="Mitchell"
+        identifier="williamPage"
+        title="William"
         />
       </div>
     </section>
