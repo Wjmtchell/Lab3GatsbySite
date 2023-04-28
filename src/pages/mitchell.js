@@ -20,7 +20,7 @@ function renderSection2(props) {
           <div
             style={{ '--src': `url(${home})` }}
             className={css(section2Styles.content_box1)}
-            onClick={() => {navigate("/index")}}
+            onClick={() => {navigate("/")}}
           />
 
           <button className={css(section2Styles.btn)} onClick={() => {navigate("/about")}}>
@@ -51,7 +51,7 @@ function renderSection2(props) {
       <div className={css(section2Styles.comment_styling)}>
       <Disqus
         identifier="mitchPage"
-        title="Shay"
+        title="Mitch"
         />
       </div>
     </section>

@@ -4,6 +4,7 @@ import cn from 'classnames';
 import { navigate } from 'gatsby';
 import home from '../images/home.png';
 import Disqus from 'gatsby-plugin-disqus';
+import d2cf_logo from '../images/d2cf_logo.jpg'
 function renderSection1(props) {
   return (
     <section className={css(section1Styles.section1)}>
@@ -20,7 +21,7 @@ function renderSection2(props) {
           <div
             style={{ '--src': `url(${home})` }}
             className={css(section2Styles.content_box1)}
-            onClick={() => {navigate("/index")}}
+            onClick={() => {navigate("/")}}
           />
 
           <button className={css(section2Styles.btn)} onClick={() => {navigate("/about")}}>
@@ -38,15 +39,12 @@ function renderSection2(props) {
       </div>
 
       <div className={css(section2Styles.main__text)}>
-        Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing
-        particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.
-        It is a way I have of driving off the spleen and regulating circulation. Whenever I find myself growing grim
-        about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily
-        pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my
-        hypos get such an upper hand of me, that it requires a strong moral principle to prevent me from deliberately
-        stepping into the street, and methodically knocking people’s hats off—then, I account it high time to get to sea
-        as soon as I can. There is nothing surprising in this. If they but knew it, almost all men in their degree, some
-        time or other, cherish very nearly the same feelings towards the ocean with me.
+        My name is William Mitchell, I am a Senior at the University of Iowa. I am a Computer Science Engineering major with a focus on software engineering and machine learning. 
+        <br></br> 
+        My journey with computer science began with Engineering Problem Solving 2 where we learned to code for the first time. 
+        <br></br>
+        Currently I work for the Doorway to College Foundation developing softwa
+        <img src={d2cf_logo} alt='d2cf_logo' style={{width: '100%'}}></img>
       </div>
       <div className={css(section2Styles.comment_styling)}>
       <Disqus
