@@ -59,7 +59,7 @@ function renderSection2(props) {
 
         <div className={css(section2Styles.rect3)}>
           <div className={css(section2Styles.txt)}>
-            <div style={{textAlign: 'center', fontSize: '30px', textDecoration: 'underline', textUnderlinePosition: 'under', fontWeight: 'bold'}}> Shay </div>
+            <div style={{textAlign: 'center', fontSize: '30px', textDecoration: 'underline', textUnderlinePosition: 'under', fontWeight: 'bold'}}> Mitch </div>
               I'm an Electrical Engineering student from Iowa City, IA. My hobbies include dirt biking and playing fetch with my two dogs every morning and evening. I spend almost all of my free time machining. Click my page to learn more!
               <br></br>
               <br></br>
