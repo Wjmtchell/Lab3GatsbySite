@@ -4,6 +4,7 @@ import cn from 'classnames';
 import { navigate } from 'gatsby';
 import home from '../images/home.png';
 import shay from '../images/shay.jpg';
+import mitch from '../images/mitch.jpg'
 
 function renderSection1(props) {
   return (
