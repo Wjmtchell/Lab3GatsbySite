@@ -48,7 +48,7 @@ function renderSection2(props) {
         as soon as I can. There is nothing surprising in this. If they but knew it, almost all men in their degree, some
         time or other, cherish very nearly the same feelings towards the ocean with me.
       </div>
-      <div>
+      <div className={css(section2Styles.comment_styling)}>
       <Disqus
         identifier="williamPage"
         title="William"
@@ -263,7 +263,11 @@ const section2Styles = StyleSheet.create({
     position: 'relative',
     flexGrow: 1,
     margin: '2px 2px 2px 182px'
-  }
+  },
+  comment_styling: {
+    width: '80%',
+    float: 'left'
+  },
 });
 
 const styles = StyleSheet.create({
