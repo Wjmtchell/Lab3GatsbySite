@@ -18,7 +18,7 @@ function renderSection2(props) {
   return (
     <section className={css(section2Styles.section2)}>
       <h1 className={css(section2Styles.title)}>
-        We’re a collection of two CSEs and an EE that met in this class. Our senior design project is implementing a database system to streamline the management of a school in Taiwan. The system will provide a centralized platform for storing and organizing important information about students, teachers, and even classes and resources. This will make it easy to track and manage the operations.
+        Test We’re a collection of two CSEs and an EE that met in this class. Our senior design project is implementing a database system to streamline the management of a school in Taiwan. The system will provide a centralized platform for storing and organizing important information about students, teachers, and even classes and resources. This will make it easy to track and manage the operations.
       </h1>
 
       <div className={css(section2Styles.content_box)}>
@@ -26,7 +26,7 @@ function renderSection2(props) {
           <div
             style={{ '--src': `url(${home})` }}
             className={css(section2Styles.content_box1)}
-            onClick={() => {navigate("/")}}
+            onClick={() => {navigate("/index")}}
           />
 
           <button className={css(section2Styles.btn2)} onClick={() => {navigate("/mitchell")}}>
@@ -60,7 +60,7 @@ function renderSection2(props) {
 
         <div className={css(section2Styles.rect3)}>
           <div className={css(section2Styles.txt1)}>
-          <div style={{textAlign: 'center', fontSize: '30px', textDecoration: 'underline', textUnderlinePosition: 'under', fontWeight: 'bold'}}> Shay </div>
+          <div style={{textAlign: 'center', fontSize: '30px', textDecoration: 'underline', textUnderlinePosition: 'under', fontWeight: 'bold'}}> Mitch </div>
             I'm an Electrical Engineering student from Iowa City, IA. My hobbies include dirt biking and playing fetch with my two dogs every morning and evening. I spend almost all of my free time machining. Click my page to learn more!
             <br></br>
             <br></br>
