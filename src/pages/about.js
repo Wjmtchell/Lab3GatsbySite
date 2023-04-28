@@ -26,7 +26,7 @@ function renderSection2(props) {
           <div
             style={{ '--src': `url(${home})` }}
             className={css(section2Styles.content_box1)}
-            onClick={() => {navigate("/home")}}
+            onClick={() => {navigate("/index")}}
           />
 
           <button className={css(section2Styles.btn2)} onClick={() => {navigate("/mitchell")}}>
@@ -80,7 +80,7 @@ function renderSection2(props) {
             <br></br>
             <b>Email:</b> william-j-mitchell@uiowa.edu
             <br></br>
-            <img src={william} alt='Shay' style={{width: '100%'}}></img>
+            <img src={william} alt='William' style={{width: '100%'}}></img>
           </div>
         </div>
       </div>
