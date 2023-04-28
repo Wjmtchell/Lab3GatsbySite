@@ -64,7 +64,12 @@ function renderSection2(props) {
         <br></br>
         <br></br>
       </div>
-      <div className={css(section2Styles.main__text)} style={{fontWeight: 'bold', textDecoration: 'underline', textUnderlinePosition: 'under'}}>Personal</div>
+      <div className={css(section2Styles.main__text)} style={{fontWeight: 'bold', textDecoration: 'underline', textUnderlinePosition: 'under'}}>
+        <br></br>
+        <br></br>
+        <br></br>
+        Personal
+      </div>
       <div className={css(section2Styles.main__text)} style={{textAlign: 'center',lineHeight:'1.1'}}>
         <br></br>
         I play fetch with my dogs every morning and every evening in my big backyard and they love it. I also own a CNC machining business which takes up almost all of my free time.
