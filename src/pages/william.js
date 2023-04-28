@@ -47,11 +47,12 @@ function renderSection2(props) {
         stepping into the street, and methodically knocking people’s hats off—then, I account it high time to get to sea
         as soon as I can. There is nothing surprising in this. If they but knew it, almost all men in their degree, some
         time or other, cherish very nearly the same feelings towards the ocean with me.
-      </div>
-      <Disqus
+        <Disqus
         identifier="williamPage"
         title="William"
         />
+      </div>
+
     </section>
 
   );
