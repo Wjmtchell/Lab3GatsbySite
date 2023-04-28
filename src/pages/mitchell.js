@@ -5,6 +5,7 @@ import { navigate } from 'gatsby';
 import home from '../images/home.png';
 import Disqus from 'gatsby-plugin-disqus';
 import mitch_dogs from '../images/mitch_dogs.jpeg';
+import mitch_van from '../images/mitch_van.jpeg';
 
 function renderSection1(props) {
   return (
@@ -41,10 +42,9 @@ function renderSection2(props) {
 
       <div className={css(section2Styles.main__text)} style={{fontWeight: 'bold', textDecoration: 'underline', textUnderlinePosition: 'under'}}>2022</div>
       <div className={css(section2Styles.main__text)} style={{textAlign: 'center',lineHeight:'1.1'}}>
-      <br></br>
-      <br></br>
-      <br></br>
+        <br></br>
         In summer 2022 I worked at Team Adventure USA where we convert Mercedes Sprinter Vans to off-grid vans. I designed the electrical system in the vans. It was a great time and I learned alot.
+        <img src={mitch_van} width ='40%' style={{marginLeft: '20px'}}></img>
         <br></br>
         <br></br>
         <br></br>
@@ -52,17 +52,19 @@ function renderSection2(props) {
       <div className={css(section2Styles.main__text)} style={{fontWeight: 'bold', textDecoration: 'underline', textUnderlinePosition: 'under'}}>2023</div>
       <div className={css(section2Styles.main__text)} style={{textAlign: 'center',lineHeight:'1.1'}}>
         <br></br>
-        <br></br>
-        <br></br>
         For summer 2023, I am working for Esco Group and I am going to be working with control systems for industrial automation.
+        <br></br>
+        <br></br>
+        <br></br>
       </div>
       <div className={css(section2Styles.main__text)} style={{fontWeight: 'bold', textDecoration: 'underline', textUnderlinePosition: 'under'}}>Personal</div>
       <div className={css(section2Styles.main__text)} style={{textAlign: 'center',lineHeight:'1.1'}}>
         <br></br>
-        <br></br>
-        <br></br>
         I play fetch with my dogs every morning and every evening in my big backyard and they love it. I also own a CNC machining business which takes up almost all of my free time.
       <img src={mitch_dogs} width ='40%' style={{marginLeft: '20px'}}></img>
+        <br></br>
+        <br></br>
+        <br></br>
       </div>
       <div className={css(section2Styles.comment_styling)}>
       <Disqus
