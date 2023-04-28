@@ -75,7 +75,7 @@ function renderSection2(props) {
         <div className={css(section2Styles.rect3)}>
           <div className={css(section2Styles.txt)}>
           <div style={{textAlign: 'center', fontSize: '30px', textDecoration: 'underline', textUnderlinePosition: 'under', fontWeight: 'bold'}}> William </div>
-            I'm a Computer Science and Engineering student from Waterloo, IA. I was originally a Mechanical Engineer, but I enjoyed my experience with the Computer Science Engineering Faculty so much that I changed. I spend most of my time at my computer working on software projects. 
+            I'm a Computer Science and Engineering student from Waterloo, IA. I was originally a Mechanical Engineer, but I enjoyed my experience with the Computer Science Engineering Faculty so much that I changed. I spend most of my time at my computer working on software projects. Check out <a href="/william">my page</a> to learn more.
             <br></br>
             <br></br>
             <b>Email:</b> william-j-mitchell@uiowa.edu
