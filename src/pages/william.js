@@ -266,7 +266,7 @@ const section2Styles = StyleSheet.create({
   },
   comment_styling: {
     width: '80%',
-    float: 'left'
+    float: 'right'
   },
 });
 
