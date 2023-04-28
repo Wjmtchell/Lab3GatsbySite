@@ -309,7 +309,7 @@ const section2Styles = StyleSheet.create({
     outline: '2px solid rgb(70,70,70)',
     outlineOffset: -2,
     position: 'relative',
-    flex: '0 1 370px',
+    flex: '0 1 500px',
     minHeight: 688
   },
   txt1: {
@@ -326,7 +326,7 @@ const section2Styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     position: 'relative',
-    flex: '0 1 370px'
+    flex: '0 1 500px'
   },
   rect32: {
     borderRadius: '10px 10px 10px 10px',
