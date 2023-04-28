@@ -60,9 +60,13 @@ function renderSection2(props) {
 
         <div className={css(section2Styles.rect3)}>
           <div className={css(section2Styles.txt1)}>
-            Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and
-            nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of
-            the world. It is a way I have of driving off the spleen and regulating the circulation.
+          <div style={{textAlign: 'center', fontSize: '30px', textDecoration: 'underline', textUnderlinePosition: 'under', fontWeight: 'bold'}}> Shay </div>
+            I'm an Electrical Engineering student from Iowa City, IA. I spend almost all of my free time machining. My hobbies include dirt biking and playing fetch with my two dogs every mroning and evening.
+            <br></br>
+            <br></br>
+            <b>Email:</b> mitchell-kurt@uiowa.edu
+            <br></br>
+            <img src={mitch} alt='Mitch' style={{width: '100%'}}></img>
           </div>
         </div>
 
