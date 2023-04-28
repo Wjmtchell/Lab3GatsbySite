@@ -5,6 +5,7 @@ import { navigate } from 'gatsby';
 import home from '../images/home.png';
 import shay from '../images/shay.jpg';
 import mitch from '../images/mitch.jpg'
+import william from '../images/william.jpg'
 function renderSection1(props) {
   return (
     <section className={css(section1Styles.section1)}>
@@ -73,10 +74,14 @@ function renderSection2(props) {
 
         <div className={css(section2Styles.rect31)}>
           <div className={css(section2Styles.rect32)} />
-          <div className={css(section2Styles.txt2)}>
-            Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and
-            nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of
-            the world. It is a way I have of driving off the spleen and regulating the circulation.
+          <div className={css(section2Styles.txt)}>
+            <div style={{textAlign: 'center', fontSize: '30px', textDecoration: 'underline', textUnderlinePosition: 'under', fontWeight: 'bold'}}> William </div>
+            I'm a Computer Science and Engineering student from Waterloo, IA. I was originally a Mechanical Engineer, but I enjoyed my experience with the Computer Science Engineering Faculty so much that I changed. I spend most of my time at my computer working on software projects. 
+            <br></br>
+            <br></br>
+            <b>Email:</b> william-j-mitchell@uiowa.edu
+            <br></br>
+            <img src={william} alt='Shay' style={{width: '100%'}}></img>
           </div>
         </div>
       </div>
