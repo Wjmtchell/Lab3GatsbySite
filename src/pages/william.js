@@ -50,7 +50,9 @@ function renderSection2(props) {
         <br></br>
       <div className={css(section2Styles.main__text)} style={{textAlign: 'center',lineHeight:'1.1'}}>
         Currently I have an internship with the Doorway to College Foundation developing test preparation software. This has moved my interest from full stack development to non-profit high importance technology. It has emphasized the importance of connecting different types of users. We use a combination of PHP Drupal and AngularJS to serve different parts of our functionality. Connecting both administrators and users has been a major focus in this project. As we move forward we hope to help more students prepare for the tests that can change their lives.
-        <img src={d2cf_logo} width ='40%' style={{marginLeft: '20px'}}></img>
+        <a href="https://www.doorwaytocollege.com/">
+          <img src={d2cf_logo} width ='40%' style={{marginLeft: '20px'}}></img>
+        </a>
       </div>
       <div className={css(section2Styles.comment_styling)}>
       <Disqus
