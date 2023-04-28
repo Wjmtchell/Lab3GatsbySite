@@ -249,7 +249,7 @@ const section2Styles = StyleSheet.create({
     width: '83.33%',
     position: 'relative',
     flexGrow: 1,
-    margin: '124px 2.36% 12px 14.31%'
+    margin: '50% 2.36% 12px 14.31%',
   },
   flexRow__cell: {
     '@media (max-width: 1199px)': {
