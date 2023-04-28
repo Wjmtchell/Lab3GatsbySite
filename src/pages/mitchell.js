@@ -45,6 +45,9 @@ function renderSection2(props) {
       <br></br>
       <br></br>
         In summer 2022 I worked at Team Adventure USA where we convert Mercedes Sprinter Vans to off-grid vans. I designed the electrical system in the vans. It was a great time and I learned alot.
+        <br></br>
+        <br></br>
+        <br></br>
       </div>
       <div className={css(section2Styles.main__text)} style={{fontWeight: 'bold', textDecoration: 'underline', textUnderlinePosition: 'under'}}>2023</div>
       <div className={css(section2Styles.main__text)} style={{textAlign: 'center',lineHeight:'1.1'}}>
