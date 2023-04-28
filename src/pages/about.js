@@ -72,10 +72,9 @@ function renderSection2(props) {
 
         <div className={css(section2Styles.flexRow__spacer)} />
 
-        <div className={css(section2Styles.rect31)}>
-          <div className={css(section2Styles.rect32)} />
+        <div className={css(section2Styles.rect3)}>
           <div className={css(section2Styles.txt)}>
-            <div style={{textAlign: 'center', fontSize: '30px', textDecoration: 'underline', textUnderlinePosition: 'under', fontWeight: 'bold'}}> William </div>
+          <div style={{textAlign: 'center', fontSize: '30px', textDecoration: 'underline', textUnderlinePosition: 'under', fontWeight: 'bold'}}> William </div>
             I'm a Computer Science and Engineering student from Waterloo, IA. I was originally a Mechanical Engineer, but I enjoyed my experience with the Computer Science Engineering Faculty so much that I changed. I spend most of my time at my computer working on software projects. 
             <br></br>
             <br></br>
