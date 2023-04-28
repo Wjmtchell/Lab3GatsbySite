@@ -44,7 +44,7 @@ function renderSection2(props) {
       <div className={css(section2Styles.main__text)} style={{textAlign: 'center',lineHeight:'1.1'}}>
         <br></br>
         In summer 2022 I worked at Team Adventure USA where we convert Mercedes Sprinter Vans to off-grid vans. I designed the electrical system in the vans. It was a great time and I learned alot.
-        <img src={mitch_van} width ='40%' style={{marginLeft: '20px'}}></img>
+      <img src={mitch_van} width ='40%' style={{marginLeft: '20px'}}></img>
         <br></br>
         <br></br>
         <br></br>
@@ -52,7 +52,7 @@ function renderSection2(props) {
       <div className={css(section2Styles.main__text)} style={{fontWeight: 'bold', textDecoration: 'underline', textUnderlinePosition: 'under'}}>2023</div>
       <div className={css(section2Styles.main__text)} style={{textAlign: 'center',lineHeight:'1.1'}}>
         <br></br>
-        For summer 2023, I am working for Esco Group and I am going to be working with control systems for industrial automation.
+        For summer 2023, I am working for Esco Group and I am going to be working on control systems for industrial automation.
         <br></br>
         <br></br>
         <br></br>
