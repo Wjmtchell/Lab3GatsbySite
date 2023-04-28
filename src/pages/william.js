@@ -20,7 +20,7 @@ function renderSection2(props) {
           <div
             style={{ '--src': `url(${home})` }}
             className={css(section2Styles.content_box1)}
-            onClick={() => {navigate("/home")}}
+            onClick={() => {navigate("/index")}}
           />
 
           <button className={css(section2Styles.btn)} onClick={() => {navigate("/about")}}>
