@@ -64,8 +64,7 @@ export default function AboutPage(props) {
         <Disqus
         identifier="williamPage"
         title="William"
-        url={window.location.href}
-      />
+        />
       </main>
     </React.Fragment>
   );
