@@ -41,10 +41,10 @@ function renderSection2(props) {
       <div className={css(section2Styles.main__text)}>
         My name is William Mitchell, I am a Senior at the University of Iowa. I am a Computer Science Engineering major with a focus on software engineering and machine learning. 
         <br></br> 
-        My journey with computer science began with Engineering Problem Solving 2 where we learned to code for the first time. 
+        My journey with computer science began with Engineering Problem Solving 2 where we learned to code for the first time. Throughout my College career I have deveoloped skills that have helped me perform in the field of my internships. Throught the University I have learned about the important basis for Computer Science. My knowledge of database systems and development gained from the University help me every day at my internship. As we move towards making our final project I can not wait to apply these skills on a project made from scratch.
         <br></br>
-        Currently I work for the Doorway to College Foundation developing softwa
-        <img src={d2cf_logo} alt='d2cf_logo' style={{width: '100%'}}></img>
+        Currently I have an internship with the Doorway to College Foundation developing test preparation software. This has moved my interest from full stack development to non-profit high importance technology. It has emphasized the importance of connecting different types of users. We use a combination of Drupal and Angular to serve different parts of our functionality. Connecting both administrators and users has been a major focus in this project. As we move forward we hope to help more students prepare for the tests that can change their lives.
+        <img src={d2cf_logo} width ='40%' style={{marginLeft: '20px'}}></img>
       </div>
       <div className={css(section2Styles.comment_styling)}>
       <Disqus
