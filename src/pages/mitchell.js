@@ -5,7 +5,7 @@ import { navigate } from 'gatsby';
 import home from '../images/home.png';
 import Disqus from 'gatsby-plugin-disqus';
 import mitch_dogs from '../images/mitch_dogs.jpeg';
-import mitch_van from '../images/mitch_van.jpeg';
+import mitch_van from '../images/mitch_van.jpg';
 
 function renderSection1(props) {
   return (
