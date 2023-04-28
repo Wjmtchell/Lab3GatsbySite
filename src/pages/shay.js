@@ -4,6 +4,9 @@ import cn from 'classnames';
 import { navigate } from 'gatsby';
 import home from '../images/home.png';
 import Disqus from 'gatsby-plugin-disqus';
+import ibmi from '../images/ibmi.png';
+import ibm from '../images/ibm.jpg';
+
 function renderSection1(props) {
   return (
     <section className={css(section1Styles.section1)}>
@@ -37,16 +40,21 @@ function renderSection2(props) {
         </div>
       </div>
 
-      <div className={css(section2Styles.main__text)}>
-        Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing
-        particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.
-        It is a way I have of driving off the spleen and regulating circulation. Whenever I find myself growing grim
-        about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily
-        pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my
-        hypos get such an upper hand of me, that it requires a strong moral principle to prevent me from deliberately
-        stepping into the street, and methodically knocking people’s hats off—then, I account it high time to get to sea
-        as soon as I can. There is nothing surprising in this. If they but knew it, almost all men in their degree, some
-        time or other, cherish very nearly the same feelings towards the ocean with me.
+      <div className={css(section2Styles.main__text)} style={{fontWeight: 'bold', textDecoration: 'underline', textUnderlinePosition: 'under'}}>2022</div>
+      <div className={css(section2Styles.main__text)} style={{textAlign: 'center',lineHeight:'1.1'}}>
+      <br></br>
+      <br></br>
+      <br></br>
+        In summer 2022, I had a remote internship with IBM as back-end software engineer working on the IBM i operating system. It was a great experience to work in the industry and see how a historical company operates. A lot of the people that work there have been at IBM for upwards of 30 years, so it was really cool to meet some veterans of the CS field. They had a lot of neat things to share and teach me about. I also was able to brush up on my C++ skills while learning about a whole new operating system and infrastructure.
+      <img src={ibmi} width ='40%' style={{marginLeft: '20px'}}></img>
+      </div>
+      <div className={css(section2Styles.main__text)} style={{fontWeight: 'bold', textDecoration: 'underline', textUnderlinePosition: 'under'}}>2023</div>
+      <div className={css(section2Styles.main__text)} style={{textAlign: 'center',lineHeight:'1.1'}}>
+        <br></br>
+        <br></br>
+        <br></br>
+        For summer 2023, I'm going back to IBM, this time for an in-person internship in Rochester, MN. I'm excited to get back to a place that I enjoyed working at and to meet new people in my field. Thankfully I'll have Teddy to keep me company in Minnesota! I'm hoping to improve more on my professional soft skills as well as improving my industry-relevant computer science skills. I enjoyed the people I worked with last summer, so hopefully some of them are still left! IBM is a great experience, so I'm really happy to go back.
+      <img src={ibm} width ='40%' style={{marginLeft: '20px'}}></img>
       </div>
       <div className={css(section2Styles.comment_styling)}>
       <Disqus
@@ -164,6 +172,7 @@ const section2Styles = StyleSheet.create({
     flex: '1 0 auto',
     minHeight: 0,
     minWidth: 160,
+    maxHeight: 80,
     margin: '69px 10px 0px'
   },
   btn__text: {
@@ -197,6 +206,7 @@ const section2Styles = StyleSheet.create({
     flex: '1 0 auto',
     minHeight: 0,
     minWidth: 160,
+    maxHeight: 80,
     margin: '69px 10px 0px'
   },
   btn__text1: {
@@ -229,6 +239,7 @@ const section2Styles = StyleSheet.create({
     flex: '1 0 auto',
     minHeight: 0,
     minWidth: 160,
+    maxHeight: 80,
     margin: '68px auto 0px'
   },
   btn__text2: {
@@ -260,7 +271,7 @@ const section2Styles = StyleSheet.create({
     letterSpacing: '0px',
     position: 'relative',
     flexGrow: 1,
-    margin: '2px 2px 2px 182px'
+    margin: '0px 0% 25px 12.5%'
   },
   comment_styling: {
     marginLeft: '20%',
