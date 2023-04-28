@@ -3,6 +3,7 @@ import { StyleSheet, css } from 'aphrodite/no-important';
 import cn from 'classnames';
 import { navigate } from 'gatsby';
 import home from '../images/home.png';
+import shay from '../images/shay.jpg';
 
 function renderSection1(props) {
   return (
@@ -28,11 +29,11 @@ function renderSection2(props) {
             onClick={() => {navigate("/home")}}
           />
 
-          <button className={css(section2Styles.btn)} onClick={() => {navigate("/mitchell")}}>
+          <button className={css(section2Styles.btn2)} onClick={() => {navigate("/mitchell")}}>
             <span className={css(section2Styles.btn__text)}>Mitchell’s Page</span>
           </button>
 
-          <button className={css(section2Styles.btn1)} onClick={() => {navigate("/william")}}>
+          <button className={css(section2Styles.btn2)} onClick={() => {navigate("/william")}}>
             <span className={css(section2Styles.btn__text)}>William’s Page</span>
           </button>
 
@@ -45,9 +46,13 @@ function renderSection2(props) {
       <div className={css(section2Styles.flexRow)}>
         <div className={css(section2Styles.rect3)}>
           <div className={css(section2Styles.txt)}>
-            Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and
-            nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of
-            the world. It is a way I have of driving off the spleen and regulating the circulation.
+            <div style={{textAlign: 'center', fontSize: '30px', textDecoration: 'underline', textUnderlinePosition: 'under', fontWeight: 'bold'}}> Shay </div>
+            I'm a Computer Science and Engineering student from Waukee, IA. I was originally a Biomedical Engineer, but decided to switch to CSE at the end of my freshman year. My hobbies include watching/playing basketball, video games, and hanging out with my partner's cat. Her name is Teddy!
+            <br></br>
+            <br></br>
+            <b>Email:</b> shay-london@uiowa.edu
+            <br></br>
+            <img src={shay} alt='Shay' style={{width: '100%'}}></img>
           </div>
         </div>
 
@@ -193,21 +198,6 @@ const section2Styles = StyleSheet.create({
     position: 'relative',
     minWidth: 180
   },
-  btn: {
-    display: 'flex',
-    flexDirection: 'column',
-    backgroundColor: 'rgb(70,70,70)',
-    borderRadius: '10px 10px 10px 10px',
-    width: 160,
-    height: 80,
-    cursor: 'pointer',
-    boxShadow: '0px 4px 4px 0px rgba(0,0,0,0.247)',
-    position: 'relative',
-    flex: '1 0 auto',
-    minHeight: 0,
-    minWidth: 160,
-    margin: '69px 10px 0px'
-  },
   btn__text: {
     '@media (max-width: 1199px)': {
       fontSize: '20px'
@@ -225,21 +215,6 @@ const section2Styles = StyleSheet.create({
     width: '100%',
     height: 80,
     position: 'relative'
-  },
-  btn1: {
-    display: 'flex',
-    flexDirection: 'column',
-    backgroundColor: 'rgb(70,70,70)',
-    borderRadius: '10px 10px 10px 10px',
-    width: 160,
-    height: 80,
-    cursor: 'pointer',
-    boxShadow: '0px 4px 4px 0px rgba(0,0,0,0.247)',
-    position: 'relative',
-    flex: '1 0 auto',
-    minHeight: 0,
-    minWidth: 160,
-    margin: '69px 10px 0px'
   },
   foreground__cell: {
     display: 'flex',
