@@ -4,8 +4,7 @@ import cn from 'classnames';
 import { navigate } from 'gatsby';
 import home from '../images/home.png';
 import shay from '../images/shay.jpg';
-import mitch from '../images/mitch.jpg'
-import william from '../images/william.jpg'
+
 function renderSection1(props) {
   return (
     <section className={css(section1Styles.section1)}>
@@ -18,7 +17,7 @@ function renderSection2(props) {
   return (
     <section className={css(section2Styles.section2)}>
       <h1 className={css(section2Styles.title)}>
-        We’re a collection of two CSEs and an EE that met in this class. Our senior design project is implementing a database system to streamline the management of a school in Taiwan. The system will provide a centralized platform for storing and organizing important information about students, teachers, and even classes and resources. This will make it easy to track and manage the operations.
+        Test We’re a collection of two CSEs and an EE that met in this class. Our senior design project is implementing a database system to streamline the management of a school in Taiwan. The system will provide a centralized platform for storing and organizing important information about students, teachers, and even classes and resources. This will make it easy to track and manage the operations.
       </h1>
 
       <div className={css(section2Styles.content_box)}>
@@ -26,7 +25,7 @@ function renderSection2(props) {
           <div
             style={{ '--src': `url(${home})` }}
             className={css(section2Styles.content_box1)}
-            onClick={() => {navigate("/home")}}
+            onClick={() => {navigate("/index")}}
           />
 
           <button className={css(section2Styles.btn2)} onClick={() => {navigate("/mitchell")}}>
@@ -59,28 +58,25 @@ function renderSection2(props) {
         <div className={css(section2Styles.flexRow__spacer)} />
 
         <div className={css(section2Styles.rect3)}>
-          <div className={css(section2Styles.txt)}>
-            <div style={{textAlign: 'center', fontSize: '30px', textDecoration: 'underline', textUnderlinePosition: 'under', fontWeight: 'bold'}}> Mitch </div>
-              I'm an Electrical Engineering student from Iowa City, IA. My hobbies include dirt biking and playing fetch with my two dogs every morning and evening. I spend almost all of my free time machining. Click my page to learn more!
-              <br></br>
-              <br></br>
-              <b>Email:</b> mitchell-kurt@uiowa.edu
-              <br></br>
-              <img src={mitch} alt='Mitch' style={{width: '100%'}}></img>
+          <div className={css(section2Styles.txt1)}>
+          <div style={{textAlign: 'center', fontSize: '30px', textDecoration: 'underline', textUnderlinePosition: 'under', fontWeight: 'bold'}}> Shay </div>
+            I'm an Electrical Engineering student from Iowa City, IA. My hobbies include dirt biking and playing fetch with my two dogs every morning and evening. I spend almost all of my free time machining. Click my page to learn more!
+            <br></br>
+            <br></br>
+            <b>Email:</b> mitchell-kurt@uiowa.edu
+            <br></br>
+            <img src={mitch} alt='Mitch' style={{width: '100%'}}></img>
           </div>
         </div>
 
         <div className={css(section2Styles.flexRow__spacer)} />
 
-        <div className={css(section2Styles.rect3)}>
-          <div className={css(section2Styles.txt)}>
-          <div style={{textAlign: 'center', fontSize: '30px', textDecoration: 'underline', textUnderlinePosition: 'under', fontWeight: 'bold'}}> William </div>
-            I'm a Computer Science and Engineering student from Waterloo, IA. I was originally a Mechanical Engineer, but I enjoyed my experience with the Computer Science Engineering Faculty so much that I changed. I spend most of my time at my computer working on software projects. Check out <a href="/william">my page</a> to learn more.
-            <br></br>
-            <br></br>
-            <b>Email:</b> william-j-mitchell@uiowa.edu
-            <br></br>
-            <img src={william} alt='Shay' style={{width: '100%'}}></img>
+        <div className={css(section2Styles.rect31)}>
+          <div className={css(section2Styles.rect32)} />
+          <div className={css(section2Styles.txt2)}>
+            Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and
+            nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of
+            the world. It is a way I have of driving off the spleen and regulating the circulation.
           </div>
         </div>
       </div>
@@ -253,7 +249,7 @@ const section2Styles = StyleSheet.create({
     width: '83.33%',
     position: 'relative',
     flexGrow: 1,
-    margin: '50% 2.36% 12px 14.31%',
+    margin: '25% 2.36% 12px 14.31%'
   },
   flexRow__cell: {
     '@media (max-width: 1199px)': {
