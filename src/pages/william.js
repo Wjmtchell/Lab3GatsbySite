@@ -265,8 +265,7 @@ const section2Styles = StyleSheet.create({
     margin: '2px 2px 2px 182px'
   },
   comment_styling: {
-    width: '80%',
-    float: 'right'
+    marginLeft: '20%',
   },
 });
 
