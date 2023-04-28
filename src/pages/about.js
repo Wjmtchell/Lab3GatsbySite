@@ -18,7 +18,7 @@ function renderSection2(props) {
   return (
     <section className={css(section2Styles.section2)}>
       <h1 className={css(section2Styles.title)}>
-        Test We’re a collection of two CSEs and an EE that met in this class. Our senior design project is implementing a database system to streamline the management of a school in Taiwan. The system will provide a centralized platform for storing and organizing important information about students, teachers, and even classes and resources. This will make it easy to track and manage the operations.
+        We’re a collection of two CSEs and an EE that met in this class. Our senior design project is implementing a database system to streamline the management of a school in Taiwan. The system will provide a centralized platform for storing and organizing important information about students, teachers, and even classes and resources. This will make it easy to track and manage the operations.
       </h1>
 
       <div className={css(section2Styles.content_box)}>
