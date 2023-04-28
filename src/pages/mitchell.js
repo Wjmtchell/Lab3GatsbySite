@@ -3,7 +3,7 @@ import { StyleSheet, css } from 'aphrodite/no-important';
 import cn from 'classnames';
 import { navigate } from 'gatsby';
 import home from '../images/home.png';
-
+import Disqus from 'gatsby-plugin-disqus';
 function renderSection1(props) {
   return (
     <section className={css(section1Styles.section1)}>
@@ -47,6 +47,12 @@ function renderSection2(props) {
         stepping into the street, and methodically knocking people’s hats off—then, I account it high time to get to sea
         as soon as I can. There is nothing surprising in this. If they but knew it, almost all men in their degree, some
         time or other, cherish very nearly the same feelings towards the ocean with me. Test.
+      </div>
+      <div className={css(section2Styles.comment_styling)}>
+      <Disqus
+        identifier="williamPage"
+        title="William"
+        />
       </div>
     </section>
   );
@@ -255,7 +261,10 @@ const section2Styles = StyleSheet.create({
     position: 'relative',
     flexGrow: 1,
     margin: '2px 2px 2px 182px'
-  }
+  },
+  comment_styling: {
+    marginLeft: '20%',
+  },
 });
 
 const styles = StyleSheet.create({
