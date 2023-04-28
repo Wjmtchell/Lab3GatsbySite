@@ -235,7 +235,8 @@ const section2Styles = StyleSheet.create({
     cursor: 'pointer',
     position: 'relative',
     minWidth: 160,
-    margin: '68px 11px 0px 9px'
+    margin: '68px 11px 0px 9px',
+    maxHeight: 80
   },
   flexRow: {
     '@media (max-width: 1199px)': {

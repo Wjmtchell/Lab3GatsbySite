@@ -164,6 +164,7 @@ const section2Styles = StyleSheet.create({
     flex: '1 0 auto',
     minHeight: 0,
     minWidth: 160,
+    maxHeight: 80,
     margin: '69px 10px 0px'
   },
   btn__text: {
@@ -197,6 +198,7 @@ const section2Styles = StyleSheet.create({
     flex: '1 0 auto',
     minHeight: 0,
     minWidth: 160,
+    maxHeight: 80,
     margin: '69px 10px 0px'
   },
   btn__text1: {
@@ -229,6 +231,7 @@ const section2Styles = StyleSheet.create({
     flex: '1 0 auto',
     minHeight: 0,
     minWidth: 160,
+    maxHeight: 80,
     margin: '68px auto 0px'
   },
   btn__text2: {
