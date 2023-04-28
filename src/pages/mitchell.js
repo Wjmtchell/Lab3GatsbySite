@@ -6,6 +6,7 @@ import home from '../images/home.png';
 import Disqus from 'gatsby-plugin-disqus';
 import mitch_dogs from '../images/mitch_dogs.jpeg';
 import mitch_van from '../images/mitch_van.jpg';
+import mitch_automation from '../images/mitch_automation.jpg';
 
 function renderSection1(props) {
   return (
@@ -49,10 +50,16 @@ function renderSection2(props) {
         <br></br>
         <br></br>
       </div>
-      <div className={css(section2Styles.main__text)} style={{fontWeight: 'bold', textDecoration: 'underline', textUnderlinePosition: 'under'}}>2023</div>
+      <div className={css(section2Styles.main__text)} style={{fontWeight: 'bold', textDecoration: 'underline', textUnderlinePosition: 'under'}}>
+        <br></br>
+        <br></br>
+        <br></br>
+        2023
+      </div>
       <div className={css(section2Styles.main__text)} style={{textAlign: 'center',lineHeight:'1.1'}}>
         <br></br>
         For summer 2023, I am working for Esco Group and I am going to be working on control systems for industrial automation.
+        <img src={mitch_automation} width ='40%' style={{marginLeft: '20px'}}></img>
         <br></br>
         <br></br>
         <br></br>
