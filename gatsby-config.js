@@ -5,5 +5,11 @@ module.exports = {
   siteMetadata: {
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: ['gatsby-plugin-aphrodite'],
+  plugins: [{
+    resolve: `gatsby-plugin-disqus`,
+    options: {
+        shortname: `team1gatsby`
+    }
+  },
+  'gatsby-plugin-aphrodite'],
 }

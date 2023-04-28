@@ -3,7 +3,7 @@ import { StyleSheet, css } from 'aphrodite/no-important';
 import cn from 'classnames';
 import { navigate } from 'gatsby';
 import home from '../images/home.png';
-
+import Disqus from 'gatsby-plugin-disqus';
 function renderSection1(props) {
   return (
     <section className={css(section1Styles.section1)}>
@@ -48,7 +48,9 @@ function renderSection2(props) {
         as soon as I can. There is nothing surprising in this. If they but knew it, almost all men in their degree, some
         time or other, cherish very nearly the same feelings towards the ocean with me.
       </div>
+
     </section>
+
   );
 }
 
@@ -59,6 +61,11 @@ export default function AboutPage(props) {
       <main className={cn(css(styles.main), 'about-page')}>
         <div className={css(styles.main__cell)}>{renderSection1(props)}</div>
         <div className={css(styles.main__cell)}>{renderSection2(props)}</div>
+        <Disqus
+        identifier="williamPage"
+        title="William"
+        url={window.location.href}
+      />
       </main>
     </React.Fragment>
   );
