@@ -43,16 +43,33 @@ function renderSection2(props) {
       </div>
 
       <div className={css(section2Styles.flexRow)}>
-        <div className={css(section2Styles.flexRow__cell)}>
-          <div className={css(section2Styles.rect3)} />
+        <div className={css(section2Styles.rect3)}>
+          <div className={css(section2Styles.txt)}>
+            Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and
+            nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of
+            the world. It is a way I have of driving off the spleen and regulating the circulation.
+          </div>
         </div>
+
         <div className={css(section2Styles.flexRow__spacer)} />
-        <div className={css(section2Styles.flexRow__cell)}>
-          <div className={css(section2Styles.rect3)} />
+
+        <div className={css(section2Styles.rect3)}>
+          <div className={css(section2Styles.txt1)}>
+            Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and
+            nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of
+            the world. It is a way I have of driving off the spleen and regulating the circulation.
+          </div>
         </div>
+
         <div className={css(section2Styles.flexRow__spacer)} />
-        <div className={css(section2Styles.flexRow__cell)}>
-          <div className={css(section2Styles.rect3)} />
+
+        <div className={css(section2Styles.rect31)}>
+          <div className={css(section2Styles.rect32)} />
+          <div className={css(section2Styles.txt2)}>
+            Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and
+            nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of
+            the world. It is a way I have of driving off the spleen and regulating the circulation.
+          </div>
         </div>
       </div>
     </section>
@@ -274,11 +291,60 @@ const section2Styles = StyleSheet.create({
     flexGrow: 1,
     minHeight: 688
   },
+  txt: {
+    font: '20px/1.4 Arial, Helvetica, Arial, serif',
+    color: 'rgb(0,0,0)',
+    letterSpacing: '0px',
+    position: 'relative',
+    flexGrow: 1,
+    margin: 7
+  },
   flexRow__spacer: {
-    '@media (max-width: 1199px)': {
-      display: 'none'
-    },
-    flex: '0 1 45px'
+    flex: '1 0 auto'
+  },
+  rect3: {
+    display: 'flex',
+    flexDirection: 'column',
+    borderRadius: '10px 10px 10px 10px',
+    outline: '2px solid rgb(70,70,70)',
+    outlineOffset: -2,
+    position: 'relative',
+    flex: '0 1 370px',
+    minHeight: 688
+  },
+  txt1: {
+    font: '20px/1.4 Arial, Helvetica, Arial, serif',
+    color: 'rgb(0,0,0)',
+    letterSpacing: '0px',
+    position: 'absolute',
+    top: 7,
+    bottom: 7,
+    left: 7,
+    right: 7
+  },
+  rect31: {
+    display: 'flex',
+    flexDirection: 'column',
+    position: 'relative',
+    flex: '0 1 370px'
+  },
+  rect32: {
+    borderRadius: '10px 10px 10px 10px',
+    outline: '2px solid rgb(70,70,70)',
+    outlineOffset: -2,
+    position: 'relative',
+    flexGrow: 1,
+    minHeight: 688
+  },
+  txt2: {
+    font: '20px/1.39 Arial, Helvetica, Arial, serif',
+    color: 'rgb(0,0,0)',
+    letterSpacing: '0px',
+    position: 'absolute',
+    top: 7,
+    bottom: 7,
+    left: 7,
+    right: 7
   }
 });
 
