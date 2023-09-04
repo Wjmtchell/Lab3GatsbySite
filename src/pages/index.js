@@ -71,7 +71,8 @@ const section1Styles = StyleSheet.create({
   content_box: {
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: 'rgb(79,236,161)',
+    //backgroundColor: 'rgb(79,236,161)',
+    backgroundColor: 'rgb(124,185,232)',
     borderStyle: 'none',
     borderWidth: '0px',
     outline: '6px solid rgb(0,0,0)',
@@ -144,7 +145,8 @@ const section2Styles = StyleSheet.create({
   btn: {
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: 'rgb(79,236,161)',
+    //backgroundColor: 'rgb(79,236,161)',
+    backgroundColor: 'rgb(124,185,232)',
     borderRadius: '10px 10px 10px 10px',
     outline: '3px solid rgb(70,70,70)',
     outlineOffset: -3,
@@ -193,7 +195,8 @@ const section2Styles = StyleSheet.create({
   btn1: {
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: 'rgb(79,236,161)',
+    //backgroundColor: 'rgb(79,236,161)',
+    backgroundColor: 'rgb(124,185,232)',
     borderRadius: '10px 10px 10px 10px',
     outline: '3px solid rgb(70,70,70)',
     outlineOffset: -3,
@@ -243,7 +246,8 @@ const section2Styles = StyleSheet.create({
   btn2: {
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: 'rgb(79,236,161)',
+    //backgroundColor: 'rgb(79,236,161)',
+    backgroundColor: 'rgb(124,185,232)',
     borderRadius: '10px 10px 10px 10px',
     outline: '3px solid rgb(70,70,70)',
     outlineOffset: -3,
@@ -293,7 +297,8 @@ const section2Styles = StyleSheet.create({
   btn3: {
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: 'rgb(79,236,161)',
+    //backgroundColor: 'rgb(79,236,161)',
+    backgroundColor: 'rgb(124,185,232)',
     borderRadius: '10px 10px 10px 10px',
     outline: '3px solid rgb(70,70,70)',
     outlineOffset: -3,
