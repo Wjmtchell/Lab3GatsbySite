@@ -82,7 +82,7 @@ const section1Styles = StyleSheet.create({
     margin: '0px 0px'
   },
   flexCol__cell: {
-    marginTop: -175,
+    marginTop: -135,
     display: 'flex',
     flexDirection: 'column',
     position: 'relative',
@@ -116,14 +116,12 @@ const section1Styles = StyleSheet.create({
       fontSize: '52px'
     },
     display: 'flex',
-    font: '400 128px/1.36 "Nunito Sans", Helvetica, Arial, serif',
+    font: '600 72px/1.36 "Nunito Sans", Helvetica, Arial, serif',
     color: 'rgb(70,70,70)',
     letterSpacing: '0px',
-    width: 950,
-    height: 175,
     position: 'relative',
     minWidth: 950,
-    margin: '0px auto'
+    margin: 'auto auto'
   }
 });
 
