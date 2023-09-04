@@ -10,7 +10,7 @@ function renderSection1(props) {
         <div className={css(section1Styles.flexCol)}>
           <article className={css(section1Styles.content_box)} />
           <div className={css(section1Styles.flexCol__cell)}>
-            <h1 className={css(section1Styles.hero_title2)}>Team 1 Portfolio</h1>
+            <h1 className={css(section1Styles.hero_title2)}>Student Record and Accounting System</h1>
           </div>
         </div>
       </px-grid>
