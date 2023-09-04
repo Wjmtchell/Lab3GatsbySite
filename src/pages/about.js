@@ -18,7 +18,7 @@ function renderSection2(props) {
   return (
     <section className={css(section2Styles.section2)}>
       <h1 className={css(section2Styles.title)}>
-        Test We’re a collection of two CSEs and an EE that met in this class. Our senior design project is implementing a database system to streamline the management of a school in Taiwan. The system will provide a centralized platform for storing and organizing important information about students, teachers, and even classes and resources. This will make it easy to track and manage the operations.
+        We’re a collection of two CSEs and an EE that met in this class. Our senior design project is implementing a database system to streamline the management of a school in Taiwan. The system will provide a centralized platform for storing and organizing important information about students, teachers, and even classes and resources. This will make it easy to track and manage the operations.
       </h1>
 
       <div className={css(section2Styles.content_box)}>
@@ -174,7 +174,8 @@ const section2Styles = StyleSheet.create({
   content_box: {
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: 'rgb(79,236,161)',
+    //backgroundColor: 'rgb(79,236,161)',
+    backgroundColor: 'rgb(124,185,232)',
     width: 180,
     position: 'absolute',
     top: -200,
@@ -200,7 +201,8 @@ const section2Styles = StyleSheet.create({
     transitionDuration: '0.3s',
     transitionProperty: 'background-color',
     ':hover': {
-      backgroundColor: '#4feca1ff'
+      //backgroundColor: '#4feca1ff'
+      backgroundColor: '#E8AB7C'
     },
     position: 'relative',
     minWidth: 180

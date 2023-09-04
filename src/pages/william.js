@@ -128,7 +128,8 @@ const section2Styles = StyleSheet.create({
   content_box: {
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: 'rgb(79,236,161)',
+    //backgroundColor: 'rgb(79,236,161)',
+    backgroundColor: 'rgb(124,185,232)',
     width: 180,
     position: 'absolute',
     top: -200,
@@ -154,7 +155,8 @@ const section2Styles = StyleSheet.create({
     transitionDuration: '0.3s',
     transitionProperty: 'background-color',
     ':hover': {
-      backgroundColor: '#4feca1ff'
+      //backgroundColor: '#4feca1ff'
+      backgroundColor: '#E8AB7C'
     },
     position: 'relative',
     minWidth: 180
