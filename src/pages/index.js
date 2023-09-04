@@ -22,10 +22,12 @@ function renderSection2(props) {
   return (
     <section className={css(section2Styles.section2)}>
       <div className={css(section2Styles.flexCol)}>
+        <h2 className={css(section1Styles.hero_title3)}>User</h2> <article className={css(section1Styles.content_box1)} />
+        <h2 className={css(section1Styles.hero_title3)}>Password</h2> <article className={css(section1Styles.content_box1)} />
         <button id={'abtn'} className={css(section2Styles.btn)} onClick={() => {navigate("/about")}}>
-          <span className={css(section2Styles.btn__text)}>About Us</span>
+          <span className={css(section2Styles.btn__text)}>Login</span>
         </button>
-
+{/* 
         <button id={'mbtn'} className={css(section2Styles.btn1)} onClick={() => {navigate("/mitchell")}}>
           <span className={css(section2Styles.btn__text1)}>Mitchell</span>
         </button>
@@ -35,9 +37,8 @@ function renderSection2(props) {
         </button>
 
         <button className={css(section2Styles.btn3)} onClick={() => {navigate("/shay")}}>
-          {/* wbtn */}
           <span className={css(section2Styles.btn__text3)}>Shay</span>
-        </button>
+        </button> */}
       </div>
     </section>
   );
@@ -82,6 +83,18 @@ const section1Styles = StyleSheet.create({
     position: 'relative',
     margin: '0px 0px'
   },
+  content_box1: {
+    display: 'flex',
+    flexDirection: 'column',
+    borderStyle: 'none',
+    borderWidth: '0px',
+    outline: '4px solid rgb(0,0,0)',
+    outlineOffset: -4,
+    width: '600px',
+    height: 72,
+    position: 'relative',
+    margin: '0px 0px'
+  },
   flexCol__cell: {
     marginTop: -135,
     display: 'flex',
@@ -123,6 +136,41 @@ const section1Styles = StyleSheet.create({
     position: 'relative',
     minWidth: 950,
     margin: 'auto auto'
+  },
+  hero_title3: {
+    '@media (min-width: 1920px) and (max-width: 2999px)': {
+      textAlign: 'center',
+      justifyContent: 'center'
+    },
+    '@media (max-width: 1919px)': {
+      textAlign: 'center',
+      justifyContent: 'center'
+    },
+    '@media (max-width: 1199px)': {
+      fontSize: '108px'
+    },
+    '@media (max-width: 991px)': {
+      fontSize: '92px'
+    },
+    '@media (max-width: 767px)': {
+      fontSize: '72px'
+    },
+    '@media (max-width: 575px)': {
+      fontSize: '64px'
+    },
+    '@media (max-width: 479px)': {
+      fontSize: '56px'
+    },
+    '@media (max-width: 383px)': {
+      fontSize: '52px'
+    },
+    display: 'flex',
+    font: '400 64px/1.36 "Nunito Sans", Helvetica, Arial, serif',
+    color: 'rgb(70,70,70)',
+    letterSpacing: '0px',
+    position: 'relative',
+    //minWidth: 950,
+    margin: 'auto auto',
   }
 });
 
@@ -150,7 +198,7 @@ const section2Styles = StyleSheet.create({
     borderRadius: '10px 10px 10px 10px',
     outline: '3px solid rgb(70,70,70)',
     outlineOffset: -3,
-    width: 600,
+    width: 200,
     height: 100,
     cursor: 'pointer',
     transitionDuration: '0.3s',
@@ -161,8 +209,8 @@ const section2Styles = StyleSheet.create({
     position: 'relative',
     flex: '1 0 auto',
     minHeight: 0,
-    minWidth: 600,
-    margin: '0px 0px'
+    minWidth: 200,
+    margin: '50px 0px'
   },
   btn__text: {
     '@media (max-width: 1199px)': {
@@ -183,14 +231,13 @@ const section2Styles = StyleSheet.create({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    font: '400 64px/1.16 "Nunito Sans", Helvetica, Arial, serif',
+    font: '400 48px/1.16 "Nunito Sans", Helvetica, Arial, serif',
     color: 'rgb(255,255,255)',
     textAlign: 'center',
     letterSpacing: '0px',
     width: '100%',
     position: 'relative',
     flexGrow: 1,
-    margin: '22px 0px'
   },
   btn1: {
     display: 'flex',
