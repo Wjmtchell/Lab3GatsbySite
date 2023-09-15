@@ -83,9 +83,10 @@ function renderSection2(props) {
         <div className={css(section2Styles.flexRow__spacer)} />
 
         <div className={css(section2Styles.rect3)}>
-        <button className={css(section2Styles.btn2)}>
-          <span className={css(section2Styles.btn__text)}>Part-Time Employees</span>
+        <button className={css(section2Styles.btn2)} onClick={() => {navigate("/employee_list")}}>
+          <span className={css(section2Styles.btn__text)}>Part-Time Employeess</span>
         </button>
+
         <button className={css(section2Styles.btn2)}>
           <span className={css(section2Styles.btn__text)}>Misc.</span>
         </button>
