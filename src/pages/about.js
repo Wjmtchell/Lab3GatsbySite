@@ -9,7 +9,7 @@ import william from '../images/william.jpg'
 function renderSection1(props) {
   return (
     <section className={css(section1Styles.section1)}>
-      <h1 className={css(section1Styles.hero_title)}>Home</h1>
+      <h1 className={css(section1Styles.hero_title)}>HomeTest</h1>
     </section>
   );
 }
