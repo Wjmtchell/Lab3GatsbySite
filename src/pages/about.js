@@ -43,7 +43,7 @@ function renderSection2(props) {
       <div className={css(section2Styles.flexRow)}>
         <div className={css(section2Styles.rect3)}>
         <button className={css(section2Styles.btn2)}>
-          <span className={css(section2Styles.btn__text)}>Students</span>
+          <span className={css(section2Styles.btn__text)}>Studentss</span>
         </button>
         <button className={css(section2Styles.btn2)}>
           <span className={css(section2Styles.btn__text)}>Monthly Summary</span>
