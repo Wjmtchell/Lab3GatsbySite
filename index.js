@@ -30,10 +30,10 @@ express()
       const result = await client.query('SELECT * FROM users WHERE username = $1 AND password= $2', values)
       if (result.rows.length===1){
         req.session.user = username;
-        res.send('Logged In!');
+        //res.send('Logged In!');
         res.redirect('/');
       } else {
-        res.send('Login failed. Please make sure you have entered the correct username and password');
+       //res.send('Login failed. Please make sure you have entered the correct username and password');
         res.redirect('/login')
       }
     } catch (error) {
