@@ -17,7 +17,7 @@ const pool = new Pool({
 express()
   .use(express.static(path.join(__dirname, 'public')))
   .use(bodyParser.urlencoded({extended:false}))
-  .use(session({resave:false,saveUninitialized:false}))
+  .use(session({secret:'Hello World', resave:false,saveUninitialized:false}))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
