@@ -1,19 +1,21 @@
-const express = require('express')
-const path = require('path')
-const { Pool } = require('pg')
-const PORT = process.env.PORT || 5001
+const express = require('express');
+const path = require('path');
+const { Pool } = require('pg');
+const bodyParser = require('body-parser');
+const PORT = process.env.PORT || 5001;
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: {
     rejectUnauthorized: false
   }
-})
+});
 
 
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
+  .use(bodyParser.urlencoded({extended:false}))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
@@ -23,7 +25,7 @@ express()
     try {
       const values = [username,password];
       const client = await pool.connect();
-      const result = await client.query('SELECT * FROM users WHERE username = $1 AND password=$2', values)
+      const result = await client.query('SELECT * FROM users WHERE username = $1 AND password= $2', values)
       if (result.rows.length===1){
         res.send('Logged In!');
       } else {
