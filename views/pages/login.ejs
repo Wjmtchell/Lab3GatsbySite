@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include ("../partials/header.ejs") %>
+      </head>
+<div class="jumbotron text-center">
+  <div style="font-size: xx-large">Login</div>
+</div>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form action="/login/auth" method="POST">
+            <div>
+                <label for="username">Username:</label>
+                <input  type="text" id="username" name="username" required>
+            </div>
+            <br>
+            <div>
+                <label for="password">Password:</label>
+                <input type="text" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
