@@ -31,10 +31,10 @@ express()
       if (result.rows.length===1){
         req.session.user = username;
         //res.send('Logged In!');
-        res.redirect('/');
+        res.redirect('/?message=Login%20Successful');
       } else {
        //res.send('Login failed. Please make sure you have entered the correct username and password');
-        res.redirect('/login')
+        res.redirect('/login?message=Login Failed')
       }
     } catch (error) {
       console.error('Login error', error);
@@ -44,7 +44,7 @@ express()
   .get('/db', async (req, res) => {
     try {
       const client = await pool.connect();
-      const result = await client.query('SELECT * FROM test_table');
+      const result = await client.query('SELECT * FROM users');
       const results = { 'results': (result) ? result.rows : null};
       res.render('pages/db', results );
       client.release();
