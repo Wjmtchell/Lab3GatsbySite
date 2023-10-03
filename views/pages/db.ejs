@@ -3,14 +3,16 @@
 <head>
   <%- include ("../partials/header.ejs") %>
 </head>
-
+<div class="jumbotron text-center">
+  <div style="font-size: xx-large">Login</div>
+</div>
 <body>
 
-<%- include ("../partials/nav.ejs") %>
 
 <div class="container">
 
 <div class="users">
+<form action="/admin/add" method="POST">
   <table class="users-table">
     <thead>
       <tr>
@@ -26,7 +28,24 @@
         <td><%= entry.type %></td>
     </tr>
     <% }) %>
+    <tr><td></td>
+      <td>Username</td>
+      <td>Password</td>
+      <td>Type</td>
+    </tr>
+    <tr>
+      <td><%= results.length + 1 %></td>
+      <td><input class="authfield" type="text" id="username" name="username" required></td>
+      <td><input class="authfield" type="password" id="password" name="password" required></td>
+      <td><select id="type" name="type">
+        <option value="1">Admin</option>
+        <option value="2">Teacher</option>
+        <option value="3">Student</option>
+      </select></td>
+      <td><button type="submit">Add User</button></td>
+    </tr>
   </table>
+</form>
 </div>
 
 </div>
