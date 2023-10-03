@@ -949,3 +949,10 @@
         font-size: 22px;
         color: rgba(0,0,0,1);
       }
+      table {
+        text-align: center;
+      }
+      td, th {
+        border: 1px solid black;
+        padding: 0 10px 0 10px;
+      }
