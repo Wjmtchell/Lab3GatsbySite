@@ -21,12 +21,12 @@
     </thead>
 
     <tr>
-      <% results.forEach(entry => { %>
+      <% results.forEach(function(entry) => { %>
         <td><%= entry.id %></td>
         <td><%= entry.username %></td>
         <td><%= entry.type %></td>
     </tr>
-  <% }) %>
+  <% }); %>
   </table>
 </div>
 
