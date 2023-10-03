@@ -26,6 +26,18 @@
         <td><%= entry.type %></td>
     </tr>
     <% }) %>
+    
+    <tr>
+      <td><%= results.length + 1 %></td>
+      <td><textarea name="username" id="username"></textarea></td>
+      <td><textarea name="password" id="password"></textarea></td>
+      <td><select>
+        <option value="1">Admin</option>
+        <option value="2">Teacher</option>
+        <option value="3">Student</option>
+      </select></td>
+      <td><button type="submit">Add User</button></td>
+    </tr>
   </table>
 </div>
 
