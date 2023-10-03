@@ -38,7 +38,7 @@ express()
         if(result.rows[0].type ==1){ 
           res.redirect('/admin?message=Login%20Successful.%20Welcome%20Admin');
         } else{ 
-          res.redirect('/home?message=Login%20Successful.%20Welcome.');
+          res.redirect('/?message=Login%20Successful.%20Welcome.');
         }
       } else {
        //res.send('Login failed. Please make sure you have entered the correct username and password');

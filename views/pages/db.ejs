@@ -6,7 +6,6 @@
 
 <body>
 
-<%- include ("../partials/nav.ejs") %>
 
 <div class="container">
 
@@ -29,8 +28,8 @@
     
     <tr>
       <td><%= results.length + 1 %></td>
-      <td><textarea name="username" id="username"></textarea></td>
-      <td><textarea name="password" id="password"></textarea></td>
+      <td><input class="authfield" type="text" id="username" name="username" required></td>
+      <td><input class="authfield" type="password" id="password" name="password" required></td>
       <td><select>
         <option value="1">Admin</option>
         <option value="2">Teacher</option>
