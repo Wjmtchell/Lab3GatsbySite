@@ -956,3 +956,12 @@
         border: 1px solid black;
         padding: 0 10px 0 10px;
       }
+.authfield {
+  border: 1px solid black;
+}
+.container{
+  width: 400px;
+  text-align: center;
+  border: 2px solid black;
+  margin-left: 40%;
+}
