@@ -22,10 +22,10 @@ express()
   .set('view engine', 'ejs')
   .get('/', (req, res) => {
     const message = req.query.message || '';
-    res.render('pages/index', message);})
+    res.render('pages/index', {message});})
   .get('/login', (req,res)=> {
     const message = req.query.message || '';
-    res.render("pages/login", message);})
+    res.render("pages/login", {message});})
   .post('/login/auth', async (req,res)=>{
     const {username, password} = req.body;
     try {
