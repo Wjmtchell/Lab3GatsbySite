@@ -10,12 +10,31 @@
 
 <div class="container">
 <h2>Database Results</h2>
+<div class="users">
+  <table class="users-table">
+    <thead>
+      <tr>
+        <th> ID </th>
+        <th> Username </th>
+        <th> User Type </th>
+      </tr>
+    </thead>
 
-<ul>
-    <% results.forEach(function(r) { %>
+    <tr>
+      <% results.forEach(entry => { %>
+        <td><%= entry.id %></td>
+        <td><%= entry.username %></td>
+        <td><%= entry.type %></td>
+    </tr>
+  <% }) %>
+  </table>
+</div>
+
+<!-- <ul>
+    <% results.forEach(function(r) => { %>
         <li><%= r.id %> - <%= r.name %></li>
     <% }); %>
-</ul>
+</ul> -->
 
 </div>
 
