@@ -36,7 +36,7 @@ td, th {
 .authfield {
   border: 1px solid black;
 }
-.container{
+.login-container{
   width: 400px;
   text-align: center;
   border: 2px solid black;
