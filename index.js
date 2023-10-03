@@ -50,12 +50,12 @@ express()
     }
   })
   .get('/admin', async (req, res) => {
-    const message = req.query.message || '';
+
     try {
       const client = await pool.connect();
       const result = await client.query('SELECT * FROM users');
       const results = { 'results': (result) ? result.rows : null};
-      res.render('pages/db', {results, message} );
+      res.render('pages/db', results );
       client.release();
     } catch (err) {
       console.error(err);
@@ -68,7 +68,7 @@ express()
       const client = await pool.connect();
       await client.query('INSERT INTO users (username,password,type) VALUES ($1,$2,$3)',[username,password,type]);
 
-      res.redirect('/admin?message=User%20Added%20Successfully');
+      res.redirect('/admin');
     } catch(error) {
       res.redirect('/admin?message=Error%20Adding%20User');
     }
