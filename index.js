@@ -58,6 +58,7 @@ express()
     }
   })
   .get('/admin', async (req, res) => {
+    const user = req.session.user;
     if(req.session.type != 1){
       res.redirect('/?message=You%20are%20not%20authorized%20to%20access%20that%20page.')
     }else{
@@ -65,7 +66,7 @@ express()
       const client = await pool.connect();
       const result = await client.query('SELECT * FROM users');
       const results = { 'results': (result) ? result.rows : null};
-      res.render('pages/db', {results} );
+      res.render('pages/db', {results, user} );
       client.release();
     } catch (err) {
       console.error(err);
@@ -88,11 +89,12 @@ express()
   .get('/student/:id', async (req,res)=>{
     const id= req.params.id;
     const values = [id];
+    const user = req.session.user;
      try {
        const client = await pool.connect();
        const result = await client.query('SELECT * FROM student_info WHERE uid=($1)',values);
        const studentInfo = result.rows[0];
-       res.render('pages/student_info', {studentInfo});
+       res.render('pages/student_info', {studentInfo,user});
        client.release();
      } catch(error) {
        res.redirect('/?message=Failed%20To%20Find%20StudentInfo')
