@@ -85,7 +85,7 @@ express()
     res.render('pages/student_info', { studentInfo });
      try {
        const client = await pool.connect();
-       const result = await client.query('SELECT * FROM student_info WHERE id=($1)',[req.params.id]);
+       const result = await client.query('SELECT * FROM student_info WHERE uid=($1)',[req.params.id]);
        const studentInfo = result.rows[0];
        res.render('pages/student_info', {studentInfo});
      } catch(error) {
