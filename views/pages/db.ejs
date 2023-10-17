@@ -25,7 +25,13 @@
     <% results.forEach(function(entry) { %>
     <tr>
         <td><%= entry.id %></td>
-        <td><%= entry.username %></td>
+        <td>
+          <% if (entry.type === 2) { %>
+            <a href="/student/<%= entry.id %>"><%= entry.username %></a>
+          <% } else { %>
+            <a href="/employee/<%= entry.id %>"><%= entry.username %></a>
+          <% } %>
+        </td>
         <td><%= entry.type %></td>
     </tr>
     <% }) %>

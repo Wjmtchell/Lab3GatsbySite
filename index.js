@@ -85,7 +85,7 @@ express()
       res.redirect('/admin?message=Error%20Adding%20User');
     }
   })
-  .get('/:id', async (req,res)=>{
+  .get('/student/:id', async (req,res)=>{
     const id= req.params.id;
     const values = [id];
      try {
