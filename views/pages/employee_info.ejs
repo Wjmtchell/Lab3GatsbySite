@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <%- include ("../partials/header.ejs") %>
+<head>
+  <title>Employee Info</title>
+</head>
+<%- include ("../partials/nav.ejs") %>
+<div class="jumbotron text-center">
+    <div style="font-size: xx-large">Employee Info</div>
+</div>
+<body>
+    
+    <div style="text-align: left; font-size: xx-large; margin-top: 20px;">
+        <%= employeeInfo.surname %>, <%= employeeInfo.given_name %>
+    </div>
+    <p style="margin-left: 20px;"><strong>Subjects:</strong> <%= employeeInfo.subjects.join(', ') %></p>
+    <div class="bio-box">
+        <p><strong>Bio:</strong></p>
+        <p><%= employeeInfo.bio %></p>
+    </div>
+    <button id="button1">Pay Stub (WIP)</button>
+</body>
+</html>

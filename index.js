@@ -101,4 +101,18 @@ express()
        res.redirect('/?message=Failed%20To%20Find%20StudentInfo')
      }
   })
+  .get('/employee/:id', async(req,res)=>{
+    const id= req.params.id;
+    const values = [id];
+    const user = req.session.user;
+     try {
+       const client = await pool.connect();
+       const result = await client.query('SELECT * FROM employee_info WHERE uid=($1)',values);
+       const employeeInfo = result.rows[0];
+       res.render('pages/student_info', {employeeInfo,user});
+       client.release();
+     } catch(error) {
+       res.redirect('/?message=Failed%20To%20Find%20EmployeeInfo')
+     }
+  })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))

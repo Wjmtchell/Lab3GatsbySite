@@ -28,9 +28,11 @@
         <td>
           <% if (entry.type === 3) { %>
             <a href="/student/<%= entry.id %>"><%= entry.username %></a>
-          <% } else { %>
+          <% } elsif (entry.type===2) { %>
             <a href="/employee/<%= entry.id %>"><%= entry.username %></a>
-          <% } %>
+          <% } else { %>
+            <%= entry.username %>
+          <% }%>
         </td>
         <td><%= entry.type %></td>
     </tr>
