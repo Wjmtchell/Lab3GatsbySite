@@ -41,11 +41,14 @@ express()
         req.session.user = username;
         req.session.type = result.rows[0].type;
         if(result.rows[0].type ==1){ 
+          client.release();
           res.redirect('/admin?message=Login%20Successful.%20Welcome%20Admin');
         } else{ 
+          client.release();
           res.redirect('/?message=Login%20Successful.%20Welcome.');
         }
       } else {
+        client.release();
        //res.send('Login failed. Please make sure you have entered the correct username and password');
         res.redirect('/login?message=Login Failed');
       }
@@ -77,17 +80,21 @@ express()
       await client.query('INSERT INTO users (username,password,type) VALUES ($1,$2,$3)',[username,password,type]);
 
       res.redirect('/admin');
+      client.release();
     } catch(error) {
       res.redirect('/admin?message=Error%20Adding%20User');
     }
   })
-  .get('/student/:id', async (req,res)=>{
+  .get('/:id', async (req,res)=>{
+    const id= req.params.id;
+    const values = [id];
     res.render('pages/student_info', { studentInfo });
      try {
        const client = await pool.connect();
-       const result = await client.query('SELECT * FROM student_info WHERE uid=($1)',[req.params.id]);
+       const result = await client.query('SELECT * FROM student_info WHERE uid=($1)',values);
        const studentInfo = result.rows[0];
        res.render('pages/student_info', {studentInfo});
+       client.release();
      } catch(error) {
        res.redirect('/?message=Failed%20To%20Find%20StudentInfo')
      }
