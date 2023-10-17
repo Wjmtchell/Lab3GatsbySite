@@ -26,7 +26,7 @@
     <tr>
         <td><%= entry.id %></td>
         <td>
-          <% if (entry.type === 2) { %>
+          <% if (entry.type === 3) { %>
             <a href="/student/<%= entry.id %>"><%= entry.username %></a>
           <% } else { %>
             <a href="/employee/<%= entry.id %>"><%= entry.username %></a>
