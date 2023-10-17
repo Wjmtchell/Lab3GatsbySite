@@ -88,7 +88,6 @@ express()
   .get('/:id', async (req,res)=>{
     const id= req.params.id;
     const values = [id];
-    res.render('pages/student_info', { studentInfo });
      try {
        const client = await pool.connect();
        const result = await client.query('SELECT * FROM student_info WHERE uid=($1)',values);
