@@ -12,7 +12,11 @@ const pool = new Pool({
   }
 });
 
-
+function getOrdinal(n) {
+  var s = ["th", "st", "nd", "rd"];
+  var v = n % 100;
+  return n + (s[(v - 20) % 10] || s[v] || s[0]);
+}
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
@@ -22,7 +26,8 @@ express()
   .set('view engine', 'ejs')
   .get('/', (req, res) => {
     const message = req.query.message || '';
-    res.render('pages/index', {message});})
+    const user = req.session.user;
+    res.render('pages/index', {user, message});})
   .get('/login', (req,res)=> {
     const message = req.query.message || '';
     res.render("pages/login", {message});})
@@ -34,7 +39,7 @@ express()
       const result = await client.query('SELECT * FROM users WHERE username = $1 AND password= $2', values);
       if (result.rows.length===1){
         req.session.user = username;
-
+        req.session.type = result.rows[0].type;
         if(result.rows[0].type ==1){ 
           res.redirect('/admin?message=Login%20Successful.%20Welcome%20Admin');
         } else{ 
@@ -50,17 +55,20 @@ express()
     }
   })
   .get('/admin', async (req, res) => {
-
+    if(req.session.type != 1){
+      res.redirect('/?message=You%20are%20not%20authorized%20to%20access%20that%20page.')
+    }else{
     try {
       const client = await pool.connect();
       const result = await client.query('SELECT * FROM users');
       const results = { 'results': (result) ? result.rows : null};
-      res.render('pages/db', results );
+      res.render('pages/db', {results} );
       client.release();
     } catch (err) {
       console.error(err);
       res.send("Error " + err);
     }
+  }
   })
   .post('/admin/add', async (req,res)=>{
     const {username,password,type}=req.body;
@@ -72,5 +80,16 @@ express()
     } catch(error) {
       res.redirect('/admin?message=Error%20Adding%20User');
     }
+  })
+  .get('/student/:id', async (req,res)=>{
+    res.render('pages/student_info', { studentInfo });
+     try {
+       const client = await pool.connect();
+       const result = await client.query('SELECT * FROM student_info WHERE id=($1)',[req.params.id]);
+       const studentInfo = result.rows[0];
+       res.render('pages/student_info', {studentInfo});
+     } catch(error) {
+       res.redirect('/?message=Failed%20To%20Find%20StudentInfo')
+     }
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
