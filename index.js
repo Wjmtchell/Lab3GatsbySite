@@ -58,7 +58,7 @@ express()
     }
   })
   .get('/admin', async (req, res) => {
-    const user = req.session.user;
+    // const user = req.session.user;
     if(req.session.type != 1){
       res.redirect('/?message=You%20are%20not%20authorized%20to%20access%20that%20page.')
     }else{
@@ -66,7 +66,7 @@ express()
         const client = await pool.connect();
         const result = await client.query('SELECT * FROM users');
         const results = { 'results': (result) ? result.rows : null};
-        res.render('pages/db', {results, user} );
+        res.render('pages/db', {results} );
         client.release();
       } catch (err) {
         console.error(err);
