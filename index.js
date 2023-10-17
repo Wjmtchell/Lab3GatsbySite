@@ -41,14 +41,14 @@ express()
         req.session.user = username;
         req.session.type = result.rows[0].type;
         if(result.rows[0].type ==1){ 
-          client.release();
+         
           res.redirect('/admin?message=Login%20Successful.%20Welcome%20Admin');
         } else{ 
-          client.release();
+        
           res.redirect('/?message=Login%20Successful.%20Welcome.');
         }
       } else {
-        client.release();
+       
        //res.send('Login failed. Please make sure you have entered the correct username and password');
         res.redirect('/login?message=Login Failed');
       }
@@ -62,18 +62,17 @@ express()
     if(req.session.type != 1){
       res.redirect('/?message=You%20are%20not%20authorized%20to%20access%20that%20page.')
     }else{
-    try {
-      const client = await pool.connect();
-      const result = await client.query('SELECT * FROM users');
-      const results = { 'results': (result) ? result.rows : null};
-      res.render('pages/db', {results, user} );
-      client.release();
-    } catch (err) {
-      console.error(err);
-      res.send("Error " + err);
-    }
-  }
-  })
+      try {
+        const client = await pool.connect();
+        const result = await client.query('SELECT * FROM users');
+        const results = { 'results': (result) ? result.rows : null};
+        res.render('pages/db', {results, user} );
+        client.release();
+      } catch (err) {
+        console.error(err);
+        res.send("Error " + err);
+      }
+    }})
   .post('/admin/add', async (req,res)=>{
     const {username,password,type}=req.body;
     try {
