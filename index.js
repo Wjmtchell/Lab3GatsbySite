@@ -109,7 +109,7 @@ express()
        const client = await pool.connect();
        const result = await client.query('SELECT * FROM employee_info WHERE uid=($1)',values);
        const employeeInfo = result.rows[0];
-       res.render('pages/student_info', {employeeInfo,user});
+       res.render('pages/employee_info', {employeeInfo,user});
        client.release();
      } catch(error) {
        res.redirect('/?message=Failed%20To%20Find%20EmployeeInfo')
