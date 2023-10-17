@@ -41,16 +41,18 @@ express()
         req.session.user = username;
         req.session.type = result.rows[0].type;
         if(result.rows[0].type ==1){ 
-         
           res.redirect('/admin?message=Login%20Successful.%20Welcome%20Admin');
+          client.release();
         } else{ 
         
           res.redirect('/?message=Login%20Successful.%20Welcome.');
+          client.release();
         }
       } else {
        
        //res.send('Login failed. Please make sure you have entered the correct username and password');
         res.redirect('/login?message=Login Failed');
+        client.release();
       }
     } catch (error) {
       console.error('Login error', error);
