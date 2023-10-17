@@ -61,9 +61,9 @@ express()
   })
   .get('/admin', async (req, res) => {
     // const user = req.session.user;
-    if(req.session.type != 1){
-      res.redirect('/?message=You%20are%20not%20authorized%20to%20access%20that%20page.')
-    }else{
+    // if(req.session.type != 1){
+    //   res.redirect('/?message=You%20are%20not%20authorized%20to%20access%20that%20page.')
+    // }else{
       try {
         const client = await pool.connect();
         const result = await client.query('SELECT * FROM users');
@@ -73,7 +73,7 @@ express()
       } catch (err) {
         console.error(err);
         res.send("Error " + err);
-      }
+      //}
     }})
   .post('/admin/add', async (req,res)=>{
     const {username,password,type}=req.body;
