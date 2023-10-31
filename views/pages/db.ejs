@@ -3,8 +3,9 @@
 <head>
   <%- include ("../partials/header.ejs") %>
 </head>
+
 <div class="jumbotron text-center">
-  <div style="font-size: xx-large">Login</div>
+  <div style="font-size: xx-large">Welcome Admin</div>
 </div>
 <body>
 
@@ -24,10 +25,19 @@
     <% results.forEach(function(entry) { %>
     <tr>
         <td><%= entry.id %></td>
-        <td><%= entry.username %></td>
+        <td>
+          <% if (entry.type === 3) { %>
+            <a href="/student/<%= entry.id %>"><%= entry.username %></a>
+          <% } else if (entry.type === 2) { %>
+            <a href="/employee/<%= entry.id %>"><%= entry.username %></a>
+          <% } else { %>
+            <%= entry.username %>
+          <% } %>
+        </td>
         <td><%= entry.type %></td>
     </tr>
     <% }) %>
+    <tr><td colspan="3"></td></tr>
     <tr><td></td>
       <td>Username</td>
       <td>Password</td>

@@ -25,7 +25,12 @@
     .jumbotron .lang-logo img {
       max-width: 100%; }
 
-      
+.right {
+  text-align: right;
+}
+.left {
+  text-align: left;
+}
 table {
   text-align: center;
 }
@@ -41,4 +46,9 @@ td, th {
   text-align: center;
   border: 2px solid black;
   margin-left: 40%;
+}
+.bio-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f7f7f7;
 }
