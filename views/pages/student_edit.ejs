@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <%- include ("../partials/header.ejs") %>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Employee Edit</title>
+<title>Student Edit</title>
 
 <script id="applicationScript">
 ///////////////////////////////////////
@@ -2919,7 +2920,7 @@ window.application = new Application();
 </script>
 </head>
 <body>
-<div id="Employee_Edit">
+<div id="Student_Edit">
 	<svg class="Rectangle_5">
 		<rect id="Rectangle_5" rx="0" ry="0" x="0" y="0" width="252" height="1079">
 		</rect>
@@ -2936,14 +2937,14 @@ window.application = new Application();
 		</div>
 	</div>
 	<div id="Page_Title">
-		<span>Employee Edit</span>
+		<span>Student Edit</span>
 	</div>
 	<svg class="Line_1" viewBox="0 0 1 1080">
 		<path id="Line_1" d="M 0 0 L 0 1080">
 		</path>
 	</svg>
-	<div id="Group_23">
-		<div id="Group_18">
+	<div id="Information">
+		<div id="Student_Info_Table">
 			<div id="Group_16">
 				<svg class="Rectangle_2">
 					<rect id="Rectangle_2" rx="0" ry="0" x="0" y="0" width="306" height="75">
@@ -3075,8 +3076,8 @@ window.application = new Application();
 					<rect id="Rectangle_2_b" rx="0" ry="0" x="0" y="0" width="306" height="76">
 					</rect>
 				</svg>
-				<div id="Employee_ID">
-					<span>Employee ID</span>
+				<div id="Student_ID">
+					<span>Student ID</span>
 				</div>
 			</div>
 			<div id="Group_17_b">
@@ -3089,43 +3090,322 @@ window.application = new Application();
 				</div>
 			</div>
 		</div>
-		<div id="Group_19">
-			<svg class="Rectangle_2_cb">
-				<rect id="Rectangle_2_cb" rx="0" ry="0" x="0" y="0" width="306" height="76">
-				</rect>
-			</svg>
-			<div id="Part_Time_or_Full_Time">
-				<span>Part Time or Full Time</span>
-			</div>
-		</div>
-		<div id="Group_20">
-			<svg class="Rectangle_2_cc">
-				<rect id="Rectangle_2_cc" rx="0" ry="0" x="0" y="0" width="281" height="76">
-				</rect>
-			</svg>
-			<div id="Part_Time">
-				<span>Part Time</span>
-			</div>
-			<div id="Group_21">
-				<svg class="Rectangle_2_cd">
-					<rect id="Rectangle_2_cd" rx="0" ry="0" x="0" y="0" width="306" height="76">
-					</rect>
-				</svg>
-				<div id="Salary">
-					<span>Salary</span>
-				</div>
-			</div>
-			<div id="Group_22">
-				<svg class="Rectangle_2_cf">
-					<rect id="Rectangle_2_cf" rx="0" ry="0" x="0" y="0" width="281" height="76">
-					</rect>
-				</svg>
-				<div id="n_00000">
-					<span>100,000</span>
-				</div>
-			</div>
+		<div id="Page_Title_b">
+			<span>Information</span>
 		</div>
 	</div>
+	<div id="Tuition">
+		<div id="Tuition_Table">
+			<div id="Group_36">
+				<div id="Group_25">
+					<svg class="Rectangle_3">
+						<rect id="Rectangle_3" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="Date">
+						<span>Date</span>
+					</div>
+				</div>
+				<div id="Group_27">
+					<svg class="Rectangle_3_cd">
+						<rect id="Rectangle_3_cd" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="Amount">
+						<span>Amount</span>
+					</div>
+				</div>
+				<div id="Group_26">
+					<svg class="Rectangle_3_cg">
+						<rect id="Rectangle_3_cg" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="Description">
+						<span>Description</span>
+					</div>
+				</div>
+			</div>
+			<div id="Group_35">
+				<div id="Group_25_cj">
+					<svg class="Rectangle_3_ck">
+						<rect id="Rectangle_3_ck" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="n_4012023">
+						<span>04/01/2023</span>
+					</div>
+				</div>
+				<div id="Group_27_cm">
+					<svg class="Rectangle_3_cn">
+						<rect id="Rectangle_3_cn" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="n_500">
+						<span>2500</span>
+					</div>
+				</div>
+				<div id="Group_26_cp">
+					<svg class="Rectangle_3_cq">
+						<rect id="Rectangle_3_cq" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="Apr_tuition">
+						<span>Apr tuition</span>
+					</div>
+				</div>
+			</div>
+			<div id="Group_33">
+				<div id="Group_25_ct">
+					<svg class="Rectangle_3_cu">
+						<rect id="Rectangle_3_cu" rx="0" ry="0" x="0" y="0" width="233" height="57">
+						</rect>
+					</svg>
+					<div id="n_3012023">
+						<span>03/01/2023</span>
+					</div>
+				</div>
+				<div id="Group_27_cw">
+					<svg class="Rectangle_3_cx">
+						<rect id="Rectangle_3_cx" rx="0" ry="0" x="0" y="0" width="233" height="57">
+						</rect>
+					</svg>
+					<div id="n_500_cy">
+						<span>2500</span>
+					</div>
+				</div>
+				<div id="Group_26_cz">
+					<svg class="Rectangle_3_c">
+						<rect id="Rectangle_3_c" rx="0" ry="0" x="0" y="0" width="233" height="57">
+						</rect>
+					</svg>
+					<div id="Mar_tuition">
+						<span>Mar tuition</span>
+					</div>
+				</div>
+			</div>
+			<div id="Group_31">
+				<div id="Group_25_c">
+					<svg class="Rectangle_3_da">
+						<rect id="Rectangle_3_da" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="n_2012023">
+						<span>02/01/2023</span>
+					</div>
+				</div>
+				<div id="Group_27_c">
+					<svg class="Rectangle_3_db">
+						<rect id="Rectangle_3_db" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="n_500_c">
+						<span>2500</span>
+					</div>
+				</div>
+				<div id="Group_26_c">
+					<svg class="Rectangle_3_dc">
+						<rect id="Rectangle_3_dc" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="Feb_tuition">
+						<span>Feb tuition</span>
+					</div>
+				</div>
+			</div>
+			<div id="Group_29">
+				<div id="Group_25_dd">
+					<svg class="Rectangle_3_de">
+						<rect id="Rectangle_3_de" rx="0" ry="0" x="0" y="0" width="233" height="57">
+						</rect>
+					</svg>
+					<div id="n_1012023">
+						<span>01/01/2023</span>
+					</div>
+				</div>
+				<div id="Group_27_dg">
+					<svg class="Rectangle_3_dh">
+						<rect id="Rectangle_3_dh" rx="0" ry="0" x="0" y="0" width="233" height="57">
+						</rect>
+					</svg>
+					<div id="n_500_di">
+						<span>2500</span>
+					</div>
+				</div>
+				<div id="Group_26_dj">
+					<svg class="Rectangle_3_dk">
+						<rect id="Rectangle_3_dk" rx="0" ry="0" x="0" y="0" width="233" height="57">
+						</rect>
+					</svg>
+					<div id="Jan_tuition">
+						<span>Jan tuition</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="Page_Title_dm">
+			<span>Tuition</span>
+		</div>
+	</div>
+	<div id="Tuition_dn">
+		<div id="Tuition_Table_do">
+			<div id="Group_36_dp">
+				<div id="Group_25_dq">
+					<svg class="Rectangle_3_dr">
+						<rect id="Rectangle_3_dr" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="Date_ds">
+						<span>Date</span>
+					</div>
+				</div>
+				<div id="Group_27_dt">
+					<svg class="Rectangle_3_du">
+						<rect id="Rectangle_3_du" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="Amount_dv">
+						<span>Amount</span>
+					</div>
+				</div>
+				<div id="Group_26_dw">
+					<svg class="Rectangle_3_dx">
+						<rect id="Rectangle_3_dx" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="Description_dy">
+						<span>Description</span>
+					</div>
+				</div>
+			</div>
+			<div id="Group_35_dz">
+				<div id="Group_25_d">
+					<svg class="Rectangle_3_d">
+						<rect id="Rectangle_3_d" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="n_1042023">
+						<span>01/04/2023</span>
+					</div>
+				</div>
+				<div id="Group_27_d">
+					<svg class="Rectangle_3_ea">
+						<rect id="Rectangle_3_ea" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="n_0">
+						<span>10</span>
+					</div>
+				</div>
+				<div id="Group_26_d">
+					<svg class="Rectangle_3_eb">
+						<rect id="Rectangle_3_eb" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="Pizza">
+						<span>Pizza</span>
+					</div>
+				</div>
+			</div>
+			<div id="Group_33_d">
+				<div id="Group_25_ea">
+					<svg class="Rectangle_3_ec">
+						<rect id="Rectangle_3_ec" rx="0" ry="0" x="0" y="0" width="233" height="57">
+						</rect>
+					</svg>
+					<div id="n_1032023">
+						<span>01/03/2023</span>
+					</div>
+				</div>
+				<div id="Group_27_ed">
+					<svg class="Rectangle_3_ee">
+						<rect id="Rectangle_3_ee" rx="0" ry="0" x="0" y="0" width="233" height="57">
+						</rect>
+					</svg>
+					<div id="n_0_ef">
+						<span>10</span>
+					</div>
+				</div>
+				<div id="Group_26_eg">
+					<svg class="Rectangle_3_eh">
+						<rect id="Rectangle_3_eh" rx="0" ry="0" x="0" y="0" width="233" height="57">
+						</rect>
+					</svg>
+					<div id="Pizza_ei">
+						<span>Pizza</span>
+					</div>
+				</div>
+			</div>
+			<div id="Group_31_ej">
+				<div id="Group_25_ek">
+					<svg class="Rectangle_3_el">
+						<rect id="Rectangle_3_el" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="n_1022023">
+						<span>01/02/2023</span>
+					</div>
+				</div>
+				<div id="Group_27_en">
+					<svg class="Rectangle_3_eo">
+						<rect id="Rectangle_3_eo" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="n_0_ep">
+						<span>10</span>
+					</div>
+				</div>
+				<div id="Group_26_eq">
+					<svg class="Rectangle_3_er">
+						<rect id="Rectangle_3_er" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="Pizza_es">
+						<span>Pizza</span>
+					</div>
+				</div>
+			</div>
+			<div id="Group_29_et">
+				<div id="Group_25_eu">
+					<svg class="Rectangle_3_ev">
+						<rect id="Rectangle_3_ev" rx="0" ry="0" x="0" y="0" width="233" height="57">
+						</rect>
+					</svg>
+					<div id="n_1012023_ew">
+						<span>01/01/2023</span>
+					</div>
+				</div>
+				<div id="Group_27_ex">
+					<svg class="Rectangle_3_ey">
+						<rect id="Rectangle_3_ey" rx="0" ry="0" x="0" y="0" width="233" height="57">
+						</rect>
+					</svg>
+					<div id="n_0_ez">
+						<span>10</span>
+					</div>
+				</div>
+				<div id="Group_26_e">
+					<svg class="Rectangle_3_e">
+						<rect id="Rectangle_3_e" rx="0" ry="0" x="0" y="0" width="233" height="57">
+						</rect>
+					</svg>
+					<div id="Pizza_e">
+						<span>Pizza</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="Page_Title_e">
+			<span>Meals</span>
+		</div>
+	</div>
+	<svg class="Icon_material-add" viewBox="7.5 7.5 36.002 36.002">
+		<path id="Icon_material-add" d="M 43.50204849243164 28.07259750366211 L 28.07259750366211 28.07259750366211 L 28.07259750366211 43.50204849243164 L 22.92944717407227 43.50204849243164 L 22.92944717407227 28.07259750366211 L 7.500000953674316 28.07259750366211 L 7.500000953674316 22.92944717407227 L 22.92944717407227 22.92944717407227 L 22.92944717407227 7.500000953674316 L 28.07259750366211 7.500000953674316 L 28.07259750366211 22.92944717407227 L 43.50204849243164 22.92944717407227 L 43.50204849243164 28.07259750366211 Z">
+		</path>
+	</svg>
+	<svg class="Icon_material-add_e" viewBox="7.5 7.5 36.002 36.002">
+		<path id="Icon_material-add_e" d="M 43.50204849243164 28.07259750366211 L 28.07259750366211 28.07259750366211 L 28.07259750366211 43.50204849243164 L 22.92944717407227 43.50204849243164 L 22.92944717407227 28.07259750366211 L 7.500000953674316 28.07259750366211 L 7.500000953674316 22.92944717407227 L 22.92944717407227 22.92944717407227 L 22.92944717407227 7.500000953674316 L 28.07259750366211 7.500000953674316 L 28.07259750366211 22.92944717407227 L 43.50204849243164 22.92944717407227 L 43.50204849243164 28.07259750366211 Z">
+		</path>
+	</svg>
 </div>
 </body>
 </html>
