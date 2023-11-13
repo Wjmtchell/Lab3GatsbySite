@@ -52,6 +52,9 @@ express()
   .get('/employee_edit', (req,res)=> {
     const message = req.query.message || '';
     res.render("pages/employee_edit", {message});})
+  .get('/test_menu', (req,res)=> {
+    const message = req.query.message || '';
+    res.render("pages/test_menu", {message});})
   .post('/login/auth', async (req,res)=>{
     const {username, password} = req.body;
     try {
