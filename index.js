@@ -31,6 +31,15 @@ express()
   .get('/login', (req,res)=> {
     const message = req.query.message || '';
     res.render("pages/login", {message});})
+  .get('/student_list', (req,res)=> {
+    const message = req.query.message || '';
+    res.render("pages/student_list", {message});})
+  .get('/employee_info', (req,res)=> {
+    const message = req.query.message || '';
+    res.render("pages/employee_info", {message});})
+  .get('/test', (req,res)=> {
+    const message = req.query.message || '';
+    res.render("pages/test", {message});})
   .post('/login/auth', async (req,res)=>{
     const {username, password} = req.body;
     try {
