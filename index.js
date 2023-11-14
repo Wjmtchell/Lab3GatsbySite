@@ -83,6 +83,7 @@ express()
   .get('/employee_list', async (req,res)=> {
     const message = req.query.message || '';
     const user = req.session.user;
+    res.render("pages/employee_list", {user, message});
     try {
       const client = await pool.connect();
       const result = await client.query('SELECT * FROM users WHERE type = 2;');
@@ -93,7 +94,7 @@ express()
       console.error(err);
       res.send("Error " + err);
     }
-    res.render("pages/employee_list", {user, message});})
+    })
   .get('/employee_info', (req,res)=> {
     const message = req.query.message || '';
     const user = req.session.user;
@@ -131,7 +132,7 @@ express()
     }
   })
   .get('/admin', async (req, res) => {
-    // const user = req.session.user;
+    const user = req.session.user;
     if(req.session.type != 1){
       res.redirect('/?message=You%20are%20not%20authorized%20to%20access%20that%20page.')
     }else{
