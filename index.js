@@ -83,7 +83,6 @@ express()
   .get('/employee_list', async (req,res)=> {
     const message = req.query.message || '';
     const user = req.session.user;
-    res.render("pages/employee_list", {user, message});
     try {
       const client = await pool.connect();
       const result = await client.query('SELECT * FROM users WHERE type = 2');
