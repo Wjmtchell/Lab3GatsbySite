@@ -4,7 +4,6 @@ const path = require('path');
 const { Pool } = require('pg');
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 5001;
-const user = 'initial';
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
