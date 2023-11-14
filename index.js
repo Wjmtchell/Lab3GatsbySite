@@ -68,10 +68,19 @@ express()
     const message = req.query.message || '';
     const user = req.session.user;
     res.render("pages/main_menu", {user, message});})
-  .get('/student_list', (req,res)=> {
+  .get('/student_list', async (req,res)=> {
     const message = req.query.message || '';
     const user = req.session.user;
-    res.render("pages/student_list", {user, message});})
+    try {
+      const client = await pool.connect();
+      const result = await client.query('SELECT * FROM users WHERE type = 3');
+      const results = { 'results': (result) ? result.rows : null};
+      res.render('pages/student_list', results);
+      client.release();
+    } catch (err) {
+      console.error(err);
+      res.send("Error " + err);
+    }})
   .get('/student_info', (req,res)=> {
     const message = req.query.message || '';
     const user = req.session.user;
@@ -80,10 +89,20 @@ express()
     const message = req.query.message || '';
     const user = req.session.user;
     res.render("pages/student_edit", {user, message});})
-  .get('/employee_list', (req,res)=> {
+  .get('/employee_list', async (req,res)=> {
     const message = req.query.message || '';
     const user = req.session.user;
-    res.render("pages/employee_list", {user, message});})
+    try {
+      const client = await pool.connect();
+      const result = await client.query('SELECT * FROM users WHERE type = 2');
+      const results = { 'results': (result) ? result.rows : null};
+      res.render('pages/employee_list', results);
+      client.release();
+    } catch (err) {
+      console.error(err);
+      res.send("Error " + err);
+    }
+    })
   .get('/employee_info', (req,res)=> {
     const message = req.query.message || '';
     const user = req.session.user;
@@ -121,7 +140,7 @@ express()
     }
   })
   .get('/admin', async (req, res) => {
-    // const user = req.session.user;
+    const user = req.session.user;
     if(req.session.type != 1){
       res.redirect('/?message=You%20are%20not%20authorized%20to%20access%20that%20page.')
     }else{
