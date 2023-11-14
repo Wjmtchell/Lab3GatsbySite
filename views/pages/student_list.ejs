@@ -1245,7 +1245,7 @@
 	}
 </style>
 </head>
-<%- include ("../partials/nav.ejs") %>
+<%- include ("../partials/nav.ejs") %>english
 	<div class="jumbotron text-center">
 		<div style="font-size: xx-large">Student List</div>
 	  </div>
@@ -1254,8 +1254,8 @@
 		<thead>
 		  <tr>
 			<th> ID </th>
-			<th> Username </th>
-			<th> Edit </th>
+			<th> <%= i18next.t('username', 'Username') %> </th>
+			<th> <%= i18next.t ('Edit','Edit') %> </th>
 		  </tr>
 		</thead><% results.forEach(function(entry) { %>
 		<tr>
