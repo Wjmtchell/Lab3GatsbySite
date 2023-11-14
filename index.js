@@ -87,13 +87,12 @@ express()
       const client = await pool.connect();
       const result = await client.query('SELECT * FROM users WHERE type = 2');
       const results = { 'results': (result) ? result.rows : null};
-      
-      client.release();
+      res.render('pages/employee_list', results);
+
     } catch (err) {
       console.error(err);
       res.send("Error " + err);
-    }
-    res.render('pages/employee_list', results);})
+    }})
   .get('/employee_info', (req,res)=> {
     const message = req.query.message || '';
     const user = req.session.user;
