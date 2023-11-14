@@ -11,12 +11,12 @@
 <body>
     
     <div style="text-align: left; font-size: xx-large; margin-top: 20px;">
-        <%= locals.i18next.t(`studentInfo.${studentInfo.id}.surname`, studentInfo.surname) %>, <%= i18next.t(`studentInfo.${studentInfo.id}.given_name`, studentInfo.given_name) %>
+        <%= locals.i18next.t(`studentInfo.${studentInfo.id}.surname`, '${studentInfo.surname}') %>, <%= i18next.t(`studentInfo.${studentInfo.id}.given_name`, '${studentInfo.given_name}') %>
     </div>
     <p style="margin-left: 20px;"><strong><%= i18next.t('GradeLevel', 'Grade Level:') %></strong> <%= studentInfo.grade_level %></p>
     <div class="bio-box">
         <p><strong><%= locals.i18next.t('Bio', 'Biography:') %></strong></p>
-        <p><%= locals.i18next.t('studentInfo.${studentInfo.id}.bio', studentInfo.bio) %></p>
+        <p><%= locals.i18next.t('studentInfo.${studentInfo.id}.bio', '${studentInfo.bio}') %></p>
     </div>
     <button id="button1">Monthly Tuition (WIP)</button>
     <button id="button2">Monthly Meal Cost (WIP)</button>
