@@ -3,8 +3,25 @@ const session = require('express-session');
 const path = require('path');
 const { Pool } = require('pg');
 const bodyParser = require('body-parser');
+const i18next = require('i18next');
+const Backend = require('i18next-locize-backend');
+const i18nextMiddleware= require('i18next-http-middleware');
 const PORT = process.env.PORT || 5001;
-
+i18next
+    .use(Backend)
+    .use(i18nextMiddleware.LanguageDetector)
+    .init({
+        lng:'en',
+        fallbackLng: 'en',
+        debug: true,
+        saveMissing: true,
+        backend:{
+            projectId: '3cc31e1c-db80-4280-a832-13111693710a',
+            apiKey: '640ced37-c6a4-49ce-8d31-4be7f1879971',
+            referenceLng: 'en',
+            version:'latest'
+        },
+    });
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: {
@@ -19,45 +36,62 @@ function getOrdinal(n) {
 }
 
 express()
+  .use(i18nextMiddleware.handle(i18next))
+  .use((req, res, next) => {
+    // Pass i18next instance to the template
+    res.locals.i18next = i18next;
+    console.log('i18next in locals:', res.locals.i18next); // Add this line for debuggin
+    next();
+  })
   .use(express.static(path.join(__dirname, 'public')))
   .use(bodyParser.urlencoded({extended:false}))
   .use(session({secret:'Hello World', resave:false,saveUninitialized:false}))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
+  .get('/change-language', async(req, res) => {
+    const { lng } = req.query;
+    if (lng) {
+      i18next.changeLanguage(lng);
+    }
+    await i18next.reloadResources();
+    res.redirect('back'); // Redirect back to the previous page
+  })
   .get('/', (req, res) => {
     const message = req.query.message || '';
     const user = req.session.user;
     res.render('pages/index', {user, message});})
   .get('/login', (req,res)=> {
     const message = req.query.message || '';
-    res.render("pages/login", {message});})
+    const user = req.session.user;
+    res.render("pages/login", {user, message});})
   .get('/main_menu', (req,res)=> {
     const message = req.query.message || '';
-    res.render("pages/main_menu", {message});})
+    const user = req.session.user;
+    res.render("pages/main_menu", {user, message});})
   .get('/student_list', (req,res)=> {
     const message = req.query.message || '';
-    res.render("pages/student_list", {message});})
+    const user = req.session.user;
+    res.render("pages/student_list", {user, message});})
   .get('/student_info', (req,res)=> {
     const message = req.query.message || '';
-    res.render("pages/student_info", {message});})
+    const user = req.session.user;
+    res.render("pages/student_info", {user, message});})
   .get('/student_edit', (req,res)=> {
     const message = req.query.message || '';
-    res.render("pages/student_edit", {message});})
+    const user = req.session.user;
+    res.render("pages/student_edit", {user, message});})
   .get('/employee_list', (req,res)=> {
     const message = req.query.message || '';
-    res.render("pages/employee_list", {message});})
+    const user = req.session.user;
+    res.render("pages/employee_list", {user, message});})
   .get('/employee_info', (req,res)=> {
     const message = req.query.message || '';
-    res.render("pages/employee_info", {message});})
+    const user = req.session.user;
+    res.render("pages/employee_info", {user,message});})
   .get('/employee_edit', (req,res)=> {
     const message = req.query.message || '';
-    res.render("pages/employee_edit", {message});})
-  .get('/test_menu', (req,res)=> {
-    const message = req.query.message || '';
-    res.render("pages/test_menu", {message});})
-  .get('/test_menu2', (req,res)=> {
-    const message = req.query.message || '';
-    res.render("pages/test_menu2", {message});})
+    const user = req.session.user;
+    res.render("pages/employee_edit", {user,message});})
   .post('/login/auth', async (req,res)=>{
     const {username, password} = req.body;
     try {

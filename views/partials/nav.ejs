@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
 <nav class="navbar navbar-default navbar-static-top navbar-inverse">
   <div class="container">
     <ul class="nav navbar-nav">
@@ -18,6 +20,16 @@
         <% } else { %>
           <a href="/login">Log In</a>
         <% } %>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <%= i18next.language %> <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="/change-language?lng=en">English</a></li>
+          <li><a href="/change-language?lng=zh">中文</a></li>
+          <!-- Add other languages as needed -->
+        </ul>
       </li>
     </ul>
   </div>
