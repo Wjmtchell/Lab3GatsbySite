@@ -31,6 +31,33 @@ express()
   .get('/login', (req,res)=> {
     const message = req.query.message || '';
     res.render("pages/login", {message});})
+  .get('/main_menu', (req,res)=> {
+    const message = req.query.message || '';
+    res.render("pages/main_menu", {message});})
+  .get('/student_list', (req,res)=> {
+    const message = req.query.message || '';
+    res.render("pages/student_list", {message});})
+  .get('/student_info', (req,res)=> {
+    const message = req.query.message || '';
+    res.render("pages/student_info", {message});})
+  .get('/student_edit', (req,res)=> {
+    const message = req.query.message || '';
+    res.render("pages/student_edit", {message});})
+  .get('/employee_list', (req,res)=> {
+    const message = req.query.message || '';
+    res.render("pages/employee_list", {message});})
+  .get('/employee_info', (req,res)=> {
+    const message = req.query.message || '';
+    res.render("pages/employee_info", {message});})
+  .get('/employee_edit', (req,res)=> {
+    const message = req.query.message || '';
+    res.render("pages/employee_edit", {message});})
+  .get('/test_menu', (req,res)=> {
+    const message = req.query.message || '';
+    res.render("pages/test_menu", {message});})
+  .get('/test_menu2', (req,res)=> {
+    const message = req.query.message || '';
+    res.render("pages/test_menu2", {message});})
   .post('/login/auth', async (req,res)=>{
     const {username, password} = req.body;
     try {

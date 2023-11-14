@@ -1,0 +1,2618 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Edit</title>
+<style id="applicationStylesheet" type="text/css">
+	.mediaViewInfo {
+		--web-view-name: Student Edit;
+		--web-view-id: Student_Edit;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: Student_Edit;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+	#Student_Edit {
+		position: absolute;
+		width: 1920px;
+		height: 1080px;
+		background-color: rgba(255,255,242,1);
+		overflow: hidden;
+		--web-view-name: Student Edit;
+		--web-view-id: Student_Edit;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	#Rectangle_5 {
+		fill: rgba(158,194,255,1);
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_5 {
+		position: absolute;
+		overflow: visible;
+		width: 252px;
+		height: 1079px;
+		left: 0px;
+		top: 0px;
+	}
+	#Monterey {
+		left: 0px;
+		top: 55px;
+		position: absolute;
+		overflow: visible;
+		width: 255px;
+		height: 61px;
+		text-align: center;
+		font-family: Plantagenet Cherokee;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 42px;
+		color: rgba(62,94,148,1);
+		text-transform: capitalize;
+	}
+	#Navigation {
+		position: absolute;
+		width: 219px;
+		height: 27px;
+		left: 1674px;
+		top: 58px;
+		overflow: visible;
+	}
+	#home {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 99px;
+		height: 27px;
+		text-align: center;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(62,94,148,1);
+		text-transform: capitalize;
+	}
+	#Logout {
+		left: 121px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 99px;
+		height: 27px;
+		text-align: center;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(62,94,148,1);
+		text-transform: capitalize;
+	}
+	#Page_Title {
+		left: 785px;
+		top: 38px;
+		position: absolute;
+		overflow: visible;
+		width: 352px;
+		height: 67px;
+		text-align: center;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 60px;
+		color: rgba(62,94,148,1);
+	}
+	#Line_1 {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_1 {
+		overflow: visible;
+		position: absolute;
+		width: 1px;
+		height: 1080px;
+		left: 253.5px;
+		top: 1.5px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Information {
+		position: absolute;
+		width: 587px;
+		height: 655px;
+		left: 343px;
+		top: 164px;
+		overflow: visible;
+	}
+	#Student_Info_Table {
+		position: absolute;
+		width: 587px;
+		height: 604px;
+		left: 0px;
+		top: 51px;
+		overflow: visible;
+	}
+	#Group_16 {
+		position: absolute;
+		width: 306px;
+		height: 75px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_2 {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2 {
+		position: absolute;
+		overflow: visible;
+		width: 306px;
+		height: 75px;
+		left: 0px;
+		top: 0px;
+	}
+	#Name {
+		left: 19px;
+		top: 25px;
+		position: absolute;
+		overflow: visible;
+		width: 61px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 22px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_17 {
+		position: absolute;
+		width: 280px;
+		height: 75px;
+		left: 306px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_2_x {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2_x {
+		position: absolute;
+		overflow: visible;
+		width: 280px;
+		height: 75px;
+		left: 0px;
+		top: 0px;
+	}
+	#Michael_Will {
+		left: 18px;
+		top: 25px;
+		position: absolute;
+		overflow: visible;
+		width: 118px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_16_z {
+		position: absolute;
+		width: 306px;
+		height: 76px;
+		left: 0px;
+		top: 528px;
+		overflow: visible;
+	}
+	#Rectangle_2_ {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2_ {
+		position: absolute;
+		overflow: visible;
+		width: 306px;
+		height: 76px;
+		left: 0px;
+		top: 0px;
+	}
+	#Emergency_Contact_Phone {
+		left: 19px;
+		top: 25px;
+		position: absolute;
+		overflow: visible;
+		width: 281px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 22px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_17_ {
+		position: absolute;
+		width: 281px;
+		height: 76px;
+		left: 306px;
+		top: 528px;
+		overflow: visible;
+	}
+	#Rectangle_2_ba {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2_ba {
+		position: absolute;
+		overflow: visible;
+		width: 281px;
+		height: 76px;
+		left: 0px;
+		top: 0px;
+	}
+	#n_92-621-8915 {
+		left: 18px;
+		top: 25px;
+		position: absolute;
+		overflow: visible;
+		width: 138px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_16_ {
+		position: absolute;
+		width: 306px;
+		height: 75px;
+		left: 0px;
+		top: 453px;
+		overflow: visible;
+	}
+	#Rectangle_2_bb {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2_bb {
+		position: absolute;
+		overflow: visible;
+		width: 306px;
+		height: 75px;
+		left: 0px;
+		top: 0px;
+	}
+	#Emergency_Contact_Name {
+		left: 19px;
+		top: 24px;
+		position: absolute;
+		overflow: visible;
+		width: 274px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 22px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_17_ba {
+		position: absolute;
+		width: 281px;
+		height: 75px;
+		left: 306px;
+		top: 453px;
+		overflow: visible;
+	}
+	#Rectangle_2_bc {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2_bc {
+		position: absolute;
+		overflow: visible;
+		width: 281px;
+		height: 75px;
+		left: 0px;
+		top: 0px;
+	}
+	#Will_Will {
+		left: 18px;
+		top: 24px;
+		position: absolute;
+		overflow: visible;
+		width: 78px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_16_bb {
+		position: absolute;
+		width: 306px;
+		height: 76px;
+		left: 0px;
+		top: 377px;
+		overflow: visible;
+	}
+	#Rectangle_2_bd {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2_bd {
+		position: absolute;
+		overflow: visible;
+		width: 306px;
+		height: 76px;
+		left: 0px;
+		top: 0px;
+	}
+	#Phone_Number {
+		left: 19px;
+		top: 25px;
+		position: absolute;
+		overflow: visible;
+		width: 158px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 22px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_17_be {
+		position: absolute;
+		width: 281px;
+		height: 76px;
+		left: 306px;
+		top: 377px;
+		overflow: visible;
+	}
+	#Rectangle_2_bf {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2_bf {
+		position: absolute;
+		overflow: visible;
+		width: 281px;
+		height: 76px;
+		left: 0px;
+		top: 0px;
+	}
+	#n_59-613-6314 {
+		left: 18px;
+		top: 25px;
+		position: absolute;
+		overflow: visible;
+		width: 138px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_16_bh {
+		position: absolute;
+		width: 306px;
+		height: 75px;
+		left: 0px;
+		top: 302px;
+		overflow: visible;
+	}
+	#Rectangle_2_bi {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2_bi {
+		position: absolute;
+		overflow: visible;
+		width: 306px;
+		height: 75px;
+		left: 0px;
+		top: 0px;
+	}
+	#Email {
+		left: 19px;
+		top: 24px;
+		position: absolute;
+		overflow: visible;
+		width: 60px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 22px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_17_bk {
+		position: absolute;
+		width: 280px;
+		height: 75px;
+		left: 306px;
+		top: 302px;
+		overflow: visible;
+	}
+	#Rectangle_2_bl {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2_bl {
+		position: absolute;
+		overflow: visible;
+		width: 280px;
+		height: 75px;
+		left: 0px;
+		top: 0px;
+	}
+	#michaelwillgmailcom {
+		left: 18px;
+		top: 24px;
+		position: absolute;
+		overflow: visible;
+		width: 230px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_16_bn {
+		position: absolute;
+		width: 306px;
+		height: 76px;
+		left: 0px;
+		top: 226px;
+		overflow: visible;
+	}
+	#Rectangle_2_bo {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2_bo {
+		position: absolute;
+		overflow: visible;
+		width: 306px;
+		height: 76px;
+		left: 0px;
+		top: 0px;
+	}
+	#Social_Security_ {
+		left: 19px;
+		top: 25px;
+		position: absolute;
+		overflow: visible;
+		width: 177px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 22px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_17_bq {
+		position: absolute;
+		width: 281px;
+		height: 76px;
+		left: 306px;
+		top: 226px;
+		overflow: visible;
+	}
+	#Rectangle_2_br {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2_br {
+		position: absolute;
+		overflow: visible;
+		width: 281px;
+		height: 76px;
+		left: 0px;
+		top: 0px;
+	}
+	#n_11-11-1123 {
+		left: 18px;
+		top: 25px;
+		position: absolute;
+		overflow: visible;
+		width: 119px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_16_bt {
+		position: absolute;
+		width: 306px;
+		height: 75px;
+		left: 0px;
+		top: 151px;
+		overflow: visible;
+	}
+	#Rectangle_2_bu {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2_bu {
+		position: absolute;
+		overflow: visible;
+		width: 306px;
+		height: 75px;
+		left: 0px;
+		top: 0px;
+	}
+	#Birthday {
+		left: 19px;
+		top: 24px;
+		position: absolute;
+		overflow: visible;
+		width: 90px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 22px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_17_bw {
+		position: absolute;
+		width: 281px;
+		height: 75px;
+		left: 306px;
+		top: 151px;
+		overflow: visible;
+	}
+	#Rectangle_2_bx {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2_bx {
+		position: absolute;
+		overflow: visible;
+		width: 281px;
+		height: 75px;
+		left: 0px;
+		top: 0px;
+	}
+	#n_1032000 {
+		left: 18px;
+		top: 24px;
+		position: absolute;
+		overflow: visible;
+		width: 111px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_16_bz {
+		position: absolute;
+		width: 306px;
+		height: 76px;
+		left: 0px;
+		top: 75px;
+		overflow: visible;
+	}
+	#Rectangle_2_b {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2_b {
+		position: absolute;
+		overflow: visible;
+		width: 306px;
+		height: 76px;
+		left: 0px;
+		top: 0px;
+	}
+	#Student_ID {
+		left: 19px;
+		top: 25px;
+		position: absolute;
+		overflow: visible;
+		width: 111px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 22px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_17_b {
+		position: absolute;
+		width: 280px;
+		height: 76px;
+		left: 306px;
+		top: 75px;
+		overflow: visible;
+	}
+	#Rectangle_2_ca {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2_ca {
+		position: absolute;
+		overflow: visible;
+		width: 280px;
+		height: 76px;
+		left: 0px;
+		top: 0px;
+	}
+	#n_ {
+		left: 18px;
+		top: 25px;
+		position: absolute;
+		overflow: visible;
+		width: 13px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		color: rgba(0,0,0,1);
+	}
+	#Page_Title_b {
+		left: 118px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 352px;
+		height: 44px;
+		text-align: center;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 40px;
+		color: rgba(62,94,148,1);
+	}
+	#Tuition {
+		position: absolute;
+		width: 699px;
+		height: 339px;
+		left: 1148px;
+		top: 164px;
+		overflow: visible;
+	}
+	#Tuition_Table {
+		position: absolute;
+		width: 699px;
+		height: 288px;
+		left: 0px;
+		top: 51px;
+		overflow: visible;
+	}
+	#Group_36 {
+		position: absolute;
+		width: 699px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Group_25 {
+		position: absolute;
+		width: 233px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3 {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3 {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+	}
+	#Date {
+		left: 14px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 38px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_27 {
+		position: absolute;
+		width: 233px;
+		height: 58px;
+		left: 466px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_cd {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_cd {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+	}
+	#Amount {
+		left: 14px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 65px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_26 {
+		position: absolute;
+		width: 233px;
+		height: 58px;
+		left: 233px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_cg {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_cg {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+	}
+	#Description {
+		left: 14px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 95px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_35 {
+		position: absolute;
+		width: 699px;
+		height: 58px;
+		left: 0px;
+		top: 230px;
+		overflow: visible;
+	}
+	#Group_25_cj {
+		position: absolute;
+		width: 233px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_ck {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_ck {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+	}
+	#n_4012023 {
+		left: 14px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 86px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_27_cm {
+		position: absolute;
+		width: 233px;
+		height: 58px;
+		left: 466px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_cn {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_cn {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+	}
+	#n_500 {
+		left: 14px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 39px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_26_cp {
+		position: absolute;
+		width: 233px;
+		height: 58px;
+		left: 233px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_cq {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_cq {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+	}
+	#Apr_tuition {
+		left: 14px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 78px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_33 {
+		position: absolute;
+		width: 699px;
+		height: 57px;
+		left: 0px;
+		top: 173px;
+		overflow: visible;
+	}
+	#Group_25_ct {
+		position: absolute;
+		width: 233px;
+		height: 57px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_cu {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_cu {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 57px;
+		left: 0px;
+		top: 0px;
+	}
+	#n_3012023 {
+		left: 14px;
+		top: 18px;
+		position: absolute;
+		overflow: visible;
+		width: 86px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_27_cw {
+		position: absolute;
+		width: 233px;
+		height: 57px;
+		left: 466px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_cx {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_cx {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 57px;
+		left: 0px;
+		top: 0px;
+	}
+	#n_500_cy {
+		left: 14px;
+		top: 18px;
+		position: absolute;
+		overflow: visible;
+		width: 39px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_26_cz {
+		position: absolute;
+		width: 233px;
+		height: 57px;
+		left: 233px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_c {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_c {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 57px;
+		left: 0px;
+		top: 0px;
+	}
+	#Mar_tuition {
+		left: 14px;
+		top: 18px;
+		position: absolute;
+		overflow: visible;
+		width: 80px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_31 {
+		position: absolute;
+		width: 699px;
+		height: 58px;
+		left: 0px;
+		top: 115px;
+		overflow: visible;
+	}
+	#Group_25_c {
+		position: absolute;
+		width: 233px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_da {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_da {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+	}
+	#n_2012023 {
+		left: 14px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 86px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_27_c {
+		position: absolute;
+		width: 233px;
+		height: 58px;
+		left: 466px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_db {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_db {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+	}
+	#n_500_c {
+		left: 14px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 39px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_26_c {
+		position: absolute;
+		width: 233px;
+		height: 58px;
+		left: 233px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_dc {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_dc {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+	}
+	#Feb_tuition {
+		left: 14px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 80px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_29 {
+		position: absolute;
+		width: 699px;
+		height: 57px;
+		left: 0px;
+		top: 58px;
+		overflow: visible;
+	}
+	#Group_25_dd {
+		position: absolute;
+		width: 233px;
+		height: 57px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_de {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_de {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 57px;
+		left: 0px;
+		top: 0px;
+	}
+	#n_1012023 {
+		left: 14px;
+		top: 18px;
+		position: absolute;
+		overflow: visible;
+		width: 86px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_27_dg {
+		position: absolute;
+		width: 233px;
+		height: 57px;
+		left: 466px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_dh {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_dh {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 57px;
+		left: 0px;
+		top: 0px;
+	}
+	#n_500_di {
+		left: 14px;
+		top: 18px;
+		position: absolute;
+		overflow: visible;
+		width: 39px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_26_dj {
+		position: absolute;
+		width: 233px;
+		height: 57px;
+		left: 233px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_dk {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_dk {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 57px;
+		left: 0px;
+		top: 0px;
+	}
+	#Jan_tuition {
+		left: 14px;
+		top: 18px;
+		position: absolute;
+		overflow: visible;
+		width: 78px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Page_Title_dm {
+		left: 174px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 352px;
+		height: 44px;
+		text-align: center;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 40px;
+		color: rgba(62,94,148,1);
+	}
+	#Tuition_dn {
+		position: absolute;
+		width: 699px;
+		height: 339px;
+		left: 1148px;
+		top: 555px;
+		overflow: visible;
+	}
+	#Tuition_Table_do {
+		position: absolute;
+		width: 699px;
+		height: 288px;
+		left: 0px;
+		top: 51px;
+		overflow: visible;
+	}
+	#Group_36_dp {
+		position: absolute;
+		width: 699px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Group_25_dq {
+		position: absolute;
+		width: 233px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_dr {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_dr {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+	}
+	#Date_ds {
+		left: 14px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 38px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_27_dt {
+		position: absolute;
+		width: 233px;
+		height: 58px;
+		left: 466px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_du {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_du {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+	}
+	#Amount_dv {
+		left: 14px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 65px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_26_dw {
+		position: absolute;
+		width: 233px;
+		height: 58px;
+		left: 233px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_dx {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_dx {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+	}
+	#Description_dy {
+		left: 14px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 95px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_35_dz {
+		position: absolute;
+		width: 699px;
+		height: 58px;
+		left: 0px;
+		top: 230px;
+		overflow: visible;
+	}
+	#Group_25_d {
+		position: absolute;
+		width: 233px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_d {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_d {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+	}
+	#n_1042023 {
+		left: 14px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 86px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_27_d {
+		position: absolute;
+		width: 233px;
+		height: 58px;
+		left: 466px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_ea {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_ea {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+	}
+	#n_0 {
+		left: 14px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 20px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_26_d {
+		position: absolute;
+		width: 233px;
+		height: 58px;
+		left: 233px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_eb {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_eb {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+	}
+	#Pizza {
+		left: 14px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 43px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_33_d {
+		position: absolute;
+		width: 699px;
+		height: 57px;
+		left: 0px;
+		top: 173px;
+		overflow: visible;
+	}
+	#Group_25_ea {
+		position: absolute;
+		width: 233px;
+		height: 57px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_ec {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_ec {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 57px;
+		left: 0px;
+		top: 0px;
+	}
+	#n_1032023 {
+		left: 14px;
+		top: 18px;
+		position: absolute;
+		overflow: visible;
+		width: 86px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_27_ed {
+		position: absolute;
+		width: 233px;
+		height: 57px;
+		left: 466px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_ee {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_ee {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 57px;
+		left: 0px;
+		top: 0px;
+	}
+	#n_0_ef {
+		left: 14px;
+		top: 18px;
+		position: absolute;
+		overflow: visible;
+		width: 20px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_26_eg {
+		position: absolute;
+		width: 233px;
+		height: 57px;
+		left: 233px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_eh {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_eh {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 57px;
+		left: 0px;
+		top: 0px;
+	}
+	#Pizza_ei {
+		left: 14px;
+		top: 18px;
+		position: absolute;
+		overflow: visible;
+		width: 43px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_31_ej {
+		position: absolute;
+		width: 699px;
+		height: 58px;
+		left: 0px;
+		top: 115px;
+		overflow: visible;
+	}
+	#Group_25_ek {
+		position: absolute;
+		width: 233px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_el {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_el {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+	}
+	#n_1022023 {
+		left: 14px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 86px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_27_en {
+		position: absolute;
+		width: 233px;
+		height: 58px;
+		left: 466px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_eo {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_eo {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+	}
+	#n_0_ep {
+		left: 14px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 20px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_26_eq {
+		position: absolute;
+		width: 233px;
+		height: 58px;
+		left: 233px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_er {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_er {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 58px;
+		left: 0px;
+		top: 0px;
+	}
+	#Pizza_es {
+		left: 14px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 43px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_29_et {
+		position: absolute;
+		width: 699px;
+		height: 57px;
+		left: 0px;
+		top: 58px;
+		overflow: visible;
+	}
+	#Group_25_eu {
+		position: absolute;
+		width: 233px;
+		height: 57px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_ev {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_ev {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 57px;
+		left: 0px;
+		top: 0px;
+	}
+	#n_1012023_ew {
+		left: 14px;
+		top: 18px;
+		position: absolute;
+		overflow: visible;
+		width: 86px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_27_ex {
+		position: absolute;
+		width: 233px;
+		height: 57px;
+		left: 466px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_ey {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_ey {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 57px;
+		left: 0px;
+		top: 0px;
+	}
+	#n_0_ez {
+		left: 14px;
+		top: 18px;
+		position: absolute;
+		overflow: visible;
+		width: 20px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Group_26_e {
+		position: absolute;
+		width: 233px;
+		height: 57px;
+		left: 233px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_3_e {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0,0,0,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_3_e {
+		position: absolute;
+		overflow: visible;
+		width: 233px;
+		height: 57px;
+		left: 0px;
+		top: 0px;
+	}
+	#Pizza_e {
+		left: 14px;
+		top: 18px;
+		position: absolute;
+		overflow: visible;
+		width: 43px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,1);
+	}
+	#Page_Title_e {
+		left: 174px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 352px;
+		height: 44px;
+		text-align: center;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 40px;
+		color: rgba(62,94,148,1);
+	}
+	#Icon_material-add {
+		fill: rgba(0,0,0,1);
+	}
+	.Icon_material-add {
+		overflow: visible;
+		position: absolute;
+		width: 36.002px;
+		height: 36.002px;
+		left: 1810.998px;
+		top: 164px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Icon_material-add_e {
+		fill: rgba(0,0,0,1);
+	}
+	.Icon_material-add_e {
+		overflow: visible;
+		position: absolute;
+		width: 36.002px;
+		height: 36.002px;
+		left: 1810.998px;
+		top: 555px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+</style>
+
+</head>
+<%- include ("../partials/nav.ejs") %>
+<body>
+<div id="Student_Edit">
+	<svg class="Rectangle_5">
+		<rect id="Rectangle_5" rx="0" ry="0" x="0" y="0" width="252" height="1079">
+		</rect>
+	</svg>
+	<div id="Monterey">
+		<span>Monterey</span>
+	</div>
+	<div id="Navigation">
+		<div id="home">
+			<span>home</span>
+		</div>
+		<div id="Logout">
+			<span>Logout</span>
+		</div>
+	</div>
+	<div id="Page_Title">
+		<span>Student Edit</span>
+	</div>
+	<svg class="Line_1" viewBox="0 0 1 1080">
+		<path id="Line_1" d="M 0 0 L 0 1080">
+		</path>
+	</svg>
+	<div id="Information">
+		<div id="Student_Info_Table">
+			<div id="Group_16">
+				<svg class="Rectangle_2">
+					<rect id="Rectangle_2" rx="0" ry="0" x="0" y="0" width="306" height="75">
+					</rect>
+				</svg>
+				<div id="Name">
+					<span>Name</span>
+				</div>
+			</div>
+			<div id="Group_17">
+				<svg class="Rectangle_2_x">
+					<rect id="Rectangle_2_x" rx="0" ry="0" x="0" y="0" width="280" height="75">
+					</rect>
+				</svg>
+				<div id="Michael_Will">
+					<span>Michael Will</span>
+				</div>
+			</div>
+			<div id="Group_16_z">
+				<svg class="Rectangle_2_">
+					<rect id="Rectangle_2_" rx="0" ry="0" x="0" y="0" width="306" height="76">
+					</rect>
+				</svg>
+				<div id="Emergency_Contact_Phone">
+					<span>Emergency Contact Phone</span>
+				</div>
+			</div>
+			<div id="Group_17_">
+				<svg class="Rectangle_2_ba">
+					<rect id="Rectangle_2_ba" rx="0" ry="0" x="0" y="0" width="281" height="76">
+					</rect>
+				</svg>
+				<div id="n_92-621-8915">
+					<span>692-621-8915</span>
+				</div>
+			</div>
+			<div id="Group_16_">
+				<svg class="Rectangle_2_bb">
+					<rect id="Rectangle_2_bb" rx="0" ry="0" x="0" y="0" width="306" height="75">
+					</rect>
+				</svg>
+				<div id="Emergency_Contact_Name">
+					<span>Emergency Contact Name</span>
+				</div>
+			</div>
+			<div id="Group_17_ba">
+				<svg class="Rectangle_2_bc">
+					<rect id="Rectangle_2_bc" rx="0" ry="0" x="0" y="0" width="281" height="75">
+					</rect>
+				</svg>
+				<div id="Will_Will">
+					<span>Will Will</span>
+				</div>
+			</div>
+			<div id="Group_16_bb">
+				<svg class="Rectangle_2_bd">
+					<rect id="Rectangle_2_bd" rx="0" ry="0" x="0" y="0" width="306" height="76">
+					</rect>
+				</svg>
+				<div id="Phone_Number">
+					<span>Phone Number</span>
+				</div>
+			</div>
+			<div id="Group_17_be">
+				<svg class="Rectangle_2_bf">
+					<rect id="Rectangle_2_bf" rx="0" ry="0" x="0" y="0" width="281" height="76">
+					</rect>
+				</svg>
+				<div id="n_59-613-6314">
+					<span>859-613-6314</span>
+				</div>
+			</div>
+			<div id="Group_16_bh">
+				<svg class="Rectangle_2_bi">
+					<rect id="Rectangle_2_bi" rx="0" ry="0" x="0" y="0" width="306" height="75">
+					</rect>
+				</svg>
+				<div id="Email">
+					<span>Email</span>
+				</div>
+			</div>
+			<div id="Group_17_bk">
+				<svg class="Rectangle_2_bl">
+					<rect id="Rectangle_2_bl" rx="0" ry="0" x="0" y="0" width="280" height="75">
+					</rect>
+				</svg>
+				<div id="michaelwillgmailcom">
+					<span>michaelwill@gmail.com</span>
+				</div>
+			</div>
+			<div id="Group_16_bn">
+				<svg class="Rectangle_2_bo">
+					<rect id="Rectangle_2_bo" rx="0" ry="0" x="0" y="0" width="306" height="76">
+					</rect>
+				</svg>
+				<div id="Social_Security_">
+					<span>Social Security #</span>
+				</div>
+			</div>
+			<div id="Group_17_bq">
+				<svg class="Rectangle_2_br">
+					<rect id="Rectangle_2_br" rx="0" ry="0" x="0" y="0" width="281" height="76">
+					</rect>
+				</svg>
+				<div id="n_11-11-1123">
+					<span>111-11-1123</span>
+				</div>
+			</div>
+			<div id="Group_16_bt">
+				<svg class="Rectangle_2_bu">
+					<rect id="Rectangle_2_bu" rx="0" ry="0" x="0" y="0" width="306" height="75">
+					</rect>
+				</svg>
+				<div id="Birthday">
+					<span>Birthday</span>
+				</div>
+			</div>
+			<div id="Group_17_bw">
+				<svg class="Rectangle_2_bx">
+					<rect id="Rectangle_2_bx" rx="0" ry="0" x="0" y="0" width="281" height="75">
+					</rect>
+				</svg>
+				<div id="n_1032000">
+					<span>01/03/2000</span>
+				</div>
+			</div>
+			<div id="Group_16_bz">
+				<svg class="Rectangle_2_b">
+					<rect id="Rectangle_2_b" rx="0" ry="0" x="0" y="0" width="306" height="76">
+					</rect>
+				</svg>
+				<div id="Student_ID">
+					<span>Student ID</span>
+				</div>
+			</div>
+			<div id="Group_17_b">
+				<svg class="Rectangle_2_ca">
+					<rect id="Rectangle_2_ca" rx="0" ry="0" x="0" y="0" width="280" height="76">
+					</rect>
+				</svg>
+				<div id="n_">
+					<span>3</span>
+				</div>
+			</div>
+		</div>
+		<div id="Page_Title_b">
+			<span>Information</span>
+		</div>
+	</div>
+	<div id="Tuition">
+		<div id="Tuition_Table">
+			<div id="Group_36">
+				<div id="Group_25">
+					<svg class="Rectangle_3">
+						<rect id="Rectangle_3" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="Date">
+						<span>Date</span>
+					</div>
+				</div>
+				<div id="Group_27">
+					<svg class="Rectangle_3_cd">
+						<rect id="Rectangle_3_cd" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="Amount">
+						<span>Amount</span>
+					</div>
+				</div>
+				<div id="Group_26">
+					<svg class="Rectangle_3_cg">
+						<rect id="Rectangle_3_cg" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="Description">
+						<span>Description</span>
+					</div>
+				</div>
+			</div>
+			<div id="Group_35">
+				<div id="Group_25_cj">
+					<svg class="Rectangle_3_ck">
+						<rect id="Rectangle_3_ck" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="n_4012023">
+						<span>04/01/2023</span>
+					</div>
+				</div>
+				<div id="Group_27_cm">
+					<svg class="Rectangle_3_cn">
+						<rect id="Rectangle_3_cn" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="n_500">
+						<span>2500</span>
+					</div>
+				</div>
+				<div id="Group_26_cp">
+					<svg class="Rectangle_3_cq">
+						<rect id="Rectangle_3_cq" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="Apr_tuition">
+						<span>Apr tuition</span>
+					</div>
+				</div>
+			</div>
+			<div id="Group_33">
+				<div id="Group_25_ct">
+					<svg class="Rectangle_3_cu">
+						<rect id="Rectangle_3_cu" rx="0" ry="0" x="0" y="0" width="233" height="57">
+						</rect>
+					</svg>
+					<div id="n_3012023">
+						<span>03/01/2023</span>
+					</div>
+				</div>
+				<div id="Group_27_cw">
+					<svg class="Rectangle_3_cx">
+						<rect id="Rectangle_3_cx" rx="0" ry="0" x="0" y="0" width="233" height="57">
+						</rect>
+					</svg>
+					<div id="n_500_cy">
+						<span>2500</span>
+					</div>
+				</div>
+				<div id="Group_26_cz">
+					<svg class="Rectangle_3_c">
+						<rect id="Rectangle_3_c" rx="0" ry="0" x="0" y="0" width="233" height="57">
+						</rect>
+					</svg>
+					<div id="Mar_tuition">
+						<span>Mar tuition</span>
+					</div>
+				</div>
+			</div>
+			<div id="Group_31">
+				<div id="Group_25_c">
+					<svg class="Rectangle_3_da">
+						<rect id="Rectangle_3_da" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="n_2012023">
+						<span>02/01/2023</span>
+					</div>
+				</div>
+				<div id="Group_27_c">
+					<svg class="Rectangle_3_db">
+						<rect id="Rectangle_3_db" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="n_500_c">
+						<span>2500</span>
+					</div>
+				</div>
+				<div id="Group_26_c">
+					<svg class="Rectangle_3_dc">
+						<rect id="Rectangle_3_dc" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="Feb_tuition">
+						<span>Feb tuition</span>
+					</div>
+				</div>
+			</div>
+			<div id="Group_29">
+				<div id="Group_25_dd">
+					<svg class="Rectangle_3_de">
+						<rect id="Rectangle_3_de" rx="0" ry="0" x="0" y="0" width="233" height="57">
+						</rect>
+					</svg>
+					<div id="n_1012023">
+						<span>01/01/2023</span>
+					</div>
+				</div>
+				<div id="Group_27_dg">
+					<svg class="Rectangle_3_dh">
+						<rect id="Rectangle_3_dh" rx="0" ry="0" x="0" y="0" width="233" height="57">
+						</rect>
+					</svg>
+					<div id="n_500_di">
+						<span>2500</span>
+					</div>
+				</div>
+				<div id="Group_26_dj">
+					<svg class="Rectangle_3_dk">
+						<rect id="Rectangle_3_dk" rx="0" ry="0" x="0" y="0" width="233" height="57">
+						</rect>
+					</svg>
+					<div id="Jan_tuition">
+						<span>Jan tuition</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="Page_Title_dm">
+			<span>Tuition</span>
+		</div>
+	</div>
+	<div id="Tuition_dn">
+		<div id="Tuition_Table_do">
+			<div id="Group_36_dp">
+				<div id="Group_25_dq">
+					<svg class="Rectangle_3_dr">
+						<rect id="Rectangle_3_dr" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="Date_ds">
+						<span>Date</span>
+					</div>
+				</div>
+				<div id="Group_27_dt">
+					<svg class="Rectangle_3_du">
+						<rect id="Rectangle_3_du" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="Amount_dv">
+						<span>Amount</span>
+					</div>
+				</div>
+				<div id="Group_26_dw">
+					<svg class="Rectangle_3_dx">
+						<rect id="Rectangle_3_dx" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="Description_dy">
+						<span>Description</span>
+					</div>
+				</div>
+			</div>
+			<div id="Group_35_dz">
+				<div id="Group_25_d">
+					<svg class="Rectangle_3_d">
+						<rect id="Rectangle_3_d" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="n_1042023">
+						<span>01/04/2023</span>
+					</div>
+				</div>
+				<div id="Group_27_d">
+					<svg class="Rectangle_3_ea">
+						<rect id="Rectangle_3_ea" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="n_0">
+						<span>10</span>
+					</div>
+				</div>
+				<div id="Group_26_d">
+					<svg class="Rectangle_3_eb">
+						<rect id="Rectangle_3_eb" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="Pizza">
+						<span>Pizza</span>
+					</div>
+				</div>
+			</div>
+			<div id="Group_33_d">
+				<div id="Group_25_ea">
+					<svg class="Rectangle_3_ec">
+						<rect id="Rectangle_3_ec" rx="0" ry="0" x="0" y="0" width="233" height="57">
+						</rect>
+					</svg>
+					<div id="n_1032023">
+						<span>01/03/2023</span>
+					</div>
+				</div>
+				<div id="Group_27_ed">
+					<svg class="Rectangle_3_ee">
+						<rect id="Rectangle_3_ee" rx="0" ry="0" x="0" y="0" width="233" height="57">
+						</rect>
+					</svg>
+					<div id="n_0_ef">
+						<span>10</span>
+					</div>
+				</div>
+				<div id="Group_26_eg">
+					<svg class="Rectangle_3_eh">
+						<rect id="Rectangle_3_eh" rx="0" ry="0" x="0" y="0" width="233" height="57">
+						</rect>
+					</svg>
+					<div id="Pizza_ei">
+						<span>Pizza</span>
+					</div>
+				</div>
+			</div>
+			<div id="Group_31_ej">
+				<div id="Group_25_ek">
+					<svg class="Rectangle_3_el">
+						<rect id="Rectangle_3_el" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="n_1022023">
+						<span>01/02/2023</span>
+					</div>
+				</div>
+				<div id="Group_27_en">
+					<svg class="Rectangle_3_eo">
+						<rect id="Rectangle_3_eo" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="n_0_ep">
+						<span>10</span>
+					</div>
+				</div>
+				<div id="Group_26_eq">
+					<svg class="Rectangle_3_er">
+						<rect id="Rectangle_3_er" rx="0" ry="0" x="0" y="0" width="233" height="58">
+						</rect>
+					</svg>
+					<div id="Pizza_es">
+						<span>Pizza</span>
+					</div>
+				</div>
+			</div>
+			<div id="Group_29_et">
+				<div id="Group_25_eu">
+					<svg class="Rectangle_3_ev">
+						<rect id="Rectangle_3_ev" rx="0" ry="0" x="0" y="0" width="233" height="57">
+						</rect>
+					</svg>
+					<div id="n_1012023_ew">
+						<span>01/01/2023</span>
+					</div>
+				</div>
+				<div id="Group_27_ex">
+					<svg class="Rectangle_3_ey">
+						<rect id="Rectangle_3_ey" rx="0" ry="0" x="0" y="0" width="233" height="57">
+						</rect>
+					</svg>
+					<div id="n_0_ez">
+						<span>10</span>
+					</div>
+				</div>
+				<div id="Group_26_e">
+					<svg class="Rectangle_3_e">
+						<rect id="Rectangle_3_e" rx="0" ry="0" x="0" y="0" width="233" height="57">
+						</rect>
+					</svg>
+					<div id="Pizza_e">
+						<span>Pizza</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="Page_Title_e">
+			<span>Meals</span>
+		</div>
+	</div>
+	<svg class="Icon_material-add" viewBox="7.5 7.5 36.002 36.002">
+		<path id="Icon_material-add" d="M 43.50204849243164 28.07259750366211 L 28.07259750366211 28.07259750366211 L 28.07259750366211 43.50204849243164 L 22.92944717407227 43.50204849243164 L 22.92944717407227 28.07259750366211 L 7.500000953674316 28.07259750366211 L 7.500000953674316 22.92944717407227 L 22.92944717407227 22.92944717407227 L 22.92944717407227 7.500000953674316 L 28.07259750366211 7.500000953674316 L 28.07259750366211 22.92944717407227 L 43.50204849243164 22.92944717407227 L 43.50204849243164 28.07259750366211 Z">
+		</path>
+	</svg>
+	<svg class="Icon_material-add_e" viewBox="7.5 7.5 36.002 36.002">
+		<path id="Icon_material-add_e" d="M 43.50204849243164 28.07259750366211 L 28.07259750366211 28.07259750366211 L 28.07259750366211 43.50204849243164 L 22.92944717407227 43.50204849243164 L 22.92944717407227 28.07259750366211 L 7.500000953674316 28.07259750366211 L 7.500000953674316 22.92944717407227 L 22.92944717407227 22.92944717407227 L 22.92944717407227 7.500000953674316 L 28.07259750366211 7.500000953674316 L 28.07259750366211 22.92944717407227 L 43.50204849243164 22.92944717407227 L 43.50204849243164 28.07259750366211 Z">
+		</path>
+	</svg>
+</div>
+</body>
+</html>

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Main Menu</title>
+<style id="applicationStylesheet" type="text/css">
+	.mediaViewInfo {
+		--web-view-name: Main Menu;
+		--web-view-id: Main_Menu;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: Main_Menu;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+	#Main_Menu {
+		position: absolute;
+		width: 1920px;
+		height: 1080px;
+		background-color: rgba(255,255,242,1);
+		overflow: hidden;
+		--web-view-name: Main Menu;
+		--web-view-id: Main_Menu;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	#Rectangle_5 {
+		fill: rgba(158,194,255,1);
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_5 {
+		position: absolute;
+		overflow: visible;
+		width: 252px;
+		height: 1079px;
+		left: 0px;
+		top: 0px;
+	}
+	#Monterey {
+		left: 0px;
+		top: 55px;
+		position: absolute;
+		overflow: visible;
+		width: 255px;
+		height: 61px;
+		text-align: center;
+		font-family: Plantagenet Cherokee;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 42px;
+		color: rgba(62,94,148,1);
+		text-transform: capitalize;
+	}
+	#Navigation {
+		position: absolute;
+		width: 219px;
+		height: 27px;
+		left: 1674px;
+		top: 58px;
+		overflow: visible;
+	}
+	#Home_Button {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 99px;
+		height: 27px;
+		text-align: center;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(62,94,148,1);
+		text-transform: capitalize;
+	}
+	#Logout_Button {
+		left: 121px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 99px;
+		height: 27px;
+		text-align: center;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(62,94,148,1);
+		text-transform: capitalize;
+	}
+	#Page_Title {
+		left: 745px;
+		top: 38px;
+		position: absolute;
+		overflow: visible;
+		width: 431px;
+		height: 67px;
+		text-align: center;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 60px;
+		color: rgba(62,94,148,1);
+	}
+	#Line_1 {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_1 {
+		overflow: visible;
+		position: absolute;
+		width: 1px;
+		height: 1080px;
+		left: 253.5px;
+		top: 1.5px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Employee_List_Button {
+		position: absolute;
+		width: 260px;
+		height: 70px;
+		left: 686px;
+		top: 364px;
+		overflow: visible;
+	}
+	#Rectangle_4 {
+		fill: rgba(224,190,117,1);
+		stroke: rgba(148,116,47,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_4 {
+		position: absolute;
+		overflow: visible;
+		width: 260px;
+		height: 70px;
+		left: 0px;
+		top: 0px;
+	}
+	#Employee_List {
+		left: 69px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 187px;
+		height: 31px;
+		text-align: center;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 28px;
+		color: rgba(148,116,47,1);
+	}
+	#List_Icon {
+		fill: rgba(148,116,47,1);
+	}
+	.List_Icon {
+		overflow: visible;
+		position: absolute;
+		width: 36px;
+		height: 29.25px;
+		left: 24px;
+		top: 20.875px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Student_List_Button {
+		position: absolute;
+		width: 260px;
+		height: 70px;
+		left: 686px;
+		top: 270px;
+		overflow: visible;
+	}
+	#Rectangle_4_w {
+		fill: rgba(224,190,117,1);
+		stroke: rgba(148,116,47,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_4_w {
+		position: absolute;
+		overflow: visible;
+		width: 260px;
+		height: 70px;
+		left: 0px;
+		top: 0px;
+	}
+	#Student_List {
+		left: 69px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 187px;
+		height: 31px;
+		text-align: center;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 28px;
+		color: rgba(148,116,47,1);
+	}
+	#List_Icon_y {
+		fill: rgba(148,116,47,1);
+	}
+	.List_Icon_y {
+		overflow: visible;
+		position: absolute;
+		width: 36px;
+		height: 29.25px;
+		left: 24px;
+		top: 20.875px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Student_Add_Button {
+		position: absolute;
+		width: 260px;
+		height: 70px;
+		left: 975px;
+		top: 270px;
+		overflow: visible;
+	}
+	#Rectangle_4_ {
+		fill: rgba(224,190,117,1);
+		stroke: rgba(148,116,47,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_4_ {
+		position: absolute;
+		overflow: visible;
+		width: 260px;
+		height: 70px;
+		left: 0px;
+		top: 0px;
+	}
+	#Student_Add {
+		left: 69px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 187px;
+		height: 31px;
+		text-align: center;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 28px;
+		color: rgba(148,116,47,1);
+	}
+	#Add_Icon {
+		fill: rgba(148,116,47,1);
+	}
+	.Add_Icon {
+		overflow: visible;
+		position: absolute;
+		width: 29.25px;
+		height: 29.25px;
+		left: 27.375px;
+		top: 19.875px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Employee_Add_Button {
+		position: absolute;
+		width: 260px;
+		height: 70px;
+		left: 975px;
+		top: 364px;
+		overflow: visible;
+	}
+	#Rectangle_4_ba {
+		fill: rgba(224,190,117,1);
+		stroke: rgba(148,116,47,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_4_ba {
+		position: absolute;
+		overflow: visible;
+		width: 260px;
+		height: 70px;
+		left: 0px;
+		top: 0px;
+	}
+	#Employee_Add {
+		left: 69px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 187px;
+		height: 31px;
+		text-align: center;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 28px;
+		color: rgba(148,116,47,1);
+	}
+	#Add_Icon_ {
+		fill: rgba(148,116,47,1);
+	}
+	.Add_Icon_ {
+		overflow: visible;
+		position: absolute;
+		width: 29.25px;
+		height: 29.25px;
+		left: 27.375px;
+		top: 20.375px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Employee_Add_Button_ {
+		position: absolute;
+		width: 260px;
+		height: 70px;
+		left: 975px;
+		top: 458px;
+		overflow: visible;
+	}
+	#Rectangle_4_bb {
+		fill: rgba(224,190,117,1);
+		stroke: rgba(148,116,47,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_4_bb {
+		position: absolute;
+		overflow: visible;
+		width: 260px;
+		height: 70px;
+		left: 0px;
+		top: 0px;
+	}
+	#Add_Payment {
+		left: 69px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 187px;
+		height: 31px;
+		text-align: center;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 28px;
+		color: rgba(148,116,47,1);
+	}
+	#Add_Icon_ba {
+		fill: rgba(148,116,47,1);
+	}
+	.Add_Icon_ba {
+		overflow: visible;
+		position: absolute;
+		width: 29.25px;
+		height: 29.25px;
+		left: 27.375px;
+		top: 20.375px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Student_Add_Button_bb {
+		position: absolute;
+		width: 260px;
+		height: 70px;
+		left: 686px;
+		top: 458px;
+		overflow: visible;
+	}
+	#Rectangle_4_bc {
+		fill: rgba(224,190,117,1);
+		stroke: rgba(148,116,47,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_4_bc {
+		position: absolute;
+		overflow: visible;
+		width: 260px;
+		height: 70px;
+		left: 0px;
+		top: 0px;
+	}
+	#Add_Expense {
+		left: 69px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 187px;
+		height: 31px;
+		text-align: center;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 28px;
+		color: rgba(148,116,47,1);
+	}
+	#Add_Icon_be {
+		fill: rgba(148,116,47,1);
+	}
+	.Add_Icon_be {
+		overflow: visible;
+		position: absolute;
+		width: 29.25px;
+		height: 29.25px;
+		left: 27.375px;
+		top: 19.875px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+</style>
+</head>
+<body>
+<div id="Main_Menu">
+	<svg class="Rectangle_5">
+		<rect id="Rectangle_5" rx="0" ry="0" x="0" y="0" width="252" height="1079">
+		</rect>
+	</svg>
+	<div id="Monterey">
+		<span>Monterey</span>
+	</div>
+	<div id="Navigation">
+		<div id="Home_Button">
+			<span>home</span>
+		</div>
+		<div id="Logout_Button">
+			<span>Logout</span>
+		</div>
+	</div>
+	<div id="Page_Title">
+		<span>Main Menu</span>
+	</div>
+	<svg class="Line_1" viewBox="0 0 1 1080">
+		<path id="Line_1" d="M 0 0 L 0 1080">
+		</path>
+	</svg>
+	<div id="Employee_List_Button">
+		<svg class="Rectangle_4">
+			<rect id="Rectangle_4" rx="20" ry="20" x="0" y="0" width="260" height="70">
+			</rect>
+		</svg>
+		<div id="Employee_List">
+			<span>Employee List</span>
+		</div>
+		<svg class="List_Icon" viewBox="0 3.375 36 29.25">
+			<path id="List_Icon" d="M 5.625 25.875 L 1.125 25.875 C 0.503679633140564 25.875 -1.192092895507812e-07 26.3786792755127 0 27 L 0 31.5 C 0 32.12131881713867 0.5036795735359192 32.625 1.124999761581421 32.625 L 5.625 32.625 C 6.246320247650146 32.625 6.75 32.12131881713867 6.75 31.5 L 6.75 27 C 6.75 26.3786792755127 6.246320247650146 25.875 5.625 25.875 Z M 5.625 3.375 L 1.125 3.375 C 0.503679633140564 3.375 -1.192092895507812e-07 3.878679752349854 0 4.5 L 0 9 C 0 9.621320724487305 0.5036795735359192 10.125 1.124999761581421 10.125 L 5.625 10.125 C 6.246320247650146 10.125 6.75 9.621320724487305 6.75 9 L 6.75 4.5 C 6.75 3.878679752349854 6.246320247650146 3.375 5.625 3.375 Z M 5.625 14.625 L 1.125 14.625 C 0.503679633140564 14.625 -1.192092895507812e-07 15.12868022918701 0 15.75 L 0 20.25 C 0 20.8713207244873 0.5036795735359192 21.375 1.124999761581421 21.375 L 5.625 21.375 C 6.246320247650146 21.375 6.75 20.8713207244873 6.75 20.25 L 6.75 15.75 C 6.75 15.1286792755127 6.246320247650146 14.625 5.625 14.625 Z M 34.875 27 L 12.375 27 C 11.7536792755127 27 11.25 27.5036792755127 11.25 28.125 L 11.25 30.375 C 11.25 30.9963207244873 11.7536792755127 31.5 12.375 31.5 L 34.875 31.5 C 35.49631881713867 31.5 36 30.9963207244873 36 30.375 L 36 28.125 C 36 27.5036792755127 35.49631881713867 27 34.875 27 Z M 34.875 4.5 L 12.375 4.5 C 11.7536792755127 4.5 11.25 5.003679752349854 11.25 5.625 L 11.25 7.875 C 11.25 8.496320724487305 11.7536792755127 9 12.375 9 L 34.875 9 C 35.49631881713867 9 36 8.496320724487305 36 7.875 L 36 5.625 C 36 5.003679752349854 35.49631881713867 4.5 34.875 4.5 Z M 34.875 15.75 L 12.375 15.75 C 11.7536792755127 15.75 11.25 16.2536792755127 11.25 16.875 L 11.25 19.125 C 11.25 19.7463207244873 11.7536792755127 20.25 12.375 20.25 L 34.875 20.25 C 35.49631881713867 20.25 36 19.7463207244873 36 19.125 L 36 16.875 C 36 16.2536792755127 35.49631881713867 15.75 34.875 15.75 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="Student_List_Button">
+		<svg class="Rectangle_4_w">
+			<rect id="Rectangle_4_w" rx="20" ry="20" x="0" y="0" width="260" height="70">
+			</rect>
+		</svg>
+		<div id="Student_List">
+			<span>Student List</span>
+		</div>
+		<svg class="List_Icon_y" viewBox="0 3.375 36 29.25">
+			<path id="List_Icon_y" d="M 5.625 25.875 L 1.125 25.875 C 0.503679633140564 25.875 -1.192092895507812e-07 26.3786792755127 0 27 L 0 31.5 C 0 32.12131881713867 0.5036795735359192 32.625 1.124999761581421 32.625 L 5.625 32.625 C 6.246320247650146 32.625 6.75 32.12131881713867 6.75 31.5 L 6.75 27 C 6.75 26.3786792755127 6.246320247650146 25.875 5.625 25.875 Z M 5.625 3.375 L 1.125 3.375 C 0.503679633140564 3.375 -1.192092895507812e-07 3.878679752349854 0 4.5 L 0 9 C 0 9.621320724487305 0.5036795735359192 10.125 1.124999761581421 10.125 L 5.625 10.125 C 6.246320247650146 10.125 6.75 9.621320724487305 6.75 9 L 6.75 4.5 C 6.75 3.878679752349854 6.246320247650146 3.375 5.625 3.375 Z M 5.625 14.625 L 1.125 14.625 C 0.503679633140564 14.625 -1.192092895507812e-07 15.12868022918701 0 15.75 L 0 20.25 C 0 20.8713207244873 0.5036795735359192 21.375 1.124999761581421 21.375 L 5.625 21.375 C 6.246320247650146 21.375 6.75 20.8713207244873 6.75 20.25 L 6.75 15.75 C 6.75 15.1286792755127 6.246320247650146 14.625 5.625 14.625 Z M 34.875 27 L 12.375 27 C 11.7536792755127 27 11.25 27.5036792755127 11.25 28.125 L 11.25 30.375 C 11.25 30.9963207244873 11.7536792755127 31.5 12.375 31.5 L 34.875 31.5 C 35.49631881713867 31.5 36 30.9963207244873 36 30.375 L 36 28.125 C 36 27.5036792755127 35.49631881713867 27 34.875 27 Z M 34.875 4.5 L 12.375 4.5 C 11.7536792755127 4.5 11.25 5.003679752349854 11.25 5.625 L 11.25 7.875 C 11.25 8.496320724487305 11.7536792755127 9 12.375 9 L 34.875 9 C 35.49631881713867 9 36 8.496320724487305 36 7.875 L 36 5.625 C 36 5.003679752349854 35.49631881713867 4.5 34.875 4.5 Z M 34.875 15.75 L 12.375 15.75 C 11.7536792755127 15.75 11.25 16.2536792755127 11.25 16.875 L 11.25 19.125 C 11.25 19.7463207244873 11.7536792755127 20.25 12.375 20.25 L 34.875 20.25 C 35.49631881713867 20.25 36 19.7463207244873 36 19.125 L 36 16.875 C 36 16.2536792755127 35.49631881713867 15.75 34.875 15.75 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="Student_Add_Button">
+		<svg class="Rectangle_4_">
+			<rect id="Rectangle_4_" rx="20" ry="20" x="0" y="0" width="260" height="70">
+			</rect>
+		</svg>
+		<div id="Student_Add">
+			<span>Student Add</span>
+		</div>
+		<svg class="Add_Icon" viewBox="6.75 6.75 29.25 29.25">
+			<path id="Add_Icon" d="M 35.99999618530273 23.32497024536133 L 23.32497024536133 23.32497024536133 L 23.32497024536133 35.99999618530273 L 19.4250316619873 35.99999618530273 L 19.4250316619873 23.32497024536133 L 6.749999523162842 23.32497024536133 L 6.749999523162842 19.4250316619873 L 19.42502975463867 19.4250316619873 L 19.42502975463867 6.749999523162842 L 23.32496643066406 6.749999523162842 L 23.32496643066406 19.42502975463867 L 35.99999618530273 19.42502975463867 L 35.99999618530273 23.32497024536133 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="Employee_Add_Button">
+		<svg class="Rectangle_4_ba">
+			<rect id="Rectangle_4_ba" rx="20" ry="20" x="0" y="0" width="260" height="70">
+			</rect>
+		</svg>
+		<div id="Employee_Add">
+			<span>Employee Add</span>
+		</div>
+		<svg class="Add_Icon_" viewBox="6.75 6.75 29.25 29.25">
+			<path id="Add_Icon_" d="M 35.99999618530273 23.32497024536133 L 23.32497024536133 23.32497024536133 L 23.32497024536133 35.99999618530273 L 19.4250316619873 35.99999618530273 L 19.4250316619873 23.32497024536133 L 6.749999523162842 23.32497024536133 L 6.749999523162842 19.4250316619873 L 19.42502975463867 19.4250316619873 L 19.42502975463867 6.749999523162842 L 23.32496643066406 6.749999523162842 L 23.32496643066406 19.42502975463867 L 35.99999618530273 19.42502975463867 L 35.99999618530273 23.32497024536133 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="Employee_Add_Button_">
+		<svg class="Rectangle_4_bb">
+			<rect id="Rectangle_4_bb" rx="20" ry="20" x="0" y="0" width="260" height="70">
+			</rect>
+		</svg>
+		<div id="Add_Payment">
+			<span>Add Payment</span>
+		</div>
+		<svg class="Add_Icon_ba" viewBox="6.75 6.75 29.25 29.25">
+			<path id="Add_Icon_ba" d="M 35.99999618530273 23.32497024536133 L 23.32497024536133 23.32497024536133 L 23.32497024536133 35.99999618530273 L 19.4250316619873 35.99999618530273 L 19.4250316619873 23.32497024536133 L 6.749999523162842 23.32497024536133 L 6.749999523162842 19.4250316619873 L 19.42502975463867 19.4250316619873 L 19.42502975463867 6.749999523162842 L 23.32496643066406 6.749999523162842 L 23.32496643066406 19.42502975463867 L 35.99999618530273 19.42502975463867 L 35.99999618530273 23.32497024536133 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="Student_Add_Button_bb">
+		<svg class="Rectangle_4_bc">
+			<rect id="Rectangle_4_bc" rx="20" ry="20" x="0" y="0" width="260" height="70">
+			</rect>
+		</svg>
+		<div id="Add_Expense">
+			<span>Add Expense</span>
+		</div>
+		<svg class="Add_Icon_be" viewBox="6.75 6.75 29.25 29.25">
+			<path id="Add_Icon_be" d="M 35.99999618530273 23.32497024536133 L 23.32497024536133 23.32497024536133 L 23.32497024536133 35.99999618530273 L 19.4250316619873 35.99999618530273 L 19.4250316619873 23.32497024536133 L 6.749999523162842 23.32497024536133 L 6.749999523162842 19.4250316619873 L 19.42502975463867 19.4250316619873 L 19.42502975463867 6.749999523162842 L 23.32496643066406 6.749999523162842 L 23.32496643066406 19.42502975463867 L 35.99999618530273 19.42502975463867 L 35.99999618530273 23.32497024536133 Z">
+			</path>
+		</svg>
+	</div>
+</div>
+</body>
+</html>
