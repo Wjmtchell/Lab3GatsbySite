@@ -86,7 +86,7 @@ express()
     res.render("pages/employee_list", {user, message});
     try {
       const client = await pool.connect();
-      const result = await client.query('SELECT * FROM users WHERE type = 2;');
+      const result = await client.query('SELECT * FROM users WHERE type = 2');
       const results = { 'results': (result) ? result.rows : null};
       res.render('pages/db', results);
       client.release();
