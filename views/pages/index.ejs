@@ -4,14 +4,18 @@
   <%- include ("../partials/header.ejs") %>
 </head>
 <%- include ("../partials/nav.ejs") %>
+<body>
 <div class="jumbotron text-center">
   <div style="font-size: xx-large">Welcome</div>
 </div>
 <p><%= message %></p>
  <nav style="text-align: center;">
   <h4></h4>
-  <li><a href="/">Home</a></li>
-  <li><a href="/login">Login</a></li>
+  <li><a href="/"><%= locals.i18next.t('Home', 'Home')%></a></li>
+  <li><a href="/login"><%= locals.i18next.t('Login', 'Login')%></a></li>
+  <li><a href="/student_list"><%= locals.i18next.t('studentList', 'Student List')%></a></li>
+  <li><a href="/employee_list"><%= locals.i18next.t('employeeList', 'Employee List')%></a></li>
+  <li><a href="/main_menu"><%= locals.i18next.t('mainMenu', 'Main Menu')%></a></li>
 </nav>
 
 
