@@ -18,6 +18,7 @@
     "i18next-express-middleware": "^2.0.0",
     "i18next-http-middleware": "^3.5.0",
     "i18next-locize-backend": "^6.4.1",
+    "index.js": "^0.0.3",
     "pg": "^8.11.3"
   },
   "devDependencies": {
