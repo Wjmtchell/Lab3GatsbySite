@@ -29,7 +29,8 @@ express()
     const user = req.session.user;
     res.render('pages/index', {user, message});})
   .get('/login', (req,res)=> {
-    const user = req.session.user;
+    const message = req.query.message || '';
+
     res.render("pages/login", {message});})
   .get('/main_menu', (req,res)=> {
     const message = req.query.message || '';
