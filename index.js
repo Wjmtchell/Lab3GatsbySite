@@ -165,12 +165,12 @@ express()
     const user = req.session.user;
      try {
        const client = await pool.connect();
-       const result = await client.query('SELECT * FROM student_info WHERE uid=($1)',values);
-       const tuition = await client.query('SELECT * FROM tuition WHERE uid=($1)',values);
-       const tuitionResults = { 'tuitionResults': (tuition) ? tuition.rows : null};
+       const students = await client.query('SELECT * FROM student_info WHERE uid=($1)',values);
+       const result = await client.query('SELECT * FROM tuition WHERE uid=($1)',values);
+       const results = { 'results': (result) ? result.rows : null};
        //const meals = await client.query('SELECT * FROM meals WHERE uid=($1)',values);
-       const studentInfo = result.rows[0];
-       res.render('pages/student_info', {studentInfo,user,tuitionResults});
+       const studentInfo = students.rows[0];
+       res.render('pages/student_info', {studentInfo,user,results});
        client.release();
      } catch(error) {
        res.redirect('/?message=Failed%20To%20Find%20StudentInfo')
