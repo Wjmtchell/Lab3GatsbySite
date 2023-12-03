@@ -440,8 +440,9 @@
 		top: 19.875px;
 		transform: matrix(1,0,0,1,0,0);
 	}
+    #container div { float: left; background: #ccc; width: 200px; margin-bottom: -2000px; padding-bottom: 2000px; }
 </style>
-<div class="jumbotron text-center" style="border: 3px solid rgba(62,94,148,1); background-color: rgb(158, 178, 212)">
+<div class="jumbotron text-center" style="border: 2px solid rgba(62,94,148,1); background-color: rgb(158, 178, 212)">
     <div style="font-size: xx-large;"><%= locals.i18next.t('studentInfo','Student Info') %></div>
 </div>
 <body style="background-color: rgb(255, 206, 101)">
@@ -461,7 +462,7 @@
         <button type="submit" style="background-color: rgb(158, 178, 212)">Save Changes</button>
     </form>
     <div style="width: 100%; margin-top: 20px;">
-        <div style="float:left; width: 40%; padding: 10px; border: 3px solid rgba(62,94,148,1); height: 400px">
+        <div style="float:left; width: 40%; padding: 10px; border: 2px solid rgba(62,94,148,1);">
             <h2 style="margin: auto">Tuition Charges</h2>
             <table class="users-table" style="margin: auto; padding:5px">
                 <thead>
@@ -475,9 +476,9 @@
                     <td><%= entry.date %></td>
                 </tr>
                 <% }) %></table>
-                <form action="/admin/" method="GET"><button id="button2" type="submit" style="margin-bottom: 5px; background-color: rgb(158, 178, 212)">Add Tuition Charge</button></form>
+                <form action="/admin/" method="GET"><button id="button2" type="submit" style="margin: auto; background-color: rgb(158, 178, 212)">Add Tuition Charge</button></form>
         </div>
-        <div style="float:right; width: 40%; padding: 10px; border: 3px solid rgba(62,94,148,1); height: 400px">
+        <div style="float:right; width: 40%; padding: 10px; border: 2px solid rgba(62,94,148,1);">
             <h2 style="margin: auto">Meal Charges</h2>
             <table class="users-table" style="margin: auto; padding:5px">
                 <thead>
@@ -491,7 +492,7 @@
                     <td><%= entry.date %></td>
                 </tr>
                 <% }) %></table>
-            <form action="/admin/" method="GET"><button id="button2" type="submit" style="margin-bottom: 5px; background-color: rgb(158, 178, 212)">Add Meal Charge</button></form>
+            <form action="/admin/" method="GET"><button id="button2" type="submit" style="margin: auto; background-color: rgb(158, 178, 212)">Add Meal Charge</button></form>
         </div>
      </div>
      <div style="clear:both"></div>
