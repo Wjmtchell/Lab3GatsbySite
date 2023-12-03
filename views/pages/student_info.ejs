@@ -43,7 +43,7 @@
       <td>Date</td>
     </tr>
     <tr>
-      <td><%= results.length + 1 %></td>
+      <td><%= Object.values(tuitionResults).flat(1).length + 1 %></td>
       <td><input class="authfield" type="text" id="charge" name="charge" required></td>
       <td><input class="authfield" type="text" id="date" name="date" required></td>
       <td><button type="submit">Add Charge</button></td>
