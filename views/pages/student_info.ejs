@@ -462,15 +462,13 @@
     </div>
     <p style="margin-left: 20px;"><strong><%= i18next.t('GradeLevel', 'Grade Level:') %></strong> <%= studentInfo.grade_level %></p>
     <div class="bio-box" style="background-color: rgb(158, 178, 212)">
-        <p><strong><%= locals.i18next.t('Bio', 'Student Information:') %></strong></p>
-        <p><%= studentInfo.bio %></p>
-    </div>
-    <form action="/edit-bio/<%= studentInfo.id %>" method="post">
-        <label for="newBio"><strong><%= i18next.t('NewBio', 'New Student Information:') %></strong></label>
-        <textarea id="newBio" name="newBio" rows="4" cols="50"><%= studentInfo.bio %></textarea>
-        <br>
-        <button type="submit" style="background-color: rgb(158, 178, 212)">Save Changes</button>
-    </form>
+		<p><strong><%= locals.i18next.t('Bio', 'Student Information:') %></strong></p>
+		<!-- Add a div for the editable bio -->
+		<div class="editable-bio" id="editableBio" contenteditable="false"><%= studentInfo.bio %></div>
+		<!-- Add an "Edit" button to toggle edit mode -->
+		<button onclick="toggleEditMode()">Edit</button>
+	</div>
+   
     <div style="width: 100%; margin-top: 20px;">
         <div class="container" style="float:left; width: 45%; border: 2px solid rgba(62,94,148,1); background: rgb(158, 178, 212)">
             <h2 style="margin: auto; text-align: center;"><%= locals.i18next.t('tuitionCharges','Tuition Charges')%> </h2>
@@ -508,4 +506,19 @@
      <div style="clear:both"></div>
     
 </body>
+<script>
+    function toggleEditMode() {
+        const bioDiv = document.getElementById('editableBio');
+        const isContentEditable = bioDiv.contentEditable === 'true';
+        
+        // Toggle contentEditable attribute
+        bioDiv.contentEditable = !isContentEditable;
+
+        // Change button text based on edit mode
+        const buttonText = isContentEditable ? 'Edit' : 'Save';
+        document.querySelector('button').innerText = buttonText;
+        
+        // You can add additional logic here if needed
+    }
+</script>
 </html>
