@@ -482,7 +482,7 @@
                   </tr>
                 </thead><% Object.values(tuitionResults).flat(1).forEach(function(entry) { %>
                 <tr>
-                    <td><%= entry.charge %></td>
+                    <td>$<%= entry.charge %></td>
                     <td><%= entry.date %></td>
                 </tr>
                 <% }) %></table>
@@ -498,7 +498,7 @@
                   </tr>
                 </thead><% Object.values(mealsResults).flat(1).forEach(function(entry) { %>
                 <tr>
-                    <td><%= entry.charge %></td>
+                    <td>$<%= entry.charge %></td>
                     <td><%= entry.date %></td>
                 </tr>
                 <% }) %></table>
