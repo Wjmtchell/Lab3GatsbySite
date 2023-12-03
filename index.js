@@ -34,18 +34,6 @@ function getOrdinal(n) {
   var v = n % 100;
   return n + (s[(v - 20) % 10] || s[v] || s[0]);
 }
-const authenticateUser = (req, res, next) => {
-  // Exclude the login route from redirection
-  if (!req.session.user && req.originalUrl !== '/login') {
-    // Store the original URL in the session for redirection after login
-    req.session.originalUrl = req.originalUrl;
-    // Redirect to the login page
-    return res.redirect('/login');
-  }
-
-  // If the user is logged in or on the login page, proceed to the next middleware/route handler
-  next();
-};
 
 express()
   .use(i18nextMiddleware.handle(i18next))
@@ -63,7 +51,7 @@ express()
   .use(session({secret:'Hello World', resave:true,saveUninitialized:true}))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
-  .use(authenticateUser)
+
   .get('/change-language', async(req, res) => {
     const { lng } = req.query;
     if (lng) {
