@@ -26,7 +26,18 @@
     </form>
     <div style="width: 100%; margin-top: 20px;">
         <div style="float:left; width: 80%">
-            <p><%= tuitionResults.uid %></p>
+            <table class="users-table" style="margin: auto; padding:5px">
+                <thead>
+                  <tr>
+                    <th> Charge </th>
+                    <th> Date </th>
+                  </tr>
+                </thead><% tuitionResults.forEach(function(entry) { %>
+                <tr>
+                    <td><%= entry.charge %></td>
+                    <td><%= entry.date %></td>
+                </tr>
+                <% }) %></table>
             <button id="button1">Monthly Tuition (WIP)</button>
         </div>
         <div style="float:right;">
