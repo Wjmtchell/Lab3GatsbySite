@@ -200,11 +200,11 @@ express()
       await client.query('UPDATE student_info SET bio = $1 WHERE uid = $2', [newBio, studentId]);
 
       // Redirect back to the student_info page after updating the biography
-      res.redirect(`/student_info?message=Biography%20Updated&id=${studentId}`);
+      res.redirect(`/student/${studentId}?message=Biography%20Updated&id=${studentId}`);
       client.release();
   } catch (error) {
       console.error('Error updating biography:', error);
-      res.redirect(`/student_info?message=Error%20Updating%20Biography&id=${studentId}`);
+      res.redirect(`/student/${studentId}?message=Error%20Updating%20Biography&id=${studentId}`);
   }
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
