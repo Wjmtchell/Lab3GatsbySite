@@ -35,7 +35,6 @@ function getOrdinal(n) {
   return n + (s[(v - 20) % 10] || s[v] || s[0]);
 }
 
-
 express()
   .use(i18nextMiddleware.handle(i18next))
   .use((req, res, next) => {
@@ -60,15 +59,11 @@ express()
   .get('/', (req, res) => {
     const message = req.query.message || '';
     const user = req.session.user;
-    res.redirect('/main_menu', {user, message});})
+    res.render('pages/main_menu', {user, message});})
   .get('/login', (req,res)=> {
     const message = req.query.message || '';
     const user = req.session.user;
     res.render("pages/login", {user, message});})
-  .get('/main_menu', (req,res)=> {
-    const message = req.query.message || '';
-    const user = req.session.user;
-    res.render("pages/main_menu", {user, message});})
   .get('/student_list', async (req,res)=> {
     const message = req.query.message || '';
     const user = req.session.user;
