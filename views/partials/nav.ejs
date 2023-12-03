@@ -19,7 +19,7 @@
       </li>
       <li class="navbar-right">
         <% if(user) { %>
-          Welcome, <%= user%>
+          <a>Welcome, <%= user%></a>
         <% } else { %>
           <a href="/login"><%= locals.i18next.t('Login', 'Login')%></a>
         <% } %>
