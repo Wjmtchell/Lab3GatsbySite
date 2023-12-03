@@ -18,8 +18,8 @@
         <a href="/employee_list"><%= locals.i18next.t('employeeList', 'Employee List')%></a>
       </li>
       <li class="navbar-right">
-        <% if (false) { %>
-          Welcome, <%= user.name%>
+        <% if user { %>
+          Welcome, <%= user%>
         <% } else { %>
           <a href="/login"><%= locals.i18next.t('Login', 'Login')%></a>
         <% } %>
