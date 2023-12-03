@@ -1257,7 +1257,7 @@
 			<th style="text-align: center;"> <%= i18next.t('username', 'Username') %> </th>
 			<th style="text-align: center;"> <%= i18next.t ('Edit','Edit') %> </th>
 		  </tr>
-		</thead><% results.forEach(function(entry) { %>
+		</thead><% Object.values(results).flat(1).forEach(function(entry) { %>
 		<tr>
 			<td style="padding: 4px;"><%= entry.id %></td>
 			<td style="padding: 4px;">
