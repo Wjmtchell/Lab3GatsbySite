@@ -147,13 +147,13 @@ express()
     const {username,password,type}=req.body;
     try {
       const client = await pool.connect();
-      const result = await client.query('INSERT INTO users (username,password,type) VALUES ($1,$2,$3)',[username,password,type]);
-      const newUid = result.rows[0].id;
-      if (type === 3) {
-        res.redirect(`/add-student/${newUid}`);
-      } else {
-        res.redirect('/admin?message=User%20Added%20Successfully');
-      }
+      const result=await client.query('INSERT INTO users (username,password,type) VALUES ($1,$2,$3)',[username,password,type]);
+      
+      //if (type === 3) {
+      //  res.redirect(`/add-student/${newUid}`);
+      //} else {
+      //  res.redirect('/admin?message=User%20Added%20Successfully');
+      //}
       res.redirect('/admin');
       client.release();
     } catch(error) {
