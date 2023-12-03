@@ -60,9 +60,6 @@ express()
   .get('/', (req, res) => {
     const message = req.query.message || '';
     const user = req.session.user;
-    if (!user){
-      res.redirect('/login',{user,message})
-    }
     res.redirect('/main_menu', {user, message});})
   .get('/login', (req,res)=> {
     const message = req.query.message || '';
