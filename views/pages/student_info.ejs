@@ -33,17 +33,13 @@
             <table class="users-table" style="margin: auto; padding:5px">
                 <thead>
                   <tr>
-                    <th> ID </th>
-                    <th> <%= i18next.t('username', 'Username') %> </th>
-                    <th> <%= i18next.t ('Edit','Edit') %> </th>
+                    <th> Charge </th>
+                    <th> Date </th>
                   </tr>
-                </thead><% results.forEach(function(entry) { %>
+                </thead><% tuition.forEach(function(entry) { %>
                 <tr>
-                    <td><%= entry.id %></td>
-                    <td>
-                        <a href="/student/<%= entry.id %>"><%= entry.username %></a>
-                    </td>
-                    <td><a href="/student_edit">Edit</a></td>
+                    <td><%= entry.charge %></td>
+                    <td><%= entry.date %></td>
                 </tr>
                 <% }) %></table>
             <button id="button2">Monthly Meal Cost (WIP)</button>
