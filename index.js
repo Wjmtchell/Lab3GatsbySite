@@ -53,6 +53,9 @@ express()
     // Pass i18next instance to the template
     res.locals.i18next = i18next;
     console.log('i18next in locals:', res.locals.i18next); // Add this line for debuggin
+    if (!req.session.user){
+      return res.redirect('/login')
+    }
     next();
   })
   .use(express.static(path.join(__dirname, 'public')))
