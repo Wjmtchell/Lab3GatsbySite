@@ -81,10 +81,6 @@ express()
       console.error(err);
       res.send("Error " + err);
     }})
-  .get('/student_info', (req,res)=> {
-    const message = req.query.message || '';
-    const user = req.session.user;
-    res.render("pages/student_info", {user, message});})
   .get('/student_edit', (req,res)=> {
     const message = req.query.message || '';
     const user = req.session.user;
@@ -103,10 +99,6 @@ express()
       res.send("Error " + err);
     }
     })
-  .get('/employee_info', (req,res)=> {
-    const message = req.query.message || '';
-    const user = req.session.user;
-    res.render("pages/employee_info", {user,message});})
   .get('/employee_edit', (req,res)=> {
     const message = req.query.message || '';
     const user = req.session.user;
@@ -194,5 +186,21 @@ express()
      } catch(error) {
        res.redirect('/?message=Failed%20To%20Find%20EmployeeInfo')
      }
+  })
+  .post('/edit-bio/:id', async (req, res) => {
+  const studentId = req.params.id;
+  const newBio = req.body.newBio;
+
+  try {
+      const client = await pool.connect();
+      await client.query('UPDATE student_info SET bio = $1 WHERE uid = $2', [newBio, studentId]);
+
+      // Redirect back to the student_info page after updating the biography
+      res.redirect(`/student_info?message=Biography%20Updated&id=${studentId}`);
+      client.release();
+  } catch (error) {
+      console.error('Error updating biography:', error);
+      res.redirect(`/student_info?message=Error%20Updating%20Biography&id=${studentId}`);
+  }
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
