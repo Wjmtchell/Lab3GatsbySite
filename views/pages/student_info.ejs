@@ -38,7 +38,7 @@
                     <td><%= entry.date %></td>
                 </tr>
                 <% }) %></table>
-            <button id="button1">Monthly Tuition (WIP)</button>
+            <button id="button1"><a href="/admin">Add Tuition Charge</a></button>
         </div>
         <div style="float:right;">
             <table class="users-table" style="margin: auto; padding:5px">
@@ -47,13 +47,13 @@
                     <th> Charge </th>
                     <th> Date </th>
                   </tr>
-                </thead><% Object.values(mealResults).flat(1).forEach(function(entry) { %>
+                </thead><% Object.values(mealsResults).flat(1).forEach(function(entry) { %>
                 <tr>
                     <td><%= entry.charge %></td>
                     <td><%= entry.date %></td>
                 </tr>
                 <% }) %></table>
-            <button id="button2">Monthly Meal Cost (WIP)</button>
+            <button id="button2"><a href="/admin">Add Meal Charge<a></a></button>
         </div>
      </div>
      <div style="clear:both"></div>
