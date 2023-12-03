@@ -5,16 +5,463 @@
 <head>
   <title>Student Info</title>
 </head>
-<div class="jumbotron text-center">
-    <div style="font-size: xx-large"><%= locals.i18next.t('studentInfo','Student Info')</div>
+<style id="applicationStylesheet" type="text/css">
+	.mediaViewInfo {
+		--web-view-name: Main Menu;
+		--web-view-id: Main_Menu;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: Main_Menu;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+	#Main_Menu {
+		position: absolute;
+		width: 1920px;
+		height: 1080px;
+		background-color: rgba(255,255,242,1);
+		overflow: hidden;
+		--web-view-name: Main Menu;
+		--web-view-id: Main_Menu;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	#Rectangle_5 {
+		fill: rgba(158,194,255,1);
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_5 {
+		position: absolute;
+		overflow: visible;
+		width: 252px;
+		height: 1079px;
+		left: 0px;
+		top: 0px;
+	}
+	#Monterey {
+		left: 0px;
+		top: 55px;
+		position: absolute;
+		overflow: visible;
+		width: 255px;
+		height: 61px;
+		text-align: center;
+		font-family: Plantagenet Cherokee;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 42px;
+		color: rgba(62,94,148,1);
+		text-transform: capitalize;
+	}
+	#Navigation {
+		position: absolute;
+		width: 219px;
+		height: 27px;
+		left: 1674px;
+		top: 58px;
+		overflow: visible;
+	}
+	#Home_Button {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 99px;
+		height: 27px;
+		text-align: center;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(62,94,148,1);
+		text-transform: capitalize;
+	}
+	#Logout_Button {
+		left: 121px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 99px;
+		height: 27px;
+		text-align: center;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(62,94,148,1);
+		text-transform: capitalize;
+	}
+	#Page_Title {
+		left: 745px;
+		top: 38px;
+		position: absolute;
+		overflow: visible;
+		width: 431px;
+		height: 67px;
+		text-align: center;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 60px;
+		color: rgba(62,94,148,1);
+	}
+	#Line_1 {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_1 {
+		overflow: visible;
+		position: absolute;
+		width: 1px;
+		height: 1080px;
+		left: 253.5px;
+		top: 1.5px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Employee_List_Button {
+		position: absolute;
+		width: 260px;
+		height: 70px;
+		left: 686px;
+		top: 364px;
+		overflow: visible;
+	}
+	#Rectangle_4 {
+		fill: rgba(224,190,117,1);
+		stroke: rgba(148,116,47,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_4 {
+		position: absolute;
+		overflow: visible;
+		width: 260px;
+		height: 70px;
+		left: 0px;
+		top: 0px;
+	}
+	#Employee_List {
+		left: 69px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 187px;
+		height: 31px;
+		text-align: center;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 28px;
+		color: rgba(148,116,47,1);
+	}
+	#List_Icon {
+		fill: rgba(148,116,47,1);
+	}
+	.List_Icon {
+		overflow: visible;
+		position: absolute;
+		width: 36px;
+		height: 29.25px;
+		left: 24px;
+		top: 20.875px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Student_List_Button {
+		position: absolute;
+		width: 260px;
+		height: 70px;
+		left: 686px;
+		top: 270px;
+		overflow: visible;
+	}
+	#Rectangle_4_w {
+		fill: rgba(224,190,117,1);
+		stroke: rgba(148,116,47,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_4_w {
+		position: absolute;
+		overflow: visible;
+		width: 260px;
+		height: 70px;
+		left: 0px;
+		top: 0px;
+	}
+	#Student_List {
+		left: 69px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 187px;
+		height: 31px;
+		text-align: center;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 28px;
+		color: rgba(148,116,47,1);
+	}
+	#List_Icon_y {
+		fill: rgba(148,116,47,1);
+	}
+	.List_Icon_y {
+		overflow: visible;
+		position: absolute;
+		width: 36px;
+		height: 29.25px;
+		left: 24px;
+		top: 20.875px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Student_Add_Button {
+		position: absolute;
+		width: 260px;
+		height: 70px;
+		left: 975px;
+		top: 270px;
+		overflow: visible;
+	}
+	#Rectangle_4_ {
+		fill: rgba(224,190,117,1);
+		stroke: rgba(148,116,47,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_4_ {
+		position: absolute;
+		overflow: visible;
+		width: 260px;
+		height: 70px;
+		left: 0px;
+		top: 0px;
+	}
+	#Student_Add {
+		left: 69px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 187px;
+		height: 31px;
+		text-align: center;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 28px;
+		color: rgba(148,116,47,1);
+	}
+	#Add_Icon {
+		fill: rgba(148,116,47,1);
+	}
+	.Add_Icon {
+		overflow: visible;
+		position: absolute;
+		width: 29.25px;
+		height: 29.25px;
+		left: 27.375px;
+		top: 19.875px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Employee_Add_Button {
+		position: absolute;
+		width: 260px;
+		height: 70px;
+		left: 975px;
+		top: 364px;
+		overflow: visible;
+	}
+	#Rectangle_4_ba {
+		fill: rgba(224,190,117,1);
+		stroke: rgba(148,116,47,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_4_ba {
+		position: absolute;
+		overflow: visible;
+		width: 260px;
+		height: 70px;
+		left: 0px;
+		top: 0px;
+	}
+	#Employee_Add {
+		left: 69px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 187px;
+		height: 31px;
+		text-align: center;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 28px;
+		color: rgba(148,116,47,1);
+	}
+	#Add_Icon_ {
+		fill: rgba(148,116,47,1);
+	}
+	.Add_Icon_ {
+		overflow: visible;
+		position: absolute;
+		width: 29.25px;
+		height: 29.25px;
+		left: 27.375px;
+		top: 20.375px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Employee_Add_Button_ {
+		position: absolute;
+		width: 260px;
+		height: 70px;
+		left: 975px;
+		top: 458px;
+		overflow: visible;
+	}
+	#Rectangle_4_bb {
+		fill: rgba(224,190,117,1);
+		stroke: rgba(148,116,47,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_4_bb {
+		position: absolute;
+		overflow: visible;
+		width: 260px;
+		height: 70px;
+		left: 0px;
+		top: 0px;
+	}
+	#Add_Payment {
+		left: 69px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 187px;
+		height: 31px;
+		text-align: center;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 28px;
+		color: rgba(148,116,47,1);
+	}
+	#Add_Icon_ba {
+		fill: rgba(148,116,47,1);
+	}
+	.Add_Icon_ba {
+		overflow: visible;
+		position: absolute;
+		width: 29.25px;
+		height: 29.25px;
+		left: 27.375px;
+		top: 20.375px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Student_Add_Button_bb {
+		position: absolute;
+		width: 260px;
+		height: 70px;
+		left: 686px;
+		top: 458px;
+		overflow: visible;
+	}
+	#Rectangle_4_bc {
+		fill: rgba(224,190,117,1);
+		stroke: rgba(148,116,47,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_4_bc {
+		position: absolute;
+		overflow: visible;
+		width: 260px;
+		height: 70px;
+		left: 0px;
+		top: 0px;
+	}
+	#Add_Expense {
+		left: 69px;
+		top: 19px;
+		position: absolute;
+		overflow: visible;
+		width: 187px;
+		height: 31px;
+		text-align: center;
+		font-family: Arial;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 28px;
+		color: rgba(148,116,47,1);
+	}
+	#Add_Icon_be {
+		fill: rgba(148,116,47,1);
+	}
+	.Add_Icon_be {
+		overflow: visible;
+		position: absolute;
+		width: 29.25px;
+		height: 29.25px;
+		left: 27.375px;
+		top: 19.875px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+    .container {
+  position: relative;
+}
+    .vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+</style>
+<div class="jumbotron text-center" style="border: 2px solid rgba(62,94,148,1); background-color: rgb(158, 178, 212)">
+    <div style="font-size: xx-large;"><%= locals.i18next.t('studentInfo','Student Info') %></div>
 </div>
-<body>
+<body style="background-color: rgb(255, 206, 101)">
     
-    <div style="text-align: left; font-size: xx-large; margin-top: 20px;">
+    <div style="text-align: left; font-size: xx-large; margin-top: 20px">
         <%= locals.i18next.t(`studentInfo.${studentInfo.id}.surname`, '${studentInfo.surname}') %>, <%= i18next.t(`studentInfo.${studentInfo.id}.given_name`, '${studentInfo.given_name}') %>
     </div>
     <p style="margin-left: 20px;"><strong><%= i18next.t('GradeLevel', 'Grade Level:') %></strong> <%= studentInfo.grade_level %></p>
-    <div class="bio-box">
+    <div class="bio-box" style="background-color: rgb(158, 178, 212)">
         <p><strong><%= locals.i18next.t('Bio', 'Student Information:') %></strong></p>
         <p><%= locals.i18next.t(`studentInfo.${studentInfo.id}.bio`, '${studentInfo.bio}') %></p>
     </div>
@@ -22,9 +469,43 @@
         <label for="newBio"><strong><%= i18next.t('NewBio', 'New Student Information:') %></strong></label>
         <textarea id="newBio" name="newBio" rows="4" cols="50"><%= studentInfo.bio %></textarea>
         <br>
-        <button type="submit">Save Changes</button>
+        <button type="submit" style="background-color: rgb(158, 178, 212)">Save Changes</button>
     </form>
-    <button id="button1">Monthly Tuition (WIP)</button>
-    <button id="button2">Monthly Meal Cost (WIP)</button>
+    <div style="width: 100%; margin-top: 20px;">
+        <div class="container" style="float:left; width: 45%; border: 2px solid rgba(62,94,148,1);">
+            <h2 style="margin: auto; text-align: center;"><%= locals.i18next.t('tuitionCharges','Tuition Charges')%> </h2>
+            <table class="users-table" style="margin: auto; padding:5px">
+                <thead>
+                  <tr>
+                    <th> <%= locals.i18next.t('Cost','Cost') %> </th>
+                    <th> <%= locals.i18next.t('Date','Date')%> </th>
+                  </tr>
+                </thead><% Object.values(tuitionResults).flat(1).forEach(function(entry) { %>
+                <tr>
+                    <td><%= entry.charge %></td>
+                    <td><%= entry.date %></td>
+                </tr>
+                <% }) %></table>
+                <form action="/admin/" method="GET"><button class="vertical-center" id="button2" type="submit" style="margin: auto; background-color: rgb(158, 178, 212)">Add Tuition Charge</button></form>
+        </div>
+        <div class="container" style="float:right; width: 45%; border: 2px solid rgba(62,94,148,1);">
+            <h2 style="margin: auto; text-align: center;">Meal Charges</h2>
+            <table class="users-table" style="margin: auto; padding:5px">
+                <thead>
+                  <tr>
+                    <th> <%= locals.i18next.t('Cost','Cost') %></th>
+                    <th> <%= locals.i18next.t('Date','Date')%> </th>
+                  </tr>
+                </thead><% Object.values(mealsResults).flat(1).forEach(function(entry) { %>
+                <tr>
+                    <td><%= entry.charge %></td>
+                    <td><%= entry.date %></td>
+                </tr>
+                <% }) %></table>
+            <form action="/admin/" method="GET"><button class="vertical-center" id="button2" type="submit" style="margin: auto; background-color: rgb(158, 178, 212)">Add Meal Charge</button></form>
+        </div>
+     </div>
+     <div style="clear:both"></div>
+    
 </body>
 </html>
