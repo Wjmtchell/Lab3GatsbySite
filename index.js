@@ -35,15 +35,13 @@ function getOrdinal(n) {
   return n + (s[(v - 20) % 10] || s[v] || s[0]);
 }
 
+
 express()
   .use(i18nextMiddleware.handle(i18next))
   .use((req, res, next) => {
     // Pass i18next instance to the template
     res.locals.i18next = i18next;
     console.log('i18next in locals:', res.locals.i18next); // Add this line for debuggin
-    if (!req.session.user){
-      return res.redirect('/login')
-    }
     next();
   })
   .use(express.static(path.join(__dirname, 'public')))
@@ -51,7 +49,6 @@ express()
   .use(session({secret:'Hello World', resave:true,saveUninitialized:true}))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
-
   .get('/change-language', async(req, res) => {
     const { lng } = req.query;
     if (lng) {
@@ -63,6 +60,9 @@ express()
   .get('/', (req, res) => {
     const message = req.query.message || '';
     const user = req.session.user;
+    if (!user){
+      res.redirect('/login',{user,message})
+    }
     res.redirect('/main_menu', {user, message});})
   .get('/login', (req,res)=> {
     const message = req.query.message || '';
