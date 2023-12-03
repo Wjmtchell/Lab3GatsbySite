@@ -32,7 +32,7 @@
                     <th> Charge </th>
                     <th> Date </th>
                   </tr>
-                </thead><% Object.keys(tuitionResults).forEach(function(entry) { %>
+                </thead><% Object.entries(tuitionResults).forEach(function(entry) { %>
                 <tr>
                     <td><%= entry %></td>
                     <td><%= entry.date %></td>
