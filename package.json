@@ -16,6 +16,8 @@
     "express": "^4.15.2",
     "express-session": "^1.17.3",
     "i18next": "^23.7.7",
+    "i18next-http-middleware": "^3.5.0",
+    "i18next-locize-backend": "^6.4.1",
     "pg": "^8.11.3"
   },
   "devDependencies": {
