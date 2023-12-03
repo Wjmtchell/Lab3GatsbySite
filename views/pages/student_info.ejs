@@ -37,6 +37,17 @@
                     <td><%= entry.charge %></td>
                     <td><%= entry.date %></td>
                 </tr>
+                <tr><td colspan="2"></td></tr>
+    <tr><td></td>
+      <td>Charge</td>
+      <td>Date</td>
+    </tr>
+    <tr>
+      <td><%= results.length + 1 %></td>
+      <td><input class="authfield" type="text" id="charge" name="charge" required></td>
+      <td><input class="authfield" type="text" id="date" name="date" required></td>
+      <td><button type="submit">Add Charge</button></td>
+    </tr>
                 <% }) %></table>
             <button id="button1">Monthly Tuition (WIP)</button>
         </div>
