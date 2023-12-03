@@ -34,6 +34,14 @@ function getOrdinal(n) {
   var v = n % 100;
   return n + (s[(v - 20) % 10] || s[v] || s[0]);
 }
+const authenticateUser = (req, res, next) => {
+  if (!req.session.user) {
+    // If the user is not logged in, redirect to the login page
+    return res.redirect('/login');
+  }
+  // If the user is logged in, proceed to the next middleware/route handler
+  next();
+};
 
 express()
   .use(i18nextMiddleware.handle(i18next))
@@ -48,6 +56,7 @@ express()
   .use(session({secret:'Hello World', resave:true,saveUninitialized:true}))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
+  .use(authenticateUser)
   .get('/change-language', async(req, res) => {
     const { lng } = req.query;
     if (lng) {
@@ -59,7 +68,7 @@ express()
   .get('/', (req, res) => {
     const message = req.query.message || '';
     const user = req.session.user;
-    res.render('pages/index', {user, message});})
+    res.redirect('/main_menu', {user, message});})
   .get('/login', (req,res)=> {
     const message = req.query.message || '';
     const user = req.session.user;
