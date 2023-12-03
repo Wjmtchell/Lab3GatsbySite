@@ -442,7 +442,6 @@
 	}
     .vertical-center {
   margin: 0;
-  position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -468,7 +467,8 @@
         <button type="submit" style="background-color: rgb(158, 178, 212)">Save Changes</button>
     </form>
     <div style="width: 100%; margin-top: 20px;">
-        <div style="float:left; width: 45%; padding: 10px; border: 2px solid rgba(62,94,148,1);">
+        <div style="float:left; width: 45%; border: 2px solid rgba(62,94,148,1); padding-bottom: 100%;
+        margin-bottom: -100%;">
             <h2 style="margin: auto">Tuition Charges</h2>
             <table class="users-table" style="margin: auto; padding:5px">
                 <thead>
@@ -484,7 +484,8 @@
                 <% }) %></table>
                 <form action="/admin/" method="GET"><button class="vertical-center" id="button2" type="submit" style="margin: auto; background-color: rgb(158, 178, 212)">Add Tuition Charge</button></form>
         </div>
-        <div style="float:right; width: 45%; padding: 10px; border: 2px solid rgba(62,94,148,1);">
+        <div style="float:right; width: 45%; border: 2px solid rgba(62,94,148,1); padding-bottom: 100%;
+        margin-bottom: -100%;">
             <h2 style="margin: auto">Meal Charges</h2>
             <table class="users-table" style="margin: auto; padding:5px">
                 <thead>
