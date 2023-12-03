@@ -148,7 +148,12 @@ express()
     try {
       const client = await pool.connect();
       await client.query('INSERT INTO users (username,password,type) VALUES ($1,$2,$3)',[username,password,type]);
-
+      const newUid = result.rows[0].id;
+      if (type === 3) {
+        res.redirect(`/add-student/${newUid}`);
+      } else {
+        res.redirect('/admin?message=User%20Added%20Successfully');
+      }
       res.redirect('/admin');
       client.release();
     } catch(error) {
@@ -202,5 +207,32 @@ express()
       console.error('Error updating biography:', error);
       res.redirect(`/student/${studentId}?message=Error%20Updating%20Biography&id=${studentId}`);
   }
+  })
+  .get('/add-student/:id', (req, res) => {
+    if(req.session.type !=1){
+      res.redirect('/?You are not authorized to access this page');
+    }
+    if (type === 3) {
+      res.redirect(`/add-student/${newUid}`);
+    } else {
+      res.redirect('/admin?message=User%20Added%20Successfully');
+    }
+  })
+  .post('/add-student/:id', async (req, res) => {
+    const { firstName, lastName, dob, emergencyContact, emergencyPhone } = req.body;
+    const studentId = req.params.id;
+    try {
+      const client = await pool.connect();
+      await client.query(
+        'INSERT INTO student_info (uid, first_name, last_name, dob, emergency_contact, emergency_phone) VALUES ($1, $2, $3, $4, $5)',
+        [studentId, firstName, lastName, dob, emergencyContact, emergencyPhone]
+      );
+
+      res.redirect(`/admin?message=Student%20Added%20Successfully`);
+      client.release();
+    } catch (error) {
+      console.error('Error adding student:', error);
+      res.redirect('/admin?message=Error%20Adding%20Student');
+    }
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
