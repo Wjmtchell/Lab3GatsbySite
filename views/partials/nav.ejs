@@ -9,19 +9,19 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li>
-        <a href="/main_menu">Main Menu</a>
+        <a href="/"><%= locals.i18next.t('mainMenu', 'Main Menu')%></a>
       </li>
       <li>
-        <a href="/student_list">Student Information</a>
+        <a href="/student_list"><%= locals.i18next.t('studentList', 'Student List')%></a>
       </li>
       <li>
-        <a href="/employee_list">Employee Information</a>
+        <a href="/employee_list"><%= locals.i18next.t('employeeList', 'Employee List')%></a>
       </li>
       <li class="navbar-right">
         <% if (false) { %>
           Welcome, <%= user.name%>
         <% } else { %>
-          <a href="/login">Log In</a>
+          <a href="/login"><%= locals.i18next.t('Login', 'Login')%></a>
         <% } %>
       </li>
       <li class="dropdown">
