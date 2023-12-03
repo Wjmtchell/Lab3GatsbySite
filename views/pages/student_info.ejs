@@ -6,18 +6,24 @@
   <title>Student Info</title>
 </head>
 <div class="jumbotron text-center">
-    <div style="font-size: xx-large">Student Info</div>
+    <div style="font-size: xx-large"><%= locals.i18next.t('Bio','Student Information') %></div>
 </div>
 <body>
     
     <div style="text-align: left; font-size: xx-large; margin-top: 20px;">
-        <%= locals.i18next.t(`studentInfo.${studentInfo.id}.surname`, '${studentInfo.surname}') %>, <%= i18next.t(`studentInfo.${studentInfo.id}.given_name`, '${studentInfo.given_name}') %>
+        <%= locals.i18next.t(`studentInfo.${studentInfo.id}.surname`, '${studentInfo.surname%>, <%= i18next.t(`studentInfo.${studentInfo.id}.given_name`, '${studentInfo.given_name}') %>
     </div>
     <p style="margin-left: 20px;"><strong><%= i18next.t('GradeLevel', 'Grade Level:') %></strong> <%= studentInfo.grade_level %></p>
     <div class="bio-box">
-        <p><strong><%= locals.i18next.t('Bio', 'Biography:') %></strong></p>
-        <p><%= locals.i18next.t('studentInfo.${studentInfo.id}.bio', '${studentInfo.bio}') %></p>
+        <p><strong><%= locals.i18next.t('Bio', 'Student Information:') %></strong></p>
+        <p><%= studentInfo.bio %></p>
     </div>
+    <form action="/edit-bio/<%= studentInfo.id %>" method="post">
+        <label for="newBio"><strong><%= i18next.t('NewBio', 'New Student Information:') %></strong></label>
+        <textarea id="newBio" name="newBio" rows="4" cols="50"><%= studentInfo.bio %></textarea>
+        <br>
+        <button type="submit">Save Changes</button>
+    </form>
     <button id="button1">Monthly Tuition (WIP)</button>
     <button id="button2">Monthly Meal Cost (WIP)</button>
 </body>
