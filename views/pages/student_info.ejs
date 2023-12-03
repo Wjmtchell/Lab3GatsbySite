@@ -25,6 +25,7 @@
         <button type="submit">Save Changes</button>
     </form>
     <div style="width: 100%; margin-top: 20px;">
+        <h2>Tuition Charges</h2>
         <div style="float:left; width: 50%; padding: 10px">
             <table class="users-table" style="margin: auto; padding:5px">
                 <thead>
@@ -38,9 +39,10 @@
                     <td><%= entry.date %></td>
                 </tr>
                 <% }) %></table>
-            <button id="button1"><a href="/admin">Add Tuition Charge</a></button>
+            <button id="button1" href="/admin" style="margin: auto">Add Tuition Charge</button>
         </div>
-        <div style="float:right;">
+        <div style="float:right; width: 50%;">
+            <h2>Meal Charges</h2>
             <table class="users-table" style="margin: auto; padding:5px">
                 <thead>
                   <tr>
@@ -53,7 +55,7 @@
                     <td><%= entry.date %></td>
                 </tr>
                 <% }) %></table>
-            <button id="button2"><a href="/admin">Add Meal Charge<a></a></button>
+            <button id="button2" href="/admin" style="margin: auto">Add Meal Charge</button>
         </div>
      </div>
      <div style="clear:both"></div>
