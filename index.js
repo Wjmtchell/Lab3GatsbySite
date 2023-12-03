@@ -35,11 +35,15 @@ function getOrdinal(n) {
   return n + (s[(v - 20) % 10] || s[v] || s[0]);
 }
 const authenticateUser = (req, res, next) => {
-  if (!req.session.user) {
-    // If the user is not logged in, redirect to the login page
+  // Exclude the login route from redirection
+  if (!req.session.user && req.originalUrl !== '/login') {
+    // Store the original URL in the session for redirection after login
+    req.session.originalUrl = req.originalUrl;
+    // Redirect to the login page
     return res.redirect('/login');
   }
-  // If the user is logged in, proceed to the next middleware/route handler
+
+  // If the user is logged in or on the login page, proceed to the next middleware/route handler
   next();
 };
 
