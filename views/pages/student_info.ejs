@@ -442,9 +442,9 @@
 	}
 </style>
 <div class="jumbotron text-center">
-    <div style="font-size: xx-large; border: 3px solid rgba(62,94,148,1); background-color: rgb(113, 127, 152)"><%= locals.i18next.t('studentInfo','Student Info') %></div>
+    <div style="font-size: xx-large; border: 3px solid rgba(62,94,148,1); background-color: rgb(158, 178, 212)"><%= locals.i18next.t('studentInfo','Student Info') %></div>
 </div>
-<body style="background-color: rgb(192, 179, 151)">
+<body style="background-color: rgb(211, 179, 111)">
     
     <div style="text-align: left; font-size: xx-large; margin-top: 20px;">
         <%= locals.i18next.t(`studentInfo.${studentInfo.id}.surname`, '${studentInfo.surname}') %>, <%= i18next.t(`studentInfo.${studentInfo.id}.given_name`, '${studentInfo.given_name}') %>
@@ -458,7 +458,7 @@
         <label for="newBio"><strong><%= i18next.t('NewBio', 'New Student Information:') %></strong></label>
         <textarea id="newBio" name="newBio" rows="4" cols="50"><%= studentInfo.bio %></textarea>
         <br>
-        <button type="submit">Save Changes</button>
+        <button type="submit" style="background-color: rgba(62,94,148,1)">Save Changes</button>
     </form>
     <div style="width: 100%; margin-top: 20px;">
         <div style="float:left; width: 40%; padding: 10px; border: 3px solid rgba(62,94,148,1)">
@@ -475,7 +475,7 @@
                     <td><%= entry.date %></td>
                 </tr>
                 <% }) %></table>
-                <form action="/admin/" method="GET"><button id="button2" type="submit" style="margin: auto">Add Tuition Charge</button></form>
+                <form action="/admin/" method="GET"><button id="button2" type="submit" style="margin: auto; background-color: rgba(62,94,148,1)">Add Tuition Charge</button></form>
         </div>
         <div style="float:right; width: 40%; padding: 10px; border: 3px solid rgba(62,94,148,1)">
             <h2 style="margin: auto">Meal Charges</h2>
@@ -491,7 +491,7 @@
                     <td><%= entry.date %></td>
                 </tr>
                 <% }) %></table>
-            <form action="/admin/" method="GET"><button id="button2" type="submit" style="margin: auto">Add Meal Charge</button></form>
+            <form action="/admin/" method="GET"><button id="button2" type="submit" style="margin: auto; background-color: rgba(62,94,148,1)">Add Meal Charge</button></form>
         </div>
      </div>
      <div style="clear:both"></div>
