@@ -185,7 +185,7 @@ express()
     const user = req.session.user;
      try {
        const client = await pool.connect();
-       const result = await client.query('SELECT * FROM users WHERE uid=($1) AND type=2',values);
+       const result = await client.query('SELECT * FROM users WHERE id=($1) AND type=2',values);
        const employeeInfo = result.rows[0];
        res.render('pages/employee_info', {employeeInfo,user});
        client.release();
