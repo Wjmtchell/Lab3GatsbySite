@@ -193,44 +193,22 @@ express()
        res.redirect('/?message=Failed%20To%20Find%20EmployeeInfo')
      }
   })
-  .post('/edit-bio/:id', async (req, res) => {
-  const studentId = req.params.id;
-  const newBio = req.body.newBio;
+  // Not Yet implemented
+  // .post('/edit-bio/:id', async (req, res) => {
+  // const studentId = req.params.id;
+  // const newBio = req.body.newBio;
 
-  try {
-      const client = await pool.connect();
-      await client.query('UPDATE student_info SET bio = $1 WHERE uid = $2', [newBio, studentId]);
+  // try {
+  //     const client = await pool.connect();
+  //     await client.query('UPDATE student_info SET bio = $1 WHERE uid = $2', [newBio, studentId]);
 
-      // Redirect back to the student_info page after updating the biography
-      res.redirect(`/student/${studentId}?message=Biography%20Updated&id=${studentId}`);
-      client.release();
-  } catch (error) {
-      console.error('Error updating biography:', error);
-      res.redirect(`/student/${studentId}?message=Error%20Updating%20Biography&id=${studentId}`);
-  }
-  })
-  .get('/add-student/:id', (req, res) => {
-    if (req.session.type !== 1) {
-      res.redirect('/?message=You are not authorized to access this page');
-    }
-    const studentId = req.params.id;
-    res.render('add_student', { studentId });
-  })
-  .post('/add-student/:id', async (req, res) => {
-    const { firstName, lastName, dob, emergencyContact, emergencyPhone } = req.body;
-    const studentId = req.params.id;
-    try {
-      const client = await pool.connect();
-      await client.query(
-        'INSERT INTO student_info (uid, given_name, surname, dob, emergency_contact, emergency_phone) VALUES ($1, $2, $3, $4, $5)',
-        [studentId, firstName, lastName, dob, emergencyContact, emergencyPhone]
-      );
-
-      res.redirect(`/admin?message=Student%20Added%20Successfully`);
-      client.release();
-    } catch (error) {
-      console.error('Error adding student:', error);
-      res.redirect('/admin?message=Error%20Adding%20Student');
-    }
-  })
+  //     // Redirect back to the student_info page after updating the biography
+  //     res.redirect(`/student/${studentId}?message=Biography%20Updated&id=${studentId}`);
+  //     client.release();
+  // } catch (error) {
+  //     console.error('Error updating biography:', error);
+  //     res.redirect(`/student/${studentId}?message=Error%20Updating%20Biography&id=${studentId}`);
+  // }
+  // })
+  
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
