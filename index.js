@@ -148,7 +148,7 @@ express()
     try {
       const client = await pool.connect();
       const result =await client.query('INSERT INTO users (username,password,type) VALUES ($1,$2,$3) RETURNING id',[username,password,type]);
-      const newUid= result.rows[0].id
+      const newUid= result.rows[0].id;
       if (type === 3) {
         res.redirect(`/add-student/${newUid}`);
       } else {
