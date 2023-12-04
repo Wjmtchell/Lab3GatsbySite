@@ -39,35 +39,35 @@
   <h2>Add User</h2>
   <form method="POST" action='/admin/add'>
 
-    <label for="username">Username:</label>
+    <label for="username"><%= i18next.t('username','Username:') %></label>
     <input type="text" id="username" name="username" required>
 
-    <label for="password">Password:</label>
+    <label for="password"><%= i18next.t('password','Password:')%></label>
     <input type="password" id="password" name="password" required>
 
     <label for="type">User Type:</label>
     <select id="type" name="type">
-      <option value="1">Admin</option>
-      <option value="2">Teacher</option>
-      <option value="3">Student</option>
+      <option value="1"><%= i18next.t('Administrator','Administrator') %></option>
+      <option value="2"><%= i18next.t('Teacher','Teacher') %></option>
+      <option value="3"><%= i18next.t('Student','Student') %></option>
     </select>
 
-    <label for="firstName">First Name:</label>
+    <label for="firstName"><%= i18next.t('givenName', 'Given Name:')%></label>
     <input type="text" id="firstName" name="firstName" required>
 
-    <label for="lastName">Last Name:</label>
+    <label for="lastName"><%= i18next.t('surname', 'Surname:')%></label>
     <input type="text" id="lastName" name="lastName" required>
 
-    <label for="dob">Date of Birth:</label>
+    <label for="dob"><%= i18next.t('DOB','Date of Birth:')%></label>
     <input type="date" id="dob" name="dob" required>
 
-    <label for="emergencyContact">Emergency Contact:</label>
+    <label for="emergencyContact"><%= i18next.t('emergencyContact','Emergency Contact:')%></label>
     <input type="text" id="emergencyContact" name="emergencyContact" required>
 
-    <label for="emergencyPhone">Emergency Contact Phone Number:</label>
+    <label for="emergencyPhone"><%= i18next.t('emergencyPhone','Emergency Contact Phone Number:')%></label>
     <input type="tel" id="emergencyPhone" name="emergencyPhone" required>
 
-    <button type="submit">Add Student</button>
+    <button type="submit"><%= i18next.t('AddUser','Add User') %></button>
   </form>
 </body>
 </html>
