@@ -150,9 +150,9 @@ express()
       await client.query('INSERT INTO users (username,password,type) VALUES ($1,$2,$3)',[username,password,type]);
      
       if (type === 3) {
-        //res.redirect(`/add-student/${newUid}`);
+        res.redirect(`/add-student/${newUid}`);
       } else {
-        //res.redirect('/admin?message=User%20Added%20Successfully');
+        res.redirect('/admin?message=User%20Added%20Successfully');
       }
       res.redirect('/admin');
       client.release();
@@ -209,14 +209,11 @@ express()
   }
   })
   .get('/add-student/:id', (req, res) => {
-    if(req.session.type !=1){
-      res.redirect('/?You are not authorized to access this page');
+    if (req.session.type !== 1) {
+      res.redirect('/?message=You are not authorized to access this page');
     }
-    if (type === 3) {
-      res.redirect(`/add-student/${newUid}`);
-    } else {
-      res.redirect('/admin?message=User%20Added%20Successfully');
-    }
+    const studentId = req.params.id;
+    res.render('add_student', { studentId });
   })
   .post('/add-student/:id', async (req, res) => {
     const { firstName, lastName, dob, emergencyContact, emergencyPhone } = req.body;
