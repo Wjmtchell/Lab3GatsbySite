@@ -154,7 +154,6 @@ express()
       } else {
         res.redirect('/admin?message=User%20Added%20Successfully');
       }
-      res.redirect('/admin');
       client.release();
     } catch(error) {
       res.redirect('/admin?message=Error%20Adding%20User');
