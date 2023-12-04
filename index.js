@@ -173,7 +173,7 @@ express()
        const meals = await client.query('SELECT * FROM meals WHERE uid=($1)',values);
        const mealsResults = { 'mealsResults': (meals) ? meals.rows : null};
        const studentInfo = result.rows[0];
-       res.render('pages/student_info', {studentInfo,user,tuitionResults,mealsResults});
+       res.render('pages/student_info', {studentInfo,user,tuitionResults,mealsResults, id});
        client.release();
      } catch(error) {
        res.redirect('/?message=Failed%20To%20Find%20StudentInfo')
