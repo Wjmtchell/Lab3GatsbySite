@@ -144,7 +144,7 @@ express()
       }
     }})
   .get('/admin/add', async (req,res)=>{
-    res.render('add_user')
+    res.render('pages/add_user')
   })
   .post('/admin/add', async (req,res)=> {
     const {username,password,type,firstName, lastName, dob, emergencyContact, emergencyPhone } = req.body;
