@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
 <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
-<nav class="navbar navbar-default navbar-static-top navbar-inverse">
+<nav class="navbar navbar-default navbar-static-top navbar-inverse" style="margin: 0px;">
   <div class="container">
     <ul class="nav navbar-nav">
       <li class="active">
@@ -9,19 +9,16 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li>
-        <a href="/main_menu">Main Menu</a>
+        <a href="/student_list"><%= locals.i18next.t('studentList', 'Student List')%></a>
       </li>
       <li>
-        <a href="/student_list">Student Information</a>
-      </li>
-      <li>
-        <a href="/employee_list">Employee Information</a>
+        <a href="/employee_list"><%= locals.i18next.t('employeeList', 'Employee List')%></a>
       </li>
       <li class="navbar-right">
-        <% if (false) { %>
-          Welcome, <%= user.name%>
+        <% if(user) { %>
+          <a>Welcome, <%= user%></a>
         <% } else { %>
-          <a href="/login">Log In</a>
+          <a href="/login"><%= locals.i18next.t('Login', 'Login')%></a>
         <% } %>
       </li>
       <li class="dropdown">

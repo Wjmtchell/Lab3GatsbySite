@@ -1256,7 +1256,7 @@
 			<th> Username </th>
 			<th> Edit </th>
 		  </tr>
-		</thead><% results.forEach(function(entry) { %>
+		</thead><% Object.values(results).flat(1).forEach(function(entry) { %>
 		<tr>
 			<td><%= entry.id %></td>
 			<td>

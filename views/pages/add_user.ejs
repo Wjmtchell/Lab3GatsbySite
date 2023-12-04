@@ -1,0 +1,76 @@
+<!-- add_student.ejs -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add User</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Add User</h2>
+  <form method="POST" action='/admin/add'>
+
+    <label for="username"><%= i18next.t('username','Username:') %></label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password"><%= i18next.t('password','Password:')%></label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="type">User Type:</label>
+    <select id="type" name="type">
+      <option value="1"><%= i18next.t('Administrator','Administrator') %></option>
+      <option value="2"><%= i18next.t('Teacher','Teacher') %></option>
+      <option value="3"><%= i18next.t('Student','Student') %></option>
+    </select>
+
+    <label for="firstName"><%= i18next.t('givenName', 'Given Name:')%></label>
+    <input type="text" id="firstName" name="firstName" required>
+
+    <label for="lastName"><%= i18next.t('surname', 'Surname:')%></label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <label for="dob"><%= i18next.t('DOB','Date of Birth:')%></label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label for="emergencyContact"><%= i18next.t('emergencyContact','Emergency Contact:')%></label>
+    <input type="text" id="emergencyContact" name="emergencyContact" required>
+
+    <label for="emergencyPhone"><%= i18next.t('emergencyPhone','Emergency Contact Phone Number:')%></label>
+    <input type="tel" id="emergencyPhone" name="emergencyPhone" required>
+
+    <label for="bio"><%= locals.i18next.t('Bio', 'Student Information:') %></label>
+    <input type="text" id="bio" name="bio" required>
+    
+    <button type="submit"><%= i18next.t('AddUser','Add User') %></button>
+  </form>
+</body>
+</html>

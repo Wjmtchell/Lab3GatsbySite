@@ -5,23 +5,23 @@
       </head>
 
 <div class="jumbotron text-center">
-  <div style="font-size: xx-large">Login</div>
+  <div style="font-size: xx-large"><%= i18next.t('loginPage','Login') %></div>
 </div>
 <p><%= message %></p>
 <body>
     <div class="login-container">
-        <h2>Login</h2>
+        <h2><%= i18next.t('loginPage','Login') %></h2>
         <form action="/login/auth" method="POST">
             <div>
-                <label for="username">Username:</label>
+                <label for="username"><%= i18next.t('username','Username:') %></label>
                 <input class="authfield" type="text" id="username" name="username" required>
             </div>
             <br>
             <div>
-                <label for="password">Password:</label>
+                <label for="password"><%= i18next.t('password','Password:')%></label>
                 <input class="authfield" type="password" id="password" name="password" required>
             </div>
-            <button type="submit">Login</button>
+            <button type="submit"><%= i18next.t('loginPage','Login') %></button>
         </form>
     </div>
 </body>
