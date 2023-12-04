@@ -147,12 +147,12 @@ express()
     res.render('pages/add_user')
   })
   .post('/admin/add', async (req,res)=> {
-    const {username,password,type,firstName, lastName, dob, emergencyContact, emergencyPhone } = req.body;
+    const {username,password,type,firstName, lastName, dob, emergencyContact, emergencyPhone, bio } = req.body;
     try {
       const client = await pool.connect();
       await client.query(
-        'INSERT INTO users (username, password, type, given_name, surname, dob, emergency_contact, emergency_phone) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)',
-        [username,password,type, firstName, lastName, dob, emergencyContact, emergencyPhone]
+        'INSERT INTO users (username, password, type, given_name, surname, dob, emergency_contact, emergency_phone,bio) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)',
+        [username,password,type, firstName, lastName, dob, emergencyContact, emergencyPhone,bio]
       );
       res.redirect(`/admin?message=User%20Added%20Successfully`);
       client.release();
