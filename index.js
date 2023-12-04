@@ -221,11 +221,11 @@ express()
             [studentId, tuitionCharge, tuitionDate]
         );
 
-        res.redirect(`/admin/?message=Tuition%20Charge%20Added&id=${studentId}`);
+        res.redirect(`/student/${studentId}?message=Tuition%20Charge%20Added&id=${studentId}`);
         client.release();
     } catch (error) {
         console.error('Error adding tuition charge:', error);
-        res.redirect(`/admin/?message=Error%20Adding%20Tuition%20Charge&id=${studentId}`);
+        res.redirect(`/student/${studentId}?message=Error%20Adding%20Tuition%20Charge&id=${studentId}`);
     }
 })
 
@@ -241,11 +241,11 @@ express()
             [studentId, mealCharge, mealDate]
         );
 
-        res.redirect(`/admin/?message=Meal%20Charge%20Added&id=${studentId}`);
+        res.redirect(`/student/${studentId}?message=Meal%20Charge%20Added&id=${studentId}`);
         client.release();
     } catch (error) {
         console.error('Error adding meal charge:', error);
-        res.redirect(`/admin/?message=Error%20Adding%20Meal%20Charge&id=${studentId}`);
+        res.redirect(`/student/${studentId}?message=Error%20Adding%20Meal%20Charge&id=${studentId}`);
     }
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
