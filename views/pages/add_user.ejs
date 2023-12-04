@@ -67,6 +67,9 @@
     <label for="emergencyPhone"><%= i18next.t('emergencyPhone','Emergency Contact Phone Number:')%></label>
     <input type="tel" id="emergencyPhone" name="emergencyPhone" required>
 
+    <label for="bio"><%= locals.i18next.t('Bio', 'Student Information:') %></label>
+    <input type="text" id="bio" name="bio" required>
+    
     <button type="submit"><%= i18next.t('AddUser','Add User') %></button>
   </form>
 </body>
