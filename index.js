@@ -151,7 +151,7 @@ express()
     try {
       const client = await pool.connect();
       await client.query(
-        'INSERT INTO users (username, password, type, first_name, last_name, dob, emergencycontact, emergencycontactphone) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)',
+        'INSERT INTO users (username, password, type, given_name, surname, dob, emergency_contact, emergency_phone) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)',
         [username,password,type, firstName, lastName, dob, emergencyContact, emergencyPhone]
       );
       res.redirect(`/admin?message=User%20Added%20Successfully`);
@@ -222,7 +222,7 @@ express()
     try {
       const client = await pool.connect();
       await client.query(
-        'INSERT INTO student_info (uid, first_name, last_name, dob, emergencycontact, emergencycontactphone) VALUES ($1, $2, $3, $4, $5)',
+        'INSERT INTO student_info (uid, given_name, surname, dob, emergency_contact, emergency_phone) VALUES ($1, $2, $3, $4, $5)',
         [studentId, firstName, lastName, dob, emergencyContact, emergencyPhone]
       );
 
