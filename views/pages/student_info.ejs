@@ -468,7 +468,7 @@
     <div style="width: 100%; margin-top: 20px;">
 		<div class="container" style="float:left; width: 50%; border: 2px solid rgba(62,94,148,1); background: rgb(158, 178, 212)">
 			<h2 style="margin: auto; text-align: center;"><%= locals.i18next.t('tuitionCosts','Tuition Costs')%></h2>
-			<form action="/add-tuition/:id" method="POST" style="margin: auto;">
+			<form action="/add-tuition/<%= id %>" method="POST" style="margin: auto;">
 				<table class="users-table" style="margin: auto; padding:5px">
 					<thead>
 						<tr>
@@ -483,7 +483,7 @@
 						</tr>
 					<% }) %>
 					<tr>
-						<td><input type="number" name="tuitionCharge" required></td>
+						<td><input type="number" name="tuitionCharge" min="1" step="any" required></td>
 						<td><input type="date" name="tuitionDate" required></td>
 						<td><button type="submit">Add Tuition Charge</button></td>
 					</tr>
@@ -494,7 +494,7 @@
 		<!-- Meal Table -->
 		<div class="container" style="float:right; width: 50%; border: 2px solid rgba(62,94,148,1); background: rgb(158, 178, 212)">
 			<h2 style="margin: auto; text-align: center;"><%= locals.i18next.t('mealCosts','Meal Costs')%></h2>
-			<form action="/add-meal/:id" method="POST" style="margin: auto;">
+			<form action="/add-meal/<%= id %>" method="POST" style="margin: auto;">
 				<table class="users-table" style="margin: auto; padding:5px">
 					<thead>
 						<tr>
@@ -509,7 +509,7 @@
 						</tr>
 					<% }) %>
 					<tr>
-						<td><input type="number" name="mealCharge" required></td>
+						<td><input type="number" name="mealCharge" min="1" step="any" required></td>
 						<td><input type="date" name="mealDate" required></td>
 						<td><button type="submit">Add Meal Charge</button></td>
 					</tr>
