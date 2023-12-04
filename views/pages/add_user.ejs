@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Add Student</title>
+  <title>Add User</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -36,8 +36,22 @@
   </style>
 </head>
 <body>
-  <h2>Add Student</h2>
-  <form method="POST" action='/add-student/${id}''>
+  <h2>Add User</h2>
+  <form method="POST" action='/admin/add'>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="type">User Type:</label>
+    <select id="type" name="type">
+      <option value="1">Admin</option>
+      <option value="2">Teacher</option>
+      <option value="3">Student</option>
+    </select>
+
     <label for="firstName">First Name:</label>
     <input type="text" id="firstName" name="firstName" required>
 

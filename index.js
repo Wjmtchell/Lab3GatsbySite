@@ -143,20 +143,22 @@ express()
         res.send("Error " + err);
       }
     }})
-  .post('/admin/add', async (req,res)=>{
-    const {username,password,type}=req.body;
+  .get('/admin/add', async (req,res)=>{
+    res.render('add_user')
+  })
+  .post('/admin/add', async (req,res)=> {
+    const {username,password,type,firstName, lastName, dob, emergencyContact, emergencyPhone } = req.body;
     try {
       const client = await pool.connect();
-      const result =await client.query('INSERT INTO users (username,password,type) VALUES ($1,$2,$3) RETURNING id',[username,password,type]);
-      const newUid= result.rows[0].id;
-      if (type === 3) {
-        res.redirect(`/add-student/${newUid}`);
-      } else {
-        res.redirect('/admin?message=User%20Added%20Successfully');
-      }
+      await client.query(
+        'INSERT INTO users (username, password, type, first_name, last_name, dob, emergencycontact, emergencycontactphone) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)',
+        [username,password,type, firstName, lastName, dob, emergencyContact, emergencyPhone]
+      );
+      res.redirect(`/admin?message=User%20Added%20Successfully`);
       client.release();
-    } catch(error) {
-      res.redirect('/admin?message=Error%20Adding%20User');
+    } catch (error) {
+      console.error('Error adding student:', error);
+      res.redirect('/admin?message=Error%20Adding%20Student');
     }
   })
   .get('/student/:id', async (req,res)=>{
@@ -165,7 +167,7 @@ express()
     const user = req.session.user;
      try {
        const client = await pool.connect();
-       const result = await client.query('SELECT * FROM student_info WHERE uid=($1)',values);
+       const result = await client.query('SELECT * FROM users WHERE id=($1) AND type=3',values);
        const tuition = await client.query('SELECT * FROM tuition WHERE uid=($1)',values);
        const tuitionResults = { 'tuitionResults': (tuition) ? tuition.rows : null};
        const meals = await client.query('SELECT * FROM meals WHERE uid=($1)',values);
@@ -183,7 +185,7 @@ express()
     const user = req.session.user;
      try {
        const client = await pool.connect();
-       const result = await client.query('SELECT * FROM employee_info WHERE uid=($1)',values);
+       const result = await client.query('SELECT * FROM users WHERE uid=($1) AND type=2',values);
        const employeeInfo = result.rows[0];
        res.render('pages/employee_info', {employeeInfo,user});
        client.release();
