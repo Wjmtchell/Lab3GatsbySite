@@ -189,7 +189,7 @@ express()
        const pay = await client.query('SELECT * FROM salaries WHERE uid=($1)',values);
        const payResults = { 'payResults': (pay) ? pay.rows : null};
        const employeeInfo = result.rows[0];
-       res.render('pages/employee_info', {employeeInfo,user,payResults});
+       res.render('pages/employee_info', {employeeInfo,user,payResults, id});
        client.release();
      } catch(error) {
        res.redirect('/?message=Failed%20To%20Find%20EmployeeInfo')
