@@ -5,20 +5,20 @@
   <title>Employee Info</title>
 </head>
 <%- include ("../partials/nav.ejs") %>
-<div class="jumbotron text-center" style="border: 2px solid rgba(62,94,148,1); background-color: rgb(158, 178, 212)">
+<div class="jumbotron text-center" style="border: 2px solid rgba(62,94,148,1); background-color: rgb(255, 206, 101)">
     <div style="font-size: xx-large">Employee Info</div>
 </div>
-<body style="background-color: rgb(255, 206, 101)">
+<body style="background-color: rgb(158, 178, 212)">
     
     <div style="text-align: left; font-size: xx-large; margin-top: 20px;">
         <%= employeeInfo.surname %>, <%= employeeInfo.given_name %>
     </div>
-    <div class="bio-box" style="background-color: rgb(158, 178, 212)">
+    <div class="bio-box" style="background-color: rgb(255, 206, 101)">
         <p><strong>Bio:</strong></p>
         <p><%= employeeInfo.bio %></p>
     </div>
-    <div class="container" style="width: 100%; margin-top: 20px; border: 2px solid rgba(62,94,148,1); background: rgb(158, 178, 212)">
-        <h2 style="margin: auto; text-align: center;"><%= locals.i18next.t('payCosts','pay Costs')%></h2>
+    <div class="container" style="width: 100%; margin-top: 20px; border: 2px solid rgba(62,94,148,1); background: rgb(255, 206, 101)">
+        <h2 style="margin: auto; text-align: center;"><%= locals.i18next.t('EmployeePayStubs','Employee Pay Stubs')%></h2>
         <form action="/add-pay/<%= id %>" method="POST" style="margin: auto;">
             <table class="users-table" style="margin: auto; padding:5px">
                 <thead>
