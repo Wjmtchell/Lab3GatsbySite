@@ -5,18 +5,42 @@
   <title>Employee Info</title>
 </head>
 <%- include ("../partials/nav.ejs") %>
-<div class="jumbotron text-center">
+<div class="jumbotron text-center" style="border: 2px solid rgba(62,94,148,1); background-color: rgb(158, 178, 212)">
     <div style="font-size: xx-large">Employee Info</div>
 </div>
-<body>
+<body style="background-color: rgb(255, 206, 101)">
     
     <div style="text-align: left; font-size: xx-large; margin-top: 20px;">
         <%= employeeInfo.surname %>, <%= employeeInfo.given_name %>
     </div>
-    <div class="bio-box">
+    <div class="bio-box" style="background-color: rgb(158, 178, 212)">
         <p><strong>Bio:</strong></p>
         <p><%= employeeInfo.bio %></p>
     </div>
-    <button id="button1">Pay Stub (WIP)</button>
+    <div style="width: 100%; margin-top: 20px;">
+		<div class="container" style="float:left; width: 50%; border: 2px solid rgba(62,94,148,1); background: rgb(158, 178, 212)">
+			<h2 style="margin: auto; text-align: center;"><%= locals.i18next.t('payCosts','pay Costs')%></h2>
+			<form action="/add-pay/<%= id %>" method="POST" style="margin: auto;">
+				<table class="users-table" style="margin: auto; padding:5px">
+					<thead>
+						<tr>
+							<th> <%= locals.i18next.t('Cost','Cost') %> </th>
+							<th> <%= locals.i18next.t('Date','Date')%> </th>
+						</tr>
+					</thead>
+					<% Object.values(payResults).flat(1).forEach(function(entry) { %>
+						<tr>
+							<td>$<%= entry.charge %></td>
+							<td><%= entry.date %></td>
+						</tr>
+					<% }) %>
+					<tr>
+						<td><input type="number" name="payCharge" min="1" step="any" required></td>
+						<td><input type="date" name="payDate" required></td>
+						<td><button type="submit">Add Pay Stub</button></td>
+					</tr>
+				</table>
+			</form>
+		</div>
 </body>
 </html>

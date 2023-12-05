@@ -186,8 +186,10 @@ express()
      try {
        const client = await pool.connect();
        const result = await client.query('SELECT * FROM users WHERE id=($1) AND type=2',values);
+       const pay = await client.query('SELECT * FROM users WHERE id=($1) AND type=2',values);
+       const payResults = { 'payResults': (pay) ? pay.rows : null};
        const employeeInfo = result.rows[0];
-       res.render('pages/employee_info', {employeeInfo,user});
+       res.render('pages/employee_info', {employeeInfo,user,payResultss});
        client.release();
      } catch(error) {
        res.redirect('/?message=Failed%20To%20Find%20EmployeeInfo')
@@ -248,4 +250,23 @@ express()
         res.redirect(`/student/${studentId}?message=Error%20Adding%20Meal%20Charge&id=${studentId}`);
     }
   })
+
+  .post('/add-pay/:id', async (req, res) => {
+    const employeeId = req.params.id;
+    const { payCharge, payDate } = req.body;
+
+    try {
+        const client = await pool.connect();
+        await client.query(
+            'INSERT INTO salaries (uid, charge, date) VALUES ($1, $2, $3)',
+            [employeeId, payCharge, payDate]
+        );
+
+        res.redirect(`/employee/${employeeId}?message=Pay%20Stub%20Added&id=${employeeId}`);
+        client.release();
+    } catch (error) {
+        console.error('Error adding pay stub:', error);
+        res.redirect(`/employee/${employeeId}?message=Error%20Adding%20Pay%20Stub&id=${employeeId}`);
+    }
+})
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
