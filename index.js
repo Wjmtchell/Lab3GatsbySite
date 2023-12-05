@@ -186,10 +186,10 @@ express()
      try {
        const client = await pool.connect();
        const result = await client.query('SELECT * FROM users WHERE id=($1) AND type=2',values);
-       const pay = await client.query('SELECT * FROM users WHERE id=($1) AND type=2',values);
+       const pay = await client.query('SELECT * FROM salaries WHERE uid=($1)',values);
        const payResults = { 'payResults': (pay) ? pay.rows : null};
        const employeeInfo = result.rows[0];
-       res.render('pages/employee_info', {employeeInfo,user,payResultss});
+       res.render('pages/employee_info', {employeeInfo,user,payResults});
        client.release();
      } catch(error) {
        res.redirect('/?message=Failed%20To%20Find%20EmployeeInfo')
