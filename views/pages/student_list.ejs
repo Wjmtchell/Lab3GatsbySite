@@ -1245,7 +1245,7 @@
 	}
 </style>
 </head>
-<%- include ("../partials/nav.ejs") %>english
+<%- include ("../partials/nav.ejs") %>
 	<div class="jumbotron text-center">
 		<div style="font-size: xx-large"><%= i18next.t('studentList', 'Student List') %></div>
 	  </div>
@@ -1255,15 +1255,13 @@
 		  <tr>
 			<th style="text-align: center;"> ID </th>
 			<th style="text-align: center;"> <%= i18next.t('username', 'Username') %> </th>
-			<th style="text-align: center;"> <%= i18next.t ('Edit','Edit') %> </th>
 		  </tr>
-		</thead><% results.forEach(function(entry) { %>
+		</thead><% Object.values(results).flat(1).forEach(function(entry) { %>
 		<tr>
 			<td style="padding: 4px;"><%= entry.id %></td>
 			<td style="padding: 4px;">
 				<a href="/student/<%= entry.id %>"><%= entry.username %></a>
 			</td>
-			<td style="padding: 4px;"><a href="/student_edit"><%= i18next.t ('Edit','Edit') %></a></td>
 		</tr>
 		<% }) %></table>
 </div>
