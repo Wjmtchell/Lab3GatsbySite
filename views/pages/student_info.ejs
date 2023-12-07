@@ -453,59 +453,79 @@
 }
 </style>
 <div class="jumbotron text-center" style="border: 2px solid rgba(62,94,148,1); background-color: rgb(158, 178, 212)">
-    <div style="font-size: xx-large;"><%= locals.i18next.t('studentInfo','Student Info') %></div>
+    <div style="font-size: xx-large;"><%= locals.i18next.t('studentInformation','Student Information') %></div>
 </div>
 <body style="background-color: rgb(255, 206, 101)">
     
     <div style="text-align: left; font-size: xx-large; margin-top: 20px">
-        <%= locals.i18next.t(`studentInfo.${studentInfo.id}.surname`, '${studentInfo.surname}') %>, <%= i18next.t(`studentInfo.${studentInfo.id}.given_name`, '${studentInfo.given_name}') %>
+        <%= studentInfo.surname %>, <%=  studentInfo.given_name %>
     </div>
-    <p style="margin-left: 20px;"><strong><%= i18next.t('GradeLevel', 'Grade Level:') %></strong> <%= studentInfo.grade_level %></p>
     <div class="bio-box" style="background-color: rgb(158, 178, 212)">
         <p><strong><%= locals.i18next.t('Bio', 'Student Information:') %></strong></p>
-        <p><%= locals.i18next.t(`studentInfo.${studentInfo.id}.bio`, '${studentInfo.bio}') %></p>
+        <p><%= studentInfo.bio %></p>
     </div>
-    <form action="/edit-bio/<%= studentInfo.id %>" method="post">
-        <label for="newBio"><strong><%= i18next.t('NewBio', 'New Student Information:') %></strong></label>
-        <textarea id="newBio" name="newBio" rows="4" cols="50"><%= studentInfo.bio %></textarea>
-        <br>
-        <button type="submit" style="background-color: rgb(158, 178, 212)">Save Changes</button>
-    </form>
     <div style="width: 100%; margin-top: 20px;">
-        <div class="container" style="float:left; width: 45%; border: 2px solid rgba(62,94,148,1);">
-            <h2 style="margin: auto; text-align: center;">Tuition Charges</h2>
-            <table class="users-table" style="margin: auto; padding:5px">
-                <thead>
-                  <tr>
-                    <th> Charge </th>
-                    <th> Date </th>
-                  </tr>
-                </thead><% Object.values(tuitionResults).flat(1).forEach(function(entry) { %>
-                <tr>
-                    <td><%= entry.charge %></td>
-                    <td><%= entry.date %></td>
-                </tr>
-                <% }) %></table>
-                <form action="/admin/" method="GET"><button class="vertical-center" id="button2" type="submit" style="margin: auto; background-color: rgb(158, 178, 212)">Add Tuition Charge</button></form>
-        </div>
-        <div class="container" style="float:right; width: 45%; border: 2px solid rgba(62,94,148,1);">
-            <h2 style="margin: auto; text-align: center;">Meal Charges</h2>
-            <table class="users-table" style="margin: auto; padding:5px">
-                <thead>
-                  <tr>
-                    <th> Charge </th>
-                    <th> Date </th>
-                  </tr>
-                </thead><% Object.values(mealsResults).flat(1).forEach(function(entry) { %>
-                <tr>
-                    <td><%= entry.charge %></td>
-                    <td><%= entry.date %></td>
-                </tr>
-                <% }) %></table>
-            <form action="/admin/" method="GET"><button class="vertical-center" id="button2" type="submit" style="margin: auto; background-color: rgb(158, 178, 212)">Add Meal Charge</button></form>
-        </div>
+		<div class="container" style="float:left; width: 50%; border: 2px solid rgba(62,94,148,1); background: rgb(158, 178, 212)">
+			<h2 style="margin: auto; text-align: center;"><%= locals.i18next.t('tuitionCosts','Tuition Costs')%></h2>
+			<form action="/add-tuition/<%= id %>" method="POST" style="margin: auto;">
+				<table class="users-table" style="margin: auto; padding:5px">
+					<thead>
+						<tr>
+							<th> <%= locals.i18next.t('Cost','Cost') %> </th>
+							<th> <%= locals.i18next.t('Date','Date')%> </th>
+						</tr>
+					</thead>
+					<% Object.values(tuitionResults).flat(1).forEach(function(entry) { %>
+						<tr>
+							<td>$<%= entry.charge %></td>
+							<td><%= entry.date %></td>
+						</tr>
+					<% }) %>
+					<% if(studentInfo.username == user || type ==1) { %>
+						<tr>
+							<td><input type="number" name="tuitionCharge" min="1" step="any" required></td>
+							<td><input type="date" name="tuitionDate" required></td>
+							<td><button type="submit"><%= locals.i18next.t('Add Tuition Charge','Add Tuition Charge') %></button></td>
+						</tr>
+					<% } %>
+				</table>
+			</form>
+			
+		</div>
+		
+		<!-- Meal Table -->
+		<div class="container" style="float:right; width: 50%; border: 2px solid rgba(62,94,148,1); background: rgb(158, 178, 212)">
+			<h2 style="margin: auto; text-align: center;"><%= locals.i18next.t('mealCosts','Meal Costs')%></h2>
+			<form action="/add-meal/<%= id %>" method="POST" style="margin: auto;">
+				<table class="users-table" style="margin: auto; padding:5px">
+					<thead>
+						<tr>
+							<th> <%= locals.i18next.t('Cost','Cost') %></th>
+							<th> <%= locals.i18next.t('Date','Date')%> </th>
+						</tr>
+					</thead>
+					<% Object.values(mealsResults).flat(1).forEach(function(entry) { %>
+						<tr>
+							<td>$<%= entry.charge %></td>
+							<td><%= entry.date %></td>
+						</tr>
+					<% }) %>
+					<% if(studentInfo.username == user || type ==1) { %>
+					<tr>
+						<td><input type="number" name="mealCharge" min="1" step="any" required></td>
+						<td><input type="date" name="mealDate" required></td>
+						<td><button type="submit"><%= locals.i18next.t('Add Meal Charge','Add Meal Charge') %></button></td>
+					</tr>
+					<% } %>
+				</table>
+			</form>
+		</div>
      </div>
      <div style="clear:both"></div>
-    
+	<form action="/student/<%= id %>/monthly-summary" method="GET">
+		<button type="submit" style="margin: auto; display: block; margin-top: 20px;">
+			<%= locals.i18next.t('viewMonthlySummary', 'View Monthly Summary') %>
+		</button>
+	</form>
 </body>
 </html>
