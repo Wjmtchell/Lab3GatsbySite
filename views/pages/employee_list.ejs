@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <%- include ("../partials/header.ejs") %>
-<title>Employee List</title>
+<title><%= i18next.t('Employee List','Employee List') %></title>
 <style id="applicationStylesheet" type="text/css">
 	.mediaViewInfo {
 		--web-view-name: Employee List;
@@ -1246,23 +1246,21 @@
 </head>
 <%- include ("../partials/nav.ejs") %>
 	<div class="jumbotron text-center">
-		<div style="font-size: xx-large">Employee Listtt</div>
+		<div style="font-size: xx-large"><%= i18next.t('Employee List','Employee List') %></div>
 	  </div>
 	<body>
-	<table class="users-table" style="margin: auto; padding:5px">
+	<table class="users-table" style="margin: auto; padding:5px; width:80%">
 		<thead>
 		  <tr>
-			<th> ID </th>
-			<th> Username </th>
-			<th> Edit </th>
+			<th style="text-align: center;"> ID </th>
+			<th style="text-align: center;"> <%= i18next.t('Username','Username') %> </th>
 		  </tr>
-		</thead><% results.forEach(function(entry) { %>
+		</thead><% Object.values(results).flat(1).forEach(function(entry) { %>
 		<tr>
-			<td><%= entry.id %></td>
-			<td>
+			<td style="padding: 4px;"><%= entry.id %></td>
+			<td style="padding: 4px;">
 				<a href="/employee/<%= entry.id %>"><%= entry.username %></a>
 			</td>
-			<td><a href="/employee_edit">Edit</a></td>
 		</tr>
 		<% }) %></table>
 </div>
